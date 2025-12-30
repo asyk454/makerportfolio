@@ -31,15 +31,32 @@
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: var(--text);
-    border: 1px solid var(--text);
+    background: var(--accent);
+    color: white;
+    border: 1px solid var(--accent);
 }
 
 .btn-secondary:hover {
-    background: var(--text);
+    background: var(--accent-bright);
     color: white;
-    border-color: var(--text);
+    border-color: var(--accent-bright);
+}
+
+@media (prefers-color-scheme: dark) {
+    .btn,
+    .btn-primary,
+    .btn-secondary {
+        background: transparent;
+        color: var(--text);
+        border: 1px solid var(--text);
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--text);
+        border-color: var(--text);
+    }
 }
 
 .btn-large {
@@ -49,7 +66,7 @@
 
 /* Cards */
 .card {
-    background: white;
+    background: var(--surface);
     border-radius: var(--radius-md);
     box-shadow: none;
     overflow: hidden;
@@ -200,7 +217,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background: #ffffff;
+    background: var(--surface);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     z-index: 1000;
     transition: all 0.3s ease;
@@ -209,7 +226,7 @@
 
 .site-header.scrolled {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-    background: #ffffff;
+    background: var(--surface);
 }
 
 .header-container {
@@ -274,6 +291,7 @@
     gap: var(--spacing-lg);
     justify-self: end;
 }
+
 
 .social-link {
     color: var(--text);
@@ -432,7 +450,7 @@
     position: absolute;
     top: calc(100% + 0.5rem);
     right: 0;
-    background: white;
+    background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-md);
@@ -462,6 +480,7 @@
 .mobile-dropdown-menu .nav-link:hover {
     background: var(--background-alt);
 }
+
 
 /* Show mobile menu much earlier to prevent any conflicts or jumbling */
 @media (max-width: 1100px) {
@@ -527,8 +546,8 @@
 
 /* Footer */
 .site-footer {
-    background: var(--text);
-    color: white;
+    background: var(--surface);
+    color: var(--text);
     padding: var(--spacing-xl) 0 var(--spacing-lg);
     margin-top: var(--spacing-xl);
     position: relative;
@@ -558,17 +577,17 @@
 }
 
 .footer-about h3 {
-    color: white;
+    color: var(--text);
     margin-bottom: var(--spacing-sm);
 }
 
 .footer-about p {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-light);
     font-size: 0.875rem;
 }
 
 .footer-links h4 {
-    color: white;
+    color: var(--text);
     margin-bottom: var(--spacing-sm);
     font-size: 1rem;
 }
@@ -582,13 +601,13 @@
 }
 
 .footer-links a {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-light);
     font-size: 0.875rem;
     transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-    color: white;
+    color: var(--text);
 }
 
 .footer-social {
@@ -598,20 +617,38 @@
 }
 
 .footer-social a {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.5rem;
+    color: var(--text-light);
+    font-size: 1.125rem;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
     transition: color 0.2s ease;
 }
 
+.footer-social svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    fill: none;
+}
+
+.footer-social .icon-github {
+    transform: scale(0.92);
+    transform-origin: center;
+}
+
 .footer-social a:hover {
-    color: white;
+    color: var(--text);
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--border);
     padding-top: var(--spacing-md);
     text-align: center;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--text-light);
     font-size: 0.875rem;
 }
 
@@ -625,4 +662,3 @@
         padding: 0 var(--spacing-md);
     }
 }
-
