@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Alex Ko's Maker Portfolio">
     <title>Alex Ko's Maker Portfolio</title>
-    <link rel="icon" type="image/png" href="assets/images/icons/site_logo_dark.png" id="favicon">
+    <link rel="icon" type="image/png" href="../assets/images/icons/site_logo_dark.png" id="favicon">
     <script>
         (function () {
             var favicon = document.getElementById('favicon');
@@ -15,8 +15,8 @@
             var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
             var setIcon = function (event) {
                 favicon.href = event.matches
-                    ? 'assets/images/icons/site_logo_light.png'
-                    : 'assets/images/icons/site_logo_dark.png';
+                    ? '../assets/images/icons/site_logo_light.png'
+                    : '../assets/images/icons/site_logo_dark.png';
             };
             setIcon(darkQuery);
             if (darkQuery.addEventListener) {
@@ -32,10 +32,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/project.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/project.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
 <body data-load-reveal>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -43,12 +43,12 @@
     <header class="site-header">
         <div class="header-container">
             <nav class="header-nav-left">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="resume.html" class="nav-link">Resume</a>
-                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="../home.html" class="nav-link">Home</a>
+                <a href="../resume.html" class="nav-link">Resume</a>
+                <a href="../home.html#projects" class="nav-link">Projects</a>
             </nav>
             <div class="header-title">
-                <a href="index.html" class="site-logo">Alex Ko's Maker Portfolio</a>
+                <a href="../home.html" class="site-logo">Alex Ko's Maker Portfolio</a>
             </div>
             <div class="header-social">
                 <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
@@ -73,8 +73,8 @@
                     <span></span>
                 </button>
                 <nav class="mobile-dropdown-menu">
-                    <a href="resume.html" class="nav-link">Resume</a>
-                    <a href="index.html#projects" class="nav-link">Projects</a>
+                    <a href="../resume.html" class="nav-link">Resume</a>
+                    <a href="../home.html#projects" class="nav-link">Projects</a>
                 </nav>
             </div>
         </div>
@@ -84,26 +84,26 @@
         <nav class="breadcrumb" aria-label="Breadcrumb">
             <div class="breadcrumb-container">
                 <div class="breadcrumb-links">
-                    <a href="index.html">Home</a>
+                    <a href="../home.html">Home</a>
                     <span class="breadcrumb-separator">/</span>
-                    <a href="index.html#projects">Projects</a>
+                    <a href="../home.html#projects">Projects</a>
                     <span class="breadcrumb-separator">/</span>
-                    <span>Biomechatronic Device</span>
+                    <span>Custom Actuator Design</span>
                 </div>
             </div>
         </nav>
 
         <section class="project-hero">
-            <img src="https://via.placeholder.com/1920x1080/065f46/ffffff?text=Biomechatronic+Device" alt="Biomechatronic Device" class="project-hero-image" loading="eager">
+            <img src="https://via.placeholder.com/1920x1080/92400e/ffffff?text=Custom+Actuator+Design" alt="Custom Actuator Design" class="project-hero-image" loading="eager">
             <div class="project-hero-content">
                 <div class="container">
-                    <h1 class="project-hero-title">Biomechatronic Device</h1>
+                    <h1 class="project-hero-title">Custom Actuator Design</h1>
                     <div class="project-hero-meta">
                         <div class="project-hero-tags">
-                            <span class="tag tag-biomechatronics">Biomechatronics</span>
-                            <span class="tag">Research</span>
+                            <span class="tag tag-prototyping">Prototyping</span>
+                            <span class="tag">Mechanical Design</span>
                         </div>
-                        <span style="color: rgba(255,255,255,0.8);">2024</span>
+                        <span style="color: rgba(255,255,255,0.8);">2023</span>
                     </div>
                 </div>
             </div>
@@ -115,49 +115,49 @@
                     <div class="overview-main">
                         <h2>Overview</h2>
                         <p>
-                            Developed a research device for studying human-machine interfaces with real-time motion 
-                            tracking and feedback systems. This project was part of research at the MIT Media Lab 
-                            Biomechatronics group, focusing on understanding how humans interact with assistive devices.
+                            Designed and prototyped a high-torque, compact actuator system for space-constrained 
+                            robotic applications. The challenge was to achieve high torque output while maintaining 
+                            a small form factor and low cost.
                         </p>
                         <p>
-                            The device integrates multiple sensors including IMUs, force sensors, and EMG electrodes 
-                            to capture comprehensive motion and muscle activity data. The system achieved 95% accuracy 
-                            in motion tracking compared to gold-standard motion capture systems.
+                            Through careful gear design and material selection, the actuator achieved the required 
+                            torque specifications while reducing unit cost by $50 compared to off-the-shelf alternatives. 
+                            The design has been used in multiple robotics projects.
                         </p>
                         <h3>Key Achievements</h3>
                         <ul>
-                            <li>95% accuracy in motion tracking</li>
-                            <li>Real-time data acquisition at 100Hz</li>
-                            <li>Multi-modal sensor fusion</li>
-                            <li>Used in 3 published research studies</li>
+                            <li>$50 cost reduction per unit</li>
+                            <li>15 Nm torque output in compact package</li>
+                            <li>Modular design for easy integration</li>
+                            <li>Validated through 1000+ hour testing</li>
                         </ul>
                     </div>
                     <div class="overview-sidebar">
                         <h3>Project Details</h3>
                         <div class="overview-item">
                             <div class="overview-item-label">Role</div>
-                            <div class="overview-item-value">Research Assistant</div>
+                            <div class="overview-item-value">Designer & Prototyper</div>
                         </div>
                         <div class="overview-item">
                             <div class="overview-item-label">Timeline</div>
-                            <div class="overview-item-value">8 months</div>
+                            <div class="overview-item-value">3 months</div>
                         </div>
                         <div class="overview-item">
                             <div class="overview-item-label">Tools</div>
                             <ul class="overview-item-list">
-                                <li>Fusion 360 (CAD)</li>
-                                <li>Python (Data Processing)</li>
-                                <li>Arduino (Control)</li>
-                                <li>MATLAB (Analysis)</li>
+                                <li>SolidWorks (CAD)</li>
+                                <li>CNC Machining</li>
+                                <li>3D Printing</li>
+                                <li>Torque Testing</li>
                             </ul>
                         </div>
                         <div class="overview-item">
                             <div class="overview-item-label">Technologies</div>
                             <ul class="overview-item-list">
-                                <li>Sensor Integration</li>
-                                <li>Signal Processing</li>
-                                <li>Biomechanics</li>
-                                <li>Data Acquisition</li>
+                                <li>Gear Design</li>
+                                <li>Actuator Systems</li>
+                                <li>Mechanical Design</li>
+                                <li>Prototyping</li>
                             </ul>
                         </div>
                     </div>
@@ -165,20 +165,20 @@
 
                 <div class="key-metrics">
                     <div class="metric-card">
-                        <div class="metric-card-value">95%</div>
-                        <div class="metric-card-label">Tracking Accuracy</div>
+                        <div class="metric-card-value">15 Nm</div>
+                        <div class="metric-card-label">Torque Output</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-card-value">100 Hz</div>
-                        <div class="metric-card-label">Sampling Rate</div>
+                        <div class="metric-card-value">45 mm</div>
+                        <div class="metric-card-label">Diameter</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-card-value">8</div>
-                        <div class="metric-card-label">Sensor Channels</div>
+                        <div class="metric-card-value">$50</div>
+                        <div class="metric-card-label">Cost Savings</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-card-value">3</div>
-                        <div class="metric-card-label">Research Studies</div>
+                        <div class="metric-card-value">1000+</div>
+                        <div class="metric-card-label">Test Hours</div>
                     </div>
                 </div>
             </div>
@@ -191,34 +191,34 @@
                     <div class="process-timeline">
                         <div class="process-step">
                             <span class="process-step-number">1</span>
-                            <h3>Requirements Analysis</h3>
+                            <h3>Requirements & Analysis</h3>
                             <p>
-                                Defined sensor requirements based on research objectives. Identified need for 
-                                multi-modal sensing: motion (IMU), force (load cells), and muscle activity (EMG).
+                                Defined specifications: 15 Nm torque, 45mm max diameter, cost under $100. Analyzed 
+                                existing solutions to identify improvement opportunities.
                             </p>
                         </div>
                         <div class="process-step">
                             <span class="process-step-number">2</span>
-                            <h3>Mechanical Design</h3>
+                            <h3>Gear Design</h3>
                             <p>
-                                Designed wearable device housing with proper sensor placement. Ensured minimal 
-                                interference with natural movement while maintaining sensor contact.
+                                Designed custom planetary gear system for high torque density. Optimized gear ratios 
+                                and tooth profiles for efficiency and manufacturability.
                             </p>
                         </div>
                         <div class="process-step">
                             <span class="process-step-number">3</span>
-                            <h3>Sensor Integration</h3>
+                            <h3>Prototyping</h3>
                             <p>
-                                Integrated multiple sensor types with synchronized data acquisition. Developed 
-                                calibration procedures for accurate measurements.
+                                Built multiple iterations using 3D printing and CNC machining. Tested torque output, 
+                                efficiency, and durability under various load conditions.
                             </p>
                         </div>
                         <div class="process-step">
                             <span class="process-step-number">4</span>
-                            <h3>Validation & Testing</h3>
+                            <h3>Optimization</h3>
                             <p>
-                                Validated system against gold-standard motion capture. Conducted user studies 
-                                to verify accuracy and usability in real-world conditions.
+                                Refined design based on test results. Reduced part count and simplified assembly 
+                                process to lower manufacturing cost while maintaining performance.
                             </p>
                         </div>
                     </div>
@@ -239,28 +239,32 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Sampling Rate</td>
-                                <td>100 Hz</td>
+                                <td>Torque Output</td>
+                                <td>15 Nm</td>
                             </tr>
                             <tr>
-                                <td>Sensor Channels</td>
-                                <td>8 (3 IMU + 2 Force + 3 EMG)</td>
+                                <td>Max Diameter</td>
+                                <td>45 mm</td>
                             </tr>
                             <tr>
-                                <td>Accuracy</td>
-                                <td>95% vs. motion capture</td>
+                                <td>Length</td>
+                                <td>60 mm</td>
                             </tr>
                             <tr>
-                                <td>Data Storage</td>
-                                <td>Onboard SD card (32GB)</td>
+                                <td>Gear Ratio</td>
+                                <td>50:1</td>
                             </tr>
                             <tr>
-                                <td>Battery Life</td>
-                                <td>4 hours continuous</td>
+                                <td>Efficiency</td>
+                                <td>85%</td>
                             </tr>
                             <tr>
                                 <td>Weight</td>
-                                <td>250g</td>
+                                <td>180g</td>
+                            </tr>
+                            <tr>
+                                <td>Cost</td>
+                                <td>$75/unit</td>
                             </tr>
                         </tbody>
                     </table>
@@ -275,21 +279,21 @@
                     
                     <div class="iteration-card">
                         <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 1: Single Sensor Type</h3>
+                            <h3 class="iteration-title">Iteration 1: Standard Gearbox</h3>
                         </div>
-                        <p><strong>What Changed:</strong> Initial prototype with IMU only</p>
-                        <p><strong>Why:</strong> Proof of concept for motion tracking</p>
-                        <p><strong>Result:</strong> 75% accuracy, insufficient for research needs</p>
+                        <p><strong>What Changed:</strong> Used off-the-shelf gearbox components</p>
+                        <p><strong>Why:</strong> Quick prototype to validate concept</p>
+                        <p><strong>Result:</strong> Met torque requirements but too expensive ($125/unit)</p>
                     </div>
 
                     <div class="iteration-card">
                         <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 2: Multi-Modal Sensing</h3>
+                            <h3 class="iteration-title">Iteration 2: Custom Design</h3>
                         </div>
-                        <p><strong>What Changed:</strong> Added force sensors and EMG electrodes</p>
-                        <p><strong>Why:</strong> Need for comprehensive biomechanical data</p>
-                        <p><strong>Tradeoff:</strong> Increased complexity and power consumption</p>
-                        <p><strong>Result:</strong> 95% accuracy, suitable for research applications</p>
+                        <p><strong>What Changed:</strong> Designed custom planetary gear system with optimized geometry</p>
+                        <p><strong>Why:</strong> Need to reduce cost while maintaining performance</p>
+                        <p><strong>Tradeoff:</strong> Longer design time, required custom tooling</p>
+                        <p><strong>Result:</strong> $50 cost reduction ($75/unit), same performance, validated through testing</p>
                     </div>
                 </div>
             </div>
@@ -301,10 +305,13 @@
                     <h2>Media Gallery</h2>
                     <div class="gallery-grid">
                         <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/065f46/ffffff?text=Device+in+Use" alt="Device in use" loading="lazy">
+                            <img src="https://via.placeholder.com/1200x675/92400e/ffffff?text=Actuator+Assembly" alt="Actuator assembly" loading="lazy">
                         </div>
                         <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/10b981/ffffff?text=Sensor+Placement" alt="Sensor placement" loading="lazy">
+                            <img src="https://via.placeholder.com/1200x675/f97316/ffffff?text=Gear+System+Detail" alt="Gear system detail" loading="lazy">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/1200x675/10b981/ffffff?text=Torque+Testing+Setup" alt="Torque testing setup" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -314,11 +321,11 @@
         <section class="section">
             <div class="container">
                 <div class="project-navigation">
-                    <a href="project-2.html" class="project-nav-link prev">
+                    <a href="SladeLab.html" class="project-nav-link prev">
                         ← Previous Project
                     </a>
-                    <a href="project-4.html" class="project-nav-link next">
-                        Next Project →
+                    <a href="../home.html#projects" class="project-nav-link next">
+                        Back to Projects →
                     </a>
                 </div>
             </div>
@@ -335,9 +342,9 @@
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#projects">Projects</a></li>
-                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="../home.html">Home</a></li>
+                        <li><a href="../home.html#projects">Projects</a></li>
+                        <li><a href="../resume.html">Resume</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -364,6 +371,6 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

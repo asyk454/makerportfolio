@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Alex Ko's Maker Portfolio">
     <title>Alex Ko's Maker Portfolio</title>
-    <link rel="icon" type="image/png" href="assets/images/icons/site_logo_dark.png" id="favicon">
+    <link rel="icon" type="image/png" href="../assets/images/icons/site_logo_dark.png" id="favicon">
     <script>
         (function () {
             var favicon = document.getElementById('favicon');
@@ -15,8 +15,8 @@
             var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
             var setIcon = function (event) {
                 favicon.href = event.matches
-                    ? 'assets/images/icons/site_logo_light.png'
-                    : 'assets/images/icons/site_logo_dark.png';
+                    ? '../assets/images/icons/site_logo_light.png'
+                    : '../assets/images/icons/site_logo_dark.png';
             };
             setIcon(darkQuery);
             if (darkQuery.addEventListener) {
@@ -32,10 +32,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/project.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/project.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
 <body data-load-reveal>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -44,12 +44,12 @@
     <header class="site-header">
         <div class="header-container">
             <nav class="header-nav-left">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="resume.html" class="nav-link">Resume</a>
-                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="../home.html" class="nav-link">Home</a>
+                <a href="../resume.html" class="nav-link">Resume</a>
+                <a href="../home.html#projects" class="nav-link">Projects</a>
             </nav>
             <div class="header-title">
-                <a href="index.html" class="site-logo">Alex Ko's Maker Portfolio</a>
+                <a href="../home.html" class="site-logo">Alex Ko's Maker Portfolio</a>
             </div>
             <div class="header-social">
                 <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
@@ -74,8 +74,8 @@
                     <span></span>
                 </button>
                 <nav class="mobile-dropdown-menu">
-                    <a href="resume.html" class="nav-link">Resume</a>
-                    <a href="index.html#projects" class="nav-link">Projects</a>
+                    <a href="../resume.html" class="nav-link">Resume</a>
+                    <a href="../home.html#projects" class="nav-link">Projects</a>
                 </nav>
             </div>
         </div>
@@ -86,9 +86,9 @@
         <nav class="breadcrumb" aria-label="Breadcrumb">
             <div class="breadcrumb-container">
                 <div class="breadcrumb-links">
-                    <a href="index.html">Home</a>
+                    <a href="../home.html">Home</a>
                     <span class="breadcrumb-separator">/</span>
-                    <a href="index.html#projects">Projects</a>
+                    <a href="../home.html#projects">Projects</a>
                     <span class="breadcrumb-separator">/</span>
                     <span>Robotic Hand Prosthesis</span>
                 </div>
@@ -398,10 +398,10 @@
         <section class="section">
             <div class="container">
                 <div class="project-navigation">
-                    <a href="index.html#projects" class="project-nav-link prev">
+                    <a href="../home.html#projects" class="project-nav-link prev">
                         ← Back to Projects
                     </a>
-                    <a href="project-2.html" class="project-nav-link next">
+                    <a href="FTC-23.html" class="project-nav-link next">
                         Next Project →
                     </a>
                 </div>
@@ -420,9 +420,9 @@
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#projects">Projects</a></li>
-                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="../home.html">Home</a></li>
+                        <li><a href="../home.html#projects">Projects</a></li>
+                        <li><a href="../resume.html">Resume</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -449,6 +449,6 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>
