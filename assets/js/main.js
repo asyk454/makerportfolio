@@ -8,21 +8,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
     
     navLinks.forEach(link => {
-        const linkPath = link.getAttribute('href');
+        const rawHref = link.getAttribute('href') || '';
+        const linkPath = rawHref.split('#')[0];
+        const linkFile = linkPath.split('/').pop();
+        const currentFile = currentPath.split('/').pop();
         // Check if this link matches the current page
-        if (currentPath.endsWith(linkPath) || 
-            (currentPath.endsWith('/') && linkPath === 'index.html') ||
-            (currentPath.endsWith('index.html') && linkPath === 'index.html')) {
+        if ((linkFile && currentFile === linkFile) || 
+            (currentPath.endsWith('/') && linkFile === 'home.html') ||
+            (currentPath.endsWith('home.html') && linkFile === 'home.html')) {
             link.classList.add('active');
         }
         // Special case for home page
-        if (currentPath.endsWith('/') || currentPath.endsWith('index.html')) {
-            if (linkPath === 'index.html' || linkPath === '/') {
+        if (currentPath.endsWith('/') || currentPath.endsWith('home.html')) {
+            if (linkFile === 'home.html' || linkPath === '/') {
                 link.classList.add('active');
             }
         }
         // Special case for resume page
-        if (currentPath.includes('resume.html') && linkPath.includes('resume.html')) {
+        if (currentPath.includes('resume.html') && linkFile === 'resume.html') {
             link.classList.add('active');
         }
     });
