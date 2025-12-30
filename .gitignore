@@ -1,0 +1,26 @@
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary Files
+*.tmp
+*.log
+*.cache
+
+# Optional: Uncomment if you want to ignore large image files during development
+# assets/images/**/*.jpg
+# assets/images/**/*.png
+# !assets/images/**/placeholder.*
+
