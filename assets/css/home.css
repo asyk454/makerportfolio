@@ -68,6 +68,25 @@
     transition: font-size 0.3s ease, line-height 0.3s ease;
 }
 
+/* Force "Hi, I'm Alex Ko, a" to always be line 1 */
+.hero-title-line1 {
+    display: block;        /* forces line break after it */
+    white-space: nowrap;   /* prevents wrapping */
+}
+
+/* "Mechanical Engineer" can wrap to 1 or 2 lines as needed */
+.hero-title-line2 {
+    display: block;        /* starts on line 2 */
+    white-space: normal;   /* allow wrapping */
+}
+
+/* Optional safety for very small screens */
+@media (max-width: 420px) {
+    .hero-title-line1 {
+        white-space: normal;
+    }
+}
+
 .name-highlight {
     color: var(--accent);
     font-weight: 700;
@@ -90,6 +109,42 @@
     margin-bottom: var(--spacing-md);
     max-width: 52ch;
     transition: font-size 0.3s ease, line-height 0.3s ease;
+}
+
+/* Rules to deal with weird hero text compression and spacing gaps */
+/* Shared hero text compression rules (applies to both ranges) */
+@media (min-width: 790px) and (max-width: 1950px) {
+  /* Keep the headline from getting too wide */
+  .hero h1,
+  .hero-title {
+    max-width: 20ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Paragraph sizing */
+  .hero-intro {
+    font-size: clamp(1.10rem, 1.5vw, 1.22rem);
+    line-height: 1.75;
+  }
+
+  .hero-cta-text {
+    max-width: 44ch;
+    font-size: clamp(1.02rem, 1.25vw, 1.12rem);
+    line-height: 1.6;
+  }
+}
+
+/* Range A: 790–1300 */
+@media (min-width: 790px) and (max-width: 1300px) {
+  .hero-content { max-width: 52ch; }
+  .hero-intro   { max-width: 38ch; }
+}
+
+/* Range B: 1300–1950 */
+@media (min-width: 1300px) and (max-width: 1950px) {
+  .hero-content { max-width: 62ch; }
+  .hero-intro   { max-width: 58ch; }
 }
 
 .hero-buttons {
@@ -394,17 +449,25 @@
 }
 
 .project-card-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 0; /*0.25rem*/
-    color: var(--text);
-    line-height: 1.3;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    min-height: calc(1.3em * 2);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--text);
+  line-height: 1.3;
+
+  /* Clamp to 2 lines (standard + fallback) */
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  line-clamp: 2;              /* standard (newer browsers) */
+  -webkit-line-clamp: 2;      /* Safari/older Chrome fallback */
+  -webkit-box-orient: vertical;
+
+  /* keep card heights consistent */
+  min-height: calc(1.3em * 2);
 }
+
 
 .project-card-affiliation {
     align-self: flex-start;
@@ -574,6 +637,14 @@ html.meta-wrap-busy .project-card-meta {
 
     .project-card-meta .meta-sep {
         display: none;
+    }
+
+    .hero-buttons {
+        margin-top: 0;              /* stop pushing buttons downward */
+    }
+
+    .hero-content {
+        min-height: auto;           /* optional: prevents extra vertical slack */
     }
 }
 
