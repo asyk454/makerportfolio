@@ -37,11 +37,11 @@
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body>
+<body data-load-reveal>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
     <!-- Header Navigation -->
-    <header class="site-header" data-load-reveal>
+    <header class="site-header">
         <div class="header-container">
             <nav class="header-nav-left">
                 <a href="index.html" class="nav-link">Home</a>
@@ -52,7 +52,7 @@
                 <a href="index.html" class="site-logo">Alex Ko's Maker Portfolio</a>
             </div>
             <div class="header-social">
-                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin" aria-label="LinkedIn">
                     in
                 </a>
                 <a href="https://github.com/asyk454" target="_blank" rel="noopener noreferrer" class="social-link social-github" aria-label="GitHub">
@@ -60,7 +60,7 @@
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
                 </a>
-                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Email">
+                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link social-email" aria-label="Email">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
                         <path d="M3 7l9 6 9-6"></path>
@@ -83,7 +83,7 @@
 
     <main id="main-content">
         <!-- Hero Section -->
-        <section class="hero" data-load-reveal>
+        <section class="hero">
             <div class="hero-layout">
                 <div class="hero-photo">
                     <img src="assets/images/profile/Alex Ko Headshot copy.jpg" alt="Profile photo" class="hero-headshot" loading="eager">
@@ -113,7 +113,7 @@
                 <div class="projects-header">
                     <h2>Featured Projects</h2>
                     <p class="projects-subtitle">
-                        A selection of projects showcasing my work in robotics, biomechatronics, and mechanical design.
+                        A selection of projects showcasing my work in robotics, biomechatronics, and mechanical design. Scroll through to learn more!
                     </p>
                 </div>
                 <div class="projects-grid">
@@ -135,9 +135,13 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="project-1.html" class="project-card-link">
-                                    Learn More →
+                                    Learn More&nbsp;→
                                 </a>
-                                <span class="project-card-meta">Cambridge, MA · Jun 2023 &mdash; Mar 2024</span>
+                                <div class="project-card-meta meta">
+                                    <span class="meta-location">Cambridge, MA</span>
+                                    <span class="meta-sep" aria-hidden="true">·</span>
+                                    <span class="meta-dates">Jun 2023 &mdash; Mar 2024</span>
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -159,9 +163,13 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="project-2.html" class="project-card-link">
-                                    Learn More →
+                                    Learn More&nbsp;→
                                 </a>
-                                <span class="project-card-meta">Weston, MA · Sep 2022 &mdash; Apr 2023</span>
+                                <div class="project-card-meta meta">
+                                    <span class="meta-location">Weston, MA</span>
+                                    <span class="meta-sep" aria-hidden="true">·</span>
+                                    <span class="meta-dates">Sep 2022 &mdash; Apr 2023</span>
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -183,9 +191,13 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="project-3.html" class="project-card-link">
-                                    Learn More →
+                                    Learn More&nbsp;→
                                 </a>
-                                <span class="project-card-meta">Cambridge, MA · Jun &mdash; Aug 2025</span>
+                                <div class="project-card-meta meta">
+                                    <span class="meta-location">Cambridge, MA</span>
+                                    <span class="meta-sep" aria-hidden="true">·</span>
+                                    <span class="meta-dates">Jun &mdash; Aug 2025</span>
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -207,9 +219,13 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="project-4.html" class="project-card-link">
-                                    Learn More →
+                                    Learn More&nbsp;→
                                 </a>
-                                <span class="project-card-meta">Cambridge, MA · Jan &mdash; May 2025</span>
+                                <div class="project-card-meta meta">
+                                    <span class="meta-location">Cambridge, MA</span>
+                                    <span class="meta-sep" aria-hidden="true">·</span>
+                                    <span class="meta-dates">Jan &mdash; May 2025</span>
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -251,13 +267,15 @@
                 <div class="footer-links">
                     <h4>Connect</h4>
                     <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
-                        <a href="https://github.com/asyk454" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin">
+                            in
+                        </a>
+                        <a href="https://github.com/asyk454" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="social-github">
                             <svg class="icon-github" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                             </svg>
                         </a>
-                        <a href="mailto:alexko.harvard.edu" aria-label="Email">
+                        <a href="mailto:alexko.harvard.edu" aria-label="Email" class="social-email">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
                                 <path d="M3 7l9 6 9-6"></path>
