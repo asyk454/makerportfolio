@@ -5,6 +5,7 @@ A static portfolio site for Alex Ko highlighting robotics, biomechatronics, and 
 ## Pages
 
 - `home.html` - Home, about, and featured projects
+- `projects.html` - Projects hub and chronological index
 - `projects/MediaLab.html` - Neurally-Controlled Bionic Knee Prosthesis (MIT Media Lab)
 - `projects/FTC-23.html` - FIRST Tech Challenge '23-'24 Robot (Weston High School Robotics Club)
 - `projects/SladeLab.html` - VLA-Controlled Supernumerary Arm (Harvard Slade Agility Lab)
@@ -16,6 +17,7 @@ A static portfolio site for Alex Ko highlighting robotics, biomechatronics, and 
 ```
 makerportfolio/
 ├── home.html                 # Home page (hero + about + featured projects)
+├── projects.html             # Projects hub and chronological index
 ├── resume.html               # Resume and contact page
 ├── projects/                 # Project case study pages
 │   ├── MediaLab.html
