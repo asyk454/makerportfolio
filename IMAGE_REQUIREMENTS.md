@@ -11,7 +11,7 @@ This document lists all images needed for the portfolio site. Add your images to
 
 Each project needs the following images in its folder:
 
-#### Project 1 (`assets/images/projects/project-1/`)
+#### Project 1 (`assets/images/projects/MediaLab/`)
 - `hero.jpg` - Hero image for project page (1920px width)
 - `card-thumb.jpg` - Thumbnail for project card on home page (800px width)
 - `cad-1.jpg` - CAD render image
@@ -21,7 +21,7 @@ Each project needs the following images in its folder:
 - `final.jpg` - Final prototype
 - `gallery-1.jpg` through `gallery-4.jpg` - Gallery images (1200px width)
 
-#### Project 2 (`assets/images/projects/project-2/`)
+#### Project 2 (`assets/images/projects/FTC-23/`)
 - `hero.jpg` - Hero image
 - `card-thumb.jpg` - Card thumbnail
 - `analysis.jpg` - Game analysis image
@@ -30,12 +30,12 @@ Each project needs the following images in its folder:
 - `testing.jpg` - Testing phase
 - `gallery-1.jpg` through `gallery-3.jpg` - Gallery images
 
-#### Project 3 (`assets/images/projects/project-3/`)
+#### Project 3 (`assets/images/projects/SladeLab/`)
 - `hero.jpg` - Hero image
 - `card-thumb.jpg` - Card thumbnail
 - `gallery-1.jpg` and `gallery-2.jpg` - Gallery images
 
-#### Project 4 (`assets/images/projects/project-4/`)
+#### Project 4 (`assets/images/projects/ES-51/`)
 - `hero.jpg` - Hero image
 - `card-thumb.jpg` - Card thumbnail
 - `gallery-1.jpg` through `gallery-3.jpg` - Gallery images

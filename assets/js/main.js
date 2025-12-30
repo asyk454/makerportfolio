@@ -8,32 +8,65 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
     
     navLinks.forEach(link => {
-        const linkPath = link.getAttribute('href');
+        const rawHref = link.getAttribute('href') || '';
+        const linkPath = rawHref.split('#')[0];
+        const linkFile = linkPath.split('/').pop();
+        const currentFile = currentPath.split('/').pop();
         // Check if this link matches the current page
-        if (currentPath.endsWith(linkPath) || 
-            (currentPath.endsWith('/') && linkPath === 'index.html') ||
-            (currentPath.endsWith('index.html') && linkPath === 'index.html')) {
+        if ((linkFile && currentFile === linkFile) || 
+            (currentPath.endsWith('/') && linkFile === 'home.html') ||
+            (currentPath.endsWith('home.html') && linkFile === 'home.html')) {
             link.classList.add('active');
         }
         // Special case for home page
-        if (currentPath.endsWith('/') || currentPath.endsWith('index.html')) {
-            if (linkPath === 'index.html' || linkPath === '/') {
+        if (currentPath.endsWith('/') || currentPath.endsWith('home.html')) {
+            if (linkFile === 'home.html' || linkPath === '/') {
                 link.classList.add('active');
             }
         }
         // Special case for resume page
-        if (currentPath.includes('resume.html') && linkPath.includes('resume.html')) {
+        if (currentPath.includes('resume.html') && linkFile === 'resume.html') {
             link.classList.add('active');
         }
     });
 
+    // --- Wrap project meta only when it overflows (NO frame delay) ---
+    function updateProjectMetaWrap() {
+        const grid = document.querySelector('.projects-grid');
+        if (!grid) return;
+
+        const metas = grid.querySelectorAll('.project-card-meta');
+
+        // First: clear forcing + per-card stacking so we can measure one-line state
+        grid.classList.remove('force-meta-stack');
+        metas.forEach(meta => meta.classList.remove('meta-stack'));
+
+        // Second: check if ANY meta overflows in one-line mode
+        let anyOverflow = false;
+        metas.forEach(meta => {
+            if (meta.scrollWidth > meta.clientWidth) anyOverflow = true;
+        });
+
+        // Third: if any overflows, force stack on all
+        if (anyOverflow) {
+            grid.classList.add('force-meta-stack');
+        }
+
+        // Unhide meta after layout is correct (your flash fix)
+        document.documentElement.classList.add('meta-wrap-ready');
+    }
+
+
+    // Run immediately (same tick)
+    updateProjectMetaWrap();
+    window.addEventListener('resize', debounce(updateProjectMetaWrap, 150));
+
+
     // Reveal only the initially visible elements marked for load animation
     const loadRevealItems = document.querySelectorAll('[data-load-reveal]');
     if (loadRevealItems.length) {
-        window.requestAnimationFrame(() => {
-            loadRevealItems.forEach(item => {
-                item.classList.add('is-revealed');
-            });
+        loadRevealItems.forEach(item => {
+            item.classList.add('is-revealed');
         });
     }
 
@@ -200,6 +233,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // Auto-scroll Projects Grid - Infinite Scroll
     const projectsGrid = document.querySelector('.projects-grid');
     if (projectsGrid) {
+        // --- Wrap project meta only when it overflows ---
+        function updateProjectMetaWrap() {
+            document.querySelectorAll('.project-card-footer').forEach((footer) => {
+                const meta = footer.querySelector('.project-card-meta');
+                if (!meta) return;
+
+                // measure in default (one-line) mode
+                meta.classList.remove('meta-stack');
+
+                // if it overflows, switch to stacked mode
+                if (meta.scrollWidth > meta.clientWidth) {
+                    meta.classList.add('meta-stack');
+                }
+            });
+        }
+
+        // Run after layout settles
+        requestAnimationFrame(updateProjectMetaWrap);
+        window.addEventListener('resize', debounce(updateProjectMetaWrap, 150));
+
+        // Auto-scroll logic
         let scrollSpeed = 1.0; // pixels per frame (slower by 1/3 from original 1.5)
         let isPaused = false;
         let animationId = null;
@@ -232,6 +286,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (firstCard) {
                     projectsGrid.appendChild(firstCard);
                     projectsGrid.scrollLeft -= recycleWidth;
+                    updateProjectMetaWrap();
                 }
             }
             

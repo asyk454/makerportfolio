@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Alex Ko's Maker Portfolio">
     <title>Alex Ko's Maker Portfolio</title>
-    <link rel="icon" type="image/png" href="assets/images/icons/site_logo_dark.png" id="favicon">
+    <link rel="icon" type="image/png" href="../assets/images/icons/site_logo_dark.png" id="favicon">
     <script>
         (function () {
             var favicon = document.getElementById('favicon');
@@ -15,8 +15,8 @@
             var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
             var setIcon = function (event) {
                 favicon.href = event.matches
-                    ? 'assets/images/icons/site_logo_light.png'
-                    : 'assets/images/icons/site_logo_dark.png';
+                    ? '../assets/images/icons/site_logo_light.png'
+                    : '../assets/images/icons/site_logo_dark.png';
             };
             setIcon(darkQuery);
             if (darkQuery.addEventListener) {
@@ -32,23 +32,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/project.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/project.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
-<body>
+<body data-load-reveal>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <header class="site-header" data-load-reveal>
+    <header class="site-header">
         <div class="header-container">
             <nav class="header-nav-left">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="resume.html" class="nav-link">Resume</a>
-                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="../home.html" class="nav-link">Home</a>
+                <a href="../resume.html" class="nav-link">Resume</a>
+                <a href="../home.html#projects" class="nav-link">Projects</a>
             </nav>
             <div class="header-title">
-                <a href="index.html" class="site-logo">Alex Ko's Maker Portfolio</a>
+                <a href="../home.html" class="site-logo">Alex Ko's Maker Portfolio</a>
             </div>
             <div class="header-social">
                 <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
@@ -73,37 +73,37 @@
                     <span></span>
                 </button>
                 <nav class="mobile-dropdown-menu">
-                    <a href="resume.html" class="nav-link">Resume</a>
-                    <a href="index.html#projects" class="nav-link">Projects</a>
+                    <a href="../resume.html" class="nav-link">Resume</a>
+                    <a href="../home.html#projects" class="nav-link">Projects</a>
                 </nav>
             </div>
         </div>
     </header>
 
     <main id="main-content">
-        <nav class="breadcrumb" aria-label="Breadcrumb" data-load-reveal>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
             <div class="breadcrumb-container">
                 <div class="breadcrumb-links">
-                    <a href="index.html">Home</a>
+                    <a href="../home.html">Home</a>
                     <span class="breadcrumb-separator">/</span>
-                    <a href="index.html#projects">Projects</a>
+                    <a href="../home.html#projects">Projects</a>
                     <span class="breadcrumb-separator">/</span>
-                    <span>FTC Competition Robot</span>
+                    <span>Biomechatronic Device</span>
                 </div>
             </div>
         </nav>
 
-        <section class="project-hero" data-load-reveal>
-            <img src="https://via.placeholder.com/1920x1080/1e40af/ffffff?text=FTC+Competition+Robot" alt="FTC Competition Robot" class="project-hero-image" loading="eager">
+        <section class="project-hero">
+            <img src="https://via.placeholder.com/1920x1080/065f46/ffffff?text=Biomechatronic+Device" alt="Biomechatronic Device" class="project-hero-image" loading="eager">
             <div class="project-hero-content">
                 <div class="container">
-                    <h1 class="project-hero-title">FTC Competition Robot</h1>
+                    <h1 class="project-hero-title">Biomechatronic Device</h1>
                     <div class="project-hero-meta">
                         <div class="project-hero-tags">
-                            <span class="tag tag-robotics">Robotics</span>
-                            <span class="tag">Competition</span>
+                            <span class="tag tag-biomechatronics">Biomechatronics</span>
+                            <span class="tag">Research</span>
                         </div>
-                        <span style="color: rgba(255,255,255,0.8);">2023</span>
+                        <span style="color: rgba(255,255,255,0.8);">2024</span>
                     </div>
                 </div>
             </div>
@@ -115,49 +115,49 @@
                     <div class="overview-main">
                         <h2>Overview</h2>
                         <p>
-                            Designed and built a competition robot for FIRST Tech Challenge, focusing on a custom 
-                            drivetrain and manipulator systems. The robot needed to be fast, reliable, and capable 
-                            of multiple game tasks including object manipulation and scoring.
+                            Developed a research device for studying human-machine interfaces with real-time motion 
+                            tracking and feedback systems. This project was part of research at the MIT Media Lab 
+                            Biomechatronics group, focusing on understanding how humans interact with assistive devices.
                         </p>
                         <p>
-                            This project was completed as part of a team, with me leading the mechanical design 
-                            and drivetrain development. The final robot achieved 2x faster movement speed compared 
-                            to our previous season's design while maintaining reliability throughout the competition.
+                            The device integrates multiple sensors including IMUs, force sensors, and EMG electrodes 
+                            to capture comprehensive motion and muscle activity data. The system achieved 95% accuracy 
+                            in motion tracking compared to gold-standard motion capture systems.
                         </p>
                         <h3>Key Achievements</h3>
                         <ul>
-                            <li>2x faster movement speed vs. previous iteration</li>
-                            <li>Top 8 finish at regional competition</li>
-                            <li>Custom 6-wheel drivetrain with mecanum wheels</li>
-                            <li>Dual manipulator system for game objects</li>
+                            <li>95% accuracy in motion tracking</li>
+                            <li>Real-time data acquisition at 100Hz</li>
+                            <li>Multi-modal sensor fusion</li>
+                            <li>Used in 3 published research studies</li>
                         </ul>
                     </div>
                     <div class="overview-sidebar">
                         <h3>Project Details</h3>
                         <div class="overview-item">
                             <div class="overview-item-label">Role</div>
-                            <div class="overview-item-value">Lead Mechanical Designer</div>
+                            <div class="overview-item-value">Research Assistant</div>
                         </div>
                         <div class="overview-item">
                             <div class="overview-item-label">Timeline</div>
-                            <div class="overview-item-value">4 months</div>
+                            <div class="overview-item-value">8 months</div>
                         </div>
                         <div class="overview-item">
                             <div class="overview-item-label">Tools</div>
                             <ul class="overview-item-list">
-                                <li>OnShape (CAD)</li>
-                                <li>CNC Machining</li>
-                                <li>3D Printing</li>
-                                <li>Laser Cutting</li>
+                                <li>Fusion 360 (CAD)</li>
+                                <li>Python (Data Processing)</li>
+                                <li>Arduino (Control)</li>
+                                <li>MATLAB (Analysis)</li>
                             </ul>
                         </div>
                         <div class="overview-item">
                             <div class="overview-item-label">Technologies</div>
                             <ul class="overview-item-list">
-                                <li>Robot Design</li>
-                                <li>Drivetrain Systems</li>
-                                <li>Mechanism Design</li>
-                                <li>Rapid Prototyping</li>
+                                <li>Sensor Integration</li>
+                                <li>Signal Processing</li>
+                                <li>Biomechanics</li>
+                                <li>Data Acquisition</li>
                             </ul>
                         </div>
                     </div>
@@ -165,20 +165,20 @@
 
                 <div class="key-metrics">
                     <div class="metric-card">
-                        <div class="metric-card-value">2.5 m/s</div>
-                        <div class="metric-card-label">Max Speed</div>
+                        <div class="metric-card-value">95%</div>
+                        <div class="metric-card-label">Tracking Accuracy</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-card-value">18 kg</div>
-                        <div class="metric-card-label">Total Weight</div>
+                        <div class="metric-card-value">100 Hz</div>
+                        <div class="metric-card-label">Sampling Rate</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-card-value">Top 8</div>
-                        <div class="metric-card-label">Competition Finish</div>
+                        <div class="metric-card-value">8</div>
+                        <div class="metric-card-label">Sensor Channels</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-card-value">6</div>
-                        <div class="metric-card-label">Wheel Drive</div>
+                        <div class="metric-card-value">3</div>
+                        <div class="metric-card-label">Research Studies</div>
                     </div>
                 </div>
             </div>
@@ -191,47 +191,35 @@
                     <div class="process-timeline">
                         <div class="process-step">
                             <span class="process-step-number">1</span>
-                            <h3>Game Analysis</h3>
+                            <h3>Requirements Analysis</h3>
                             <p>
-                                Analyzed competition game rules and scoring opportunities. Identified key requirements: 
-                                fast movement, object manipulation, and autonomous capabilities.
+                                Defined sensor requirements based on research objectives. Identified need for 
+                                multi-modal sensing: motion (IMU), force (load cells), and muscle activity (EMG).
                             </p>
-                            <div class="process-step-image">
-                                <img src="https://via.placeholder.com/1200x675/1e40af/ffffff?text=Game+Analysis" alt="Game analysis" loading="lazy">
-                            </div>
                         </div>
                         <div class="process-step">
                             <span class="process-step-number">2</span>
-                            <h3>Drivetrain Design</h3>
+                            <h3>Mechanical Design</h3>
                             <p>
-                                Designed custom 6-wheel mecanum drivetrain for omnidirectional movement. Optimized 
-                                wheel placement and gear ratios for maximum speed and maneuverability.
+                                Designed wearable device housing with proper sensor placement. Ensured minimal 
+                                interference with natural movement while maintaining sensor contact.
                             </p>
-                            <div class="process-step-image">
-                                <img src="https://via.placeholder.com/1200x675/3b82f6/ffffff?text=Drivetrain+Design" alt="Drivetrain design" loading="lazy">
-                            </div>
                         </div>
                         <div class="process-step">
                             <span class="process-step-number">3</span>
-                            <h3>Manipulator Systems</h3>
+                            <h3>Sensor Integration</h3>
                             <p>
-                                Developed dual manipulator system: one for large objects, one for precision tasks. 
-                                Used four-bar linkages and custom grippers optimized for game objects.
+                                Integrated multiple sensor types with synchronized data acquisition. Developed 
+                                calibration procedures for accurate measurements.
                             </p>
-                            <div class="process-step-image">
-                                <img src="https://via.placeholder.com/1200x675/14b8a6/ffffff?text=Manipulator+Design" alt="Manipulator design" loading="lazy">
-                            </div>
                         </div>
                         <div class="process-step">
                             <span class="process-step-number">4</span>
-                            <h3>Prototyping & Testing</h3>
+                            <h3>Validation & Testing</h3>
                             <p>
-                                Built multiple iterations, testing speed, reliability, and game performance. Refined 
-                                designs based on competition practice matches.
+                                Validated system against gold-standard motion capture. Conducted user studies 
+                                to verify accuracy and usability in real-world conditions.
                             </p>
-                            <div class="process-step-image">
-                                <img src="https://via.placeholder.com/1200x675/10b981/ffffff?text=Testing+Phase" alt="Testing phase" loading="lazy">
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -251,28 +239,28 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Total Weight</td>
-                                <td>18 kg</td>
+                                <td>Sampling Rate</td>
+                                <td>100 Hz</td>
                             </tr>
                             <tr>
-                                <td>Dimensions</td>
-                                <td>45 × 45 × 30 cm</td>
+                                <td>Sensor Channels</td>
+                                <td>8 (3 IMU + 2 Force + 3 EMG)</td>
                             </tr>
                             <tr>
-                                <td>Drivetrain</td>
-                                <td>6-wheel mecanum</td>
+                                <td>Accuracy</td>
+                                <td>95% vs. motion capture</td>
                             </tr>
                             <tr>
-                                <td>Max Speed</td>
-                                <td>2.5 m/s</td>
+                                <td>Data Storage</td>
+                                <td>Onboard SD card (32GB)</td>
                             </tr>
                             <tr>
-                                <td>Manipulators</td>
-                                <td>2 (large object + precision)</td>
+                                <td>Battery Life</td>
+                                <td>4 hours continuous</td>
                             </tr>
                             <tr>
-                                <td>Control System</td>
-                                <td>REV Control Hub</td>
+                                <td>Weight</td>
+                                <td>250g</td>
                             </tr>
                         </tbody>
                     </table>
@@ -287,21 +275,21 @@
                     
                     <div class="iteration-card">
                         <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 1: Standard Drivetrain</h3>
+                            <h3 class="iteration-title">Iteration 1: Single Sensor Type</h3>
                         </div>
-                        <p><strong>What Changed:</strong> Traditional 4-wheel tank drive</p>
-                        <p><strong>Why:</strong> Simple and reliable baseline</p>
-                        <p><strong>Result:</strong> Functional but slow, limited maneuverability</p>
+                        <p><strong>What Changed:</strong> Initial prototype with IMU only</p>
+                        <p><strong>Why:</strong> Proof of concept for motion tracking</p>
+                        <p><strong>Result:</strong> 75% accuracy, insufficient for research needs</p>
                     </div>
 
                     <div class="iteration-card">
                         <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 2: Mecanum Upgrade</h3>
+                            <h3 class="iteration-title">Iteration 2: Multi-Modal Sensing</h3>
                         </div>
-                        <p><strong>What Changed:</strong> Upgraded to 6-wheel mecanum drivetrain</p>
-                        <p><strong>Why:</strong> Need for omnidirectional movement and faster gameplay</p>
-                        <p><strong>Tradeoff:</strong> Increased complexity and cost</p>
-                        <p><strong>Result:</strong> 2x faster movement, better positioning, top 8 finish</p>
+                        <p><strong>What Changed:</strong> Added force sensors and EMG electrodes</p>
+                        <p><strong>Why:</strong> Need for comprehensive biomechanical data</p>
+                        <p><strong>Tradeoff:</strong> Increased complexity and power consumption</p>
+                        <p><strong>Result:</strong> 95% accuracy, suitable for research applications</p>
                     </div>
                 </div>
             </div>
@@ -313,13 +301,10 @@
                     <h2>Media Gallery</h2>
                     <div class="gallery-grid">
                         <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/1e40af/ffffff?text=Robot+in+Competition" alt="Robot in competition" loading="lazy">
+                            <img src="https://via.placeholder.com/1200x675/065f46/ffffff?text=Device+in+Use" alt="Device in use" loading="lazy">
                         </div>
                         <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/3b82f6/ffffff?text=Drivetrain+Detail" alt="Drivetrain detail" loading="lazy">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/14b8a6/ffffff?text=Manipulator+System" alt="Manipulator system" loading="lazy">
+                            <img src="https://via.placeholder.com/1200x675/10b981/ffffff?text=Sensor+Placement" alt="Sensor placement" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -329,10 +314,10 @@
         <section class="section">
             <div class="container">
                 <div class="project-navigation">
-                    <a href="project-1.html" class="project-nav-link prev">
+                    <a href="FTC-23.html" class="project-nav-link prev">
                         ← Previous Project
                     </a>
-                    <a href="project-3.html" class="project-nav-link next">
+                    <a href="ES-51.html" class="project-nav-link next">
                         Next Project →
                     </a>
                 </div>
@@ -350,9 +335,9 @@
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#projects">Projects</a></li>
-                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="../home.html">Home</a></li>
+                        <li><a href="../home.html#projects">Projects</a></li>
+                        <li><a href="../resume.html">Resume</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -379,6 +364,6 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

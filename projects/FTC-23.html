@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Alex Ko's Maker Portfolio">
     <title>Alex Ko's Maker Portfolio</title>
-    <link rel="icon" type="image/png" href="assets/images/icons/site_logo_dark.png" id="favicon">
+    <link rel="icon" type="image/png" href="../assets/images/icons/site_logo_dark.png" id="favicon">
     <script>
         (function () {
             var favicon = document.getElementById('favicon');
@@ -15,8 +15,8 @@
             var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
             var setIcon = function (event) {
                 favicon.href = event.matches
-                    ? 'assets/images/icons/site_logo_light.png'
-                    : 'assets/images/icons/site_logo_dark.png';
+                    ? '../assets/images/icons/site_logo_light.png'
+                    : '../assets/images/icons/site_logo_dark.png';
             };
             setIcon(darkQuery);
             if (darkQuery.addEventListener) {
@@ -32,23 +32,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/project.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/project.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
-<body>
+<body data-load-reveal>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <header class="site-header" data-load-reveal>
+    <header class="site-header">
         <div class="header-container">
             <nav class="header-nav-left">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="resume.html" class="nav-link">Resume</a>
-                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="../home.html" class="nav-link">Home</a>
+                <a href="../resume.html" class="nav-link">Resume</a>
+                <a href="../home.html#projects" class="nav-link">Projects</a>
             </nav>
             <div class="header-title">
-                <a href="index.html" class="site-logo">Alex Ko's Maker Portfolio</a>
+                <a href="../home.html" class="site-logo">Alex Ko's Maker Portfolio</a>
             </div>
             <div class="header-social">
                 <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
@@ -73,35 +73,35 @@
                     <span></span>
                 </button>
                 <nav class="mobile-dropdown-menu">
-                    <a href="resume.html" class="nav-link">Resume</a>
-                    <a href="index.html#projects" class="nav-link">Projects</a>
+                    <a href="../resume.html" class="nav-link">Resume</a>
+                    <a href="../home.html#projects" class="nav-link">Projects</a>
                 </nav>
             </div>
         </div>
     </header>
 
     <main id="main-content">
-        <nav class="breadcrumb" aria-label="Breadcrumb" data-load-reveal>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
             <div class="breadcrumb-container">
                 <div class="breadcrumb-links">
-                    <a href="index.html">Home</a>
+                    <a href="../home.html">Home</a>
                     <span class="breadcrumb-separator">/</span>
-                    <a href="index.html#projects">Projects</a>
+                    <a href="../home.html#projects">Projects</a>
                     <span class="breadcrumb-separator">/</span>
-                    <span>Custom Actuator Design</span>
+                    <span>FTC Competition Robot</span>
                 </div>
             </div>
         </nav>
 
-        <section class="project-hero" data-load-reveal>
-            <img src="https://via.placeholder.com/1920x1080/92400e/ffffff?text=Custom+Actuator+Design" alt="Custom Actuator Design" class="project-hero-image" loading="eager">
+        <section class="project-hero">
+            <img src="https://via.placeholder.com/1920x1080/1e40af/ffffff?text=FTC+Competition+Robot" alt="FTC Competition Robot" class="project-hero-image" loading="eager">
             <div class="project-hero-content">
                 <div class="container">
-                    <h1 class="project-hero-title">Custom Actuator Design</h1>
+                    <h1 class="project-hero-title">FTC Competition Robot</h1>
                     <div class="project-hero-meta">
                         <div class="project-hero-tags">
-                            <span class="tag tag-prototyping">Prototyping</span>
-                            <span class="tag">Mechanical Design</span>
+                            <span class="tag tag-robotics">Robotics</span>
+                            <span class="tag">Competition</span>
                         </div>
                         <span style="color: rgba(255,255,255,0.8);">2023</span>
                     </div>
@@ -115,49 +115,49 @@
                     <div class="overview-main">
                         <h2>Overview</h2>
                         <p>
-                            Designed and prototyped a high-torque, compact actuator system for space-constrained 
-                            robotic applications. The challenge was to achieve high torque output while maintaining 
-                            a small form factor and low cost.
+                            Designed and built a competition robot for FIRST Tech Challenge, focusing on a custom 
+                            drivetrain and manipulator systems. The robot needed to be fast, reliable, and capable 
+                            of multiple game tasks including object manipulation and scoring.
                         </p>
                         <p>
-                            Through careful gear design and material selection, the actuator achieved the required 
-                            torque specifications while reducing unit cost by $50 compared to off-the-shelf alternatives. 
-                            The design has been used in multiple robotics projects.
+                            This project was completed as part of a team, with me leading the mechanical design 
+                            and drivetrain development. The final robot achieved 2x faster movement speed compared 
+                            to our previous season's design while maintaining reliability throughout the competition.
                         </p>
                         <h3>Key Achievements</h3>
                         <ul>
-                            <li>$50 cost reduction per unit</li>
-                            <li>15 Nm torque output in compact package</li>
-                            <li>Modular design for easy integration</li>
-                            <li>Validated through 1000+ hour testing</li>
+                            <li>2x faster movement speed vs. previous iteration</li>
+                            <li>Top 8 finish at regional competition</li>
+                            <li>Custom 6-wheel drivetrain with mecanum wheels</li>
+                            <li>Dual manipulator system for game objects</li>
                         </ul>
                     </div>
                     <div class="overview-sidebar">
                         <h3>Project Details</h3>
                         <div class="overview-item">
                             <div class="overview-item-label">Role</div>
-                            <div class="overview-item-value">Designer & Prototyper</div>
+                            <div class="overview-item-value">Lead Mechanical Designer</div>
                         </div>
                         <div class="overview-item">
                             <div class="overview-item-label">Timeline</div>
-                            <div class="overview-item-value">3 months</div>
+                            <div class="overview-item-value">4 months</div>
                         </div>
                         <div class="overview-item">
                             <div class="overview-item-label">Tools</div>
                             <ul class="overview-item-list">
-                                <li>SolidWorks (CAD)</li>
+                                <li>OnShape (CAD)</li>
                                 <li>CNC Machining</li>
                                 <li>3D Printing</li>
-                                <li>Torque Testing</li>
+                                <li>Laser Cutting</li>
                             </ul>
                         </div>
                         <div class="overview-item">
                             <div class="overview-item-label">Technologies</div>
                             <ul class="overview-item-list">
-                                <li>Gear Design</li>
-                                <li>Actuator Systems</li>
-                                <li>Mechanical Design</li>
-                                <li>Prototyping</li>
+                                <li>Robot Design</li>
+                                <li>Drivetrain Systems</li>
+                                <li>Mechanism Design</li>
+                                <li>Rapid Prototyping</li>
                             </ul>
                         </div>
                     </div>
@@ -165,20 +165,20 @@
 
                 <div class="key-metrics">
                     <div class="metric-card">
-                        <div class="metric-card-value">15 Nm</div>
-                        <div class="metric-card-label">Torque Output</div>
+                        <div class="metric-card-value">2.5 m/s</div>
+                        <div class="metric-card-label">Max Speed</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-card-value">45 mm</div>
-                        <div class="metric-card-label">Diameter</div>
+                        <div class="metric-card-value">18 kg</div>
+                        <div class="metric-card-label">Total Weight</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-card-value">$50</div>
-                        <div class="metric-card-label">Cost Savings</div>
+                        <div class="metric-card-value">Top 8</div>
+                        <div class="metric-card-label">Competition Finish</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-card-value">1000+</div>
-                        <div class="metric-card-label">Test Hours</div>
+                        <div class="metric-card-value">6</div>
+                        <div class="metric-card-label">Wheel Drive</div>
                     </div>
                 </div>
             </div>
@@ -191,35 +191,47 @@
                     <div class="process-timeline">
                         <div class="process-step">
                             <span class="process-step-number">1</span>
-                            <h3>Requirements & Analysis</h3>
+                            <h3>Game Analysis</h3>
                             <p>
-                                Defined specifications: 15 Nm torque, 45mm max diameter, cost under $100. Analyzed 
-                                existing solutions to identify improvement opportunities.
+                                Analyzed competition game rules and scoring opportunities. Identified key requirements: 
+                                fast movement, object manipulation, and autonomous capabilities.
                             </p>
+                            <div class="process-step-image">
+                                <img src="https://via.placeholder.com/1200x675/1e40af/ffffff?text=Game+Analysis" alt="Game analysis" loading="lazy">
+                            </div>
                         </div>
                         <div class="process-step">
                             <span class="process-step-number">2</span>
-                            <h3>Gear Design</h3>
+                            <h3>Drivetrain Design</h3>
                             <p>
-                                Designed custom planetary gear system for high torque density. Optimized gear ratios 
-                                and tooth profiles for efficiency and manufacturability.
+                                Designed custom 6-wheel mecanum drivetrain for omnidirectional movement. Optimized 
+                                wheel placement and gear ratios for maximum speed and maneuverability.
                             </p>
+                            <div class="process-step-image">
+                                <img src="https://via.placeholder.com/1200x675/3b82f6/ffffff?text=Drivetrain+Design" alt="Drivetrain design" loading="lazy">
+                            </div>
                         </div>
                         <div class="process-step">
                             <span class="process-step-number">3</span>
-                            <h3>Prototyping</h3>
+                            <h3>Manipulator Systems</h3>
                             <p>
-                                Built multiple iterations using 3D printing and CNC machining. Tested torque output, 
-                                efficiency, and durability under various load conditions.
+                                Developed dual manipulator system: one for large objects, one for precision tasks. 
+                                Used four-bar linkages and custom grippers optimized for game objects.
                             </p>
+                            <div class="process-step-image">
+                                <img src="https://via.placeholder.com/1200x675/14b8a6/ffffff?text=Manipulator+Design" alt="Manipulator design" loading="lazy">
+                            </div>
                         </div>
                         <div class="process-step">
                             <span class="process-step-number">4</span>
-                            <h3>Optimization</h3>
+                            <h3>Prototyping & Testing</h3>
                             <p>
-                                Refined design based on test results. Reduced part count and simplified assembly 
-                                process to lower manufacturing cost while maintaining performance.
+                                Built multiple iterations, testing speed, reliability, and game performance. Refined 
+                                designs based on competition practice matches.
                             </p>
+                            <div class="process-step-image">
+                                <img src="https://via.placeholder.com/1200x675/10b981/ffffff?text=Testing+Phase" alt="Testing phase" loading="lazy">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -239,32 +251,28 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Torque Output</td>
-                                <td>15 Nm</td>
+                                <td>Total Weight</td>
+                                <td>18 kg</td>
                             </tr>
                             <tr>
-                                <td>Max Diameter</td>
-                                <td>45 mm</td>
+                                <td>Dimensions</td>
+                                <td>45 × 45 × 30 cm</td>
                             </tr>
                             <tr>
-                                <td>Length</td>
-                                <td>60 mm</td>
+                                <td>Drivetrain</td>
+                                <td>6-wheel mecanum</td>
                             </tr>
                             <tr>
-                                <td>Gear Ratio</td>
-                                <td>50:1</td>
+                                <td>Max Speed</td>
+                                <td>2.5 m/s</td>
                             </tr>
                             <tr>
-                                <td>Efficiency</td>
-                                <td>85%</td>
+                                <td>Manipulators</td>
+                                <td>2 (large object + precision)</td>
                             </tr>
                             <tr>
-                                <td>Weight</td>
-                                <td>180g</td>
-                            </tr>
-                            <tr>
-                                <td>Cost</td>
-                                <td>$75/unit</td>
+                                <td>Control System</td>
+                                <td>REV Control Hub</td>
                             </tr>
                         </tbody>
                     </table>
@@ -279,21 +287,21 @@
                     
                     <div class="iteration-card">
                         <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 1: Standard Gearbox</h3>
+                            <h3 class="iteration-title">Iteration 1: Standard Drivetrain</h3>
                         </div>
-                        <p><strong>What Changed:</strong> Used off-the-shelf gearbox components</p>
-                        <p><strong>Why:</strong> Quick prototype to validate concept</p>
-                        <p><strong>Result:</strong> Met torque requirements but too expensive ($125/unit)</p>
+                        <p><strong>What Changed:</strong> Traditional 4-wheel tank drive</p>
+                        <p><strong>Why:</strong> Simple and reliable baseline</p>
+                        <p><strong>Result:</strong> Functional but slow, limited maneuverability</p>
                     </div>
 
                     <div class="iteration-card">
                         <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 2: Custom Design</h3>
+                            <h3 class="iteration-title">Iteration 2: Mecanum Upgrade</h3>
                         </div>
-                        <p><strong>What Changed:</strong> Designed custom planetary gear system with optimized geometry</p>
-                        <p><strong>Why:</strong> Need to reduce cost while maintaining performance</p>
-                        <p><strong>Tradeoff:</strong> Longer design time, required custom tooling</p>
-                        <p><strong>Result:</strong> $50 cost reduction ($75/unit), same performance, validated through testing</p>
+                        <p><strong>What Changed:</strong> Upgraded to 6-wheel mecanum drivetrain</p>
+                        <p><strong>Why:</strong> Need for omnidirectional movement and faster gameplay</p>
+                        <p><strong>Tradeoff:</strong> Increased complexity and cost</p>
+                        <p><strong>Result:</strong> 2x faster movement, better positioning, top 8 finish</p>
                     </div>
                 </div>
             </div>
@@ -305,13 +313,13 @@
                     <h2>Media Gallery</h2>
                     <div class="gallery-grid">
                         <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/92400e/ffffff?text=Actuator+Assembly" alt="Actuator assembly" loading="lazy">
+                            <img src="https://via.placeholder.com/1200x675/1e40af/ffffff?text=Robot+in+Competition" alt="Robot in competition" loading="lazy">
                         </div>
                         <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/f97316/ffffff?text=Gear+System+Detail" alt="Gear system detail" loading="lazy">
+                            <img src="https://via.placeholder.com/1200x675/3b82f6/ffffff?text=Drivetrain+Detail" alt="Drivetrain detail" loading="lazy">
                         </div>
                         <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/10b981/ffffff?text=Torque+Testing+Setup" alt="Torque testing setup" loading="lazy">
+                            <img src="https://via.placeholder.com/1200x675/14b8a6/ffffff?text=Manipulator+System" alt="Manipulator system" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -321,11 +329,11 @@
         <section class="section">
             <div class="container">
                 <div class="project-navigation">
-                    <a href="project-3.html" class="project-nav-link prev">
+                    <a href="MediaLab.html" class="project-nav-link prev">
                         ← Previous Project
                     </a>
-                    <a href="index.html#projects" class="project-nav-link next">
-                        Back to Projects →
+                    <a href="SladeLab.html" class="project-nav-link next">
+                        Next Project →
                     </a>
                 </div>
             </div>
@@ -342,9 +350,9 @@
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#projects">Projects</a></li>
-                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="../home.html">Home</a></li>
+                        <li><a href="../home.html#projects">Projects</a></li>
+                        <li><a href="../resume.html">Resume</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -371,6 +379,6 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

@@ -68,9 +68,29 @@
     transition: font-size 0.3s ease, line-height 0.3s ease;
 }
 
+/* Force "Hi, I'm Alex Ko, a" to always be line 1 */
+.hero-title-line1 {
+    display: block;        /* forces line break after it */
+    white-space: nowrap;   /* prevents wrapping */
+}
+
+/* "Mechanical Engineer" can wrap to 1 or 2 lines as needed */
+.hero-title-line2 {
+    display: block;        /* starts on line 2 */
+    white-space: normal;   /* allow wrapping */
+}
+
+/* Optional safety for very small screens */
+@media (max-width: 420px) {
+    .hero-title-line1 {
+        white-space: normal;
+    }
+}
+
 .name-highlight {
-    color: var(--text);
+    color: var(--accent);
     font-weight: 700;
+    text-decoration: none;
 }
 
 .hero-intro {
@@ -78,6 +98,7 @@
     line-height: 1.6;
     color: var(--text);
     margin-bottom: var(--spacing-sm);
+    max-width: 56ch;
     transition: font-size 0.3s ease, line-height 0.3s ease;
 }
 
@@ -86,7 +107,44 @@
     line-height: 1.5;
     color: var(--text-light);
     margin-bottom: var(--spacing-md);
+    max-width: 52ch;
     transition: font-size 0.3s ease, line-height 0.3s ease;
+}
+
+/* Rules to deal with weird hero text compression and spacing gaps */
+/* Shared hero text compression rules (applies to both ranges) */
+@media (min-width: 790px) and (max-width: 1950px) {
+  /* Keep the headline from getting too wide */
+  .hero h1,
+  .hero-title {
+    max-width: 20ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Paragraph sizing */
+  .hero-intro {
+    font-size: clamp(1.10rem, 1.5vw, 1.22rem);
+    line-height: 1.75;
+  }
+
+  .hero-cta-text {
+    max-width: 44ch;
+    font-size: clamp(1.02rem, 1.25vw, 1.12rem);
+    line-height: 1.6;
+  }
+}
+
+/* Range A: 790–1300 */
+@media (min-width: 790px) and (max-width: 1300px) {
+  .hero-content { max-width: 52ch; }
+  .hero-intro   { max-width: 38ch; }
+}
+
+/* Range B: 1300–1950 */
+@media (min-width: 1300px) and (max-width: 1950px) {
+  .hero-content { max-width: 62ch; }
+  .hero-intro   { max-width: 58ch; }
 }
 
 .hero-buttons {
@@ -117,7 +175,7 @@
 .btn-hero:hover {
     background: var(--accent-bright);
     border-color: var(--accent-bright);
-    transform: none;
+    transform: scale(1.08);
     box-shadow: none;
 }
 
@@ -281,7 +339,7 @@
 
 .projects-header {
     text-align: center;
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
 }
 
 .projects-header h2 {
@@ -298,7 +356,7 @@
 .projects-grid {
     display: flex;
     gap: var(--spacing-lg);
-    margin-top: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
     overflow-x: auto;
     overflow-y: hidden;
     scroll-behavior: auto; /* Changed to auto for smooth animation frame scrolling */
@@ -384,23 +442,37 @@
 }
 
 .project-card-content {
-    padding: var(--spacing-md);
+    padding: var(--spacing-xs) var(--spacing-md);
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 .project-card-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: var(--spacing-xs);
-    color: var(--text);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--text);
+  line-height: 1.3;
+
+  /* Clamp to 2 lines (standard + fallback) */
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  line-clamp: 2;              /* standard (newer browsers) */
+  -webkit-line-clamp: 2;      /* Safari/older Chrome fallback */
+  -webkit-box-orient: vertical;
+
+  /* keep card heights consistent */
+  min-height: calc(1.3em * 2);
 }
+
 
 .project-card-affiliation {
     align-self: flex-start;
     display: inline-flex;
-    margin-bottom: var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
     padding: 6px 10px;
     border-radius: 999px;
     font-size: 0.8125rem;
@@ -408,20 +480,26 @@
     color: var(--text);
     background: var(--surface-alt);
     border: 1px solid var(--border);
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .project-card-description {
     color: var(--text-light);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 0.35rem;
     flex: 1;
+    max-width: 42ch;
+    line-height: 1.45;
 }
 
 .project-card-metric {
     background: var(--background-alt);
     border-left: 2px solid var(--text);
-    padding: var(--spacing-xs) var(--spacing-sm);
+    padding: 0.35rem var(--spacing-sm);
     border-radius: var(--radius-sm);
-    margin: var(--spacing-sm) 0;
+    margin: 0.35rem 0;
     font-size: 0.875rem;
     box-shadow: none;
     transition: none;
@@ -439,6 +517,8 @@
     gap: var(--spacing-xs);
     color: var(--text);
     font-weight: 500;
+    white-space: nowrap;
+    flex: 0 0 auto;   /* don't shrink into wrapping */
 }
 
 .project-card-link:hover {
@@ -450,7 +530,7 @@
 .project-card-footer {
     margin-top: var(--spacing-sm);
     display: flex;
-    align-items: center;
+    align-items: flex-end; /*center;*/
     justify-content: space-between;
     gap: var(--spacing-sm);
     flex-wrap: nowrap;
@@ -459,13 +539,113 @@
 
 .project-card-footer .project-card-link {
     margin-top: 0;
+    white-space: nowrap;
+    flex: 0 0 auto;   /* keep link width */
 }
 
+/* Default: one line (right-aligned, JS overflow detection works) */
 .project-card-meta {
     margin-left: auto;
     color: var(--text-light);
     font-size: 0.875rem;
+
+    /* IMPORTANT: not a flex container */
+    display: block;
+    text-align: right;
+
     white-space: nowrap;
+    min-width: 0;
+    flex: 1 1 auto;
+
+    overflow: hidden; /* optional, prevents visible spill while measuring */
+}
+
+/* Only when JS adds the class: stack into two lines, right-aligned */
+.project-card-meta.meta-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.2;
+}
+
+/* If ANY card needs stacking, force stacking on ALL cards */
+.projects-grid.force-meta-stack .project-card-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.2;
+}
+
+.projects-grid.force-meta-stack .project-card-meta .meta-sep {
+    display: none;
+}
+
+.projects-grid.force-meta-stack .project-card-meta .meta-location,
+.projects-grid.force-meta-stack .project-card-meta .meta-dates {
+    display: block;
+}
+
+
+/* Hide the dot only in stacked mode */
+.project-card-meta.meta-stack .meta-sep {
+    display: none;
+}
+
+/* Make location + dates each take their own line in stacked mode */
+.project-card-meta.meta-stack .meta-location,
+.project-card-meta.meta-stack .meta-dates {
+    display: block;
+}
+
+/* Prevent flash of wrong layout before JS runs */
+.project-card-meta {
+    visibility: hidden;
+}
+
+html.meta-wrap-ready .project-card-meta {
+    visibility: visible;
+}
+
+html.meta-wrap-busy .project-card-meta {
+    visibility: hidden;
+}
+
+@media (max-width: 480px) {
+    .project-card-footer {
+        align-items: flex-start;
+    }
+
+    /* keep meta stacked and right-aligned */
+    .project-card-meta {
+        flex: 0 1 65%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* keep link + meta on same row, meta stays stacked */
+    .project-card-meta {
+        flex: 0 1 70%;
+    }
+
+    .project-card-meta .meta-sep {
+        display: none;
+    }
+
+    .hero-buttons {
+        margin-top: 0;              /* stop pushing buttons downward */
+    }
+
+    .hero-content {
+        min-height: auto;           /* optional: prevents extra vertical slack */
+    }
 }
 
 /* Horizontal scroll works on all screen sizes */
@@ -474,7 +654,7 @@
 /* Contact CTA Section */
 .contact-section {
     text-align: center;
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-xl) 0 var(--spacing-md);
     background: var(--background);
 }
 
@@ -489,6 +669,7 @@
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 52ch;
 }
 
 .contact-buttons {
