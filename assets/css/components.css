@@ -26,7 +26,7 @@
 .btn-primary:hover {
     background: var(--accent-bright);
     border-color: var(--accent-bright);
-    transform: none;
+    transform: scale(1.08);
     box-shadow: none;
 }
 
@@ -40,6 +40,7 @@
     background: var(--accent-bright);
     color: white;
     border-color: var(--accent-bright);
+    transform: scale(1.08);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -56,6 +57,7 @@
         background: rgba(255, 255, 255, 0.08);
         color: var(--text);
         border-color: var(--text);
+        transform: scale(1.08);
     }
 }
 
@@ -325,6 +327,7 @@
     height: 20px;
     stroke: currentColor;
     fill: none;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 /* Hide social icons and adjust layout on smaller screens */
@@ -382,6 +385,9 @@
     transition: color 0.2s ease;
     position: relative;
     font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    transform-origin: center;
 }
 
 .nav-link:hover {
@@ -397,6 +403,12 @@
 /* Simple hover effect - no underline animation */
 .nav-link:not(.active):hover {
     opacity: 0.7;
+    transform: scale(1.08);
+}
+
+.nav-link.active:hover {
+    opacity: 0.7;
+    transform: scale(1.08);
 }
 
 /* Mobile Dropdown Menu */
@@ -625,7 +637,7 @@
     align-items: center;
     justify-content: center;
     line-height: 1;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .footer-social svg {
@@ -633,6 +645,7 @@
     height: 24px;
     stroke: currentColor;
     fill: none;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .footer-social .icon-github {
@@ -642,6 +655,59 @@
 
 .footer-social a:hover {
     color: var(--text);
+    transform: scale(1.08);
+}
+
+.footer-social .social-linkedin:hover {
+    color: #0a66c2;
+}
+
+.social-linkedin {
+    font-family: "Avenir 95", "Avenir Next Heavy", "Avenir Next", Avenir, "SF Pro Text", system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-social .social-linkedin {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    line-height: 1;
+}
+
+.social-linkedin:hover {
+    color: #0a66c2;
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+.social-github:hover svg,
+.social-email:hover svg {
+    transform: scale(1.08);
+}
+
+.social-github:hover svg {
+    color: #501daf;
+}
+
+.social-email:hover svg {
+    color: #bb001b;
+}
+
+.footer-social .social-github:hover svg,
+.footer-social .social-email:hover svg {
+    transform: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    .social-github:hover svg {
+        color: #c06eff;
+    }
+
+    .social-email:hover svg {
+        color: #ea4335;
+    }
 }
 
 .footer-bottom {
