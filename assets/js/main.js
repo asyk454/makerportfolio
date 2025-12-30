@@ -26,6 +26,18 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('active');
         }
     });
+
+    // Reveal only the initially visible elements marked for load animation
+    const loadRevealItems = document.querySelectorAll('[data-load-reveal]');
+    if (loadRevealItems.length) {
+        window.requestAnimationFrame(() => {
+            loadRevealItems.forEach(item => {
+                item.classList.add('is-revealed');
+            });
+        });
+    }
+
+    // Theme follows system preference via CSS only
     
     // Mobile Dropdown Toggle
     const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
@@ -191,41 +203,19 @@ document.addEventListener('DOMContentLoaded', function() {
         let scrollSpeed = 1.0; // pixels per frame (slower by 1/3 from original 1.5)
         let isPaused = false;
         let animationId = null;
-        let originalSetWidth = 0;
-        
-        // Clone all cards to create seamless infinite loop
-        const originalCards = Array.from(projectsGrid.querySelectorAll('.project-card'));
-        if (originalCards.length > 0) {
-            // Only clone if not already cloned (check by counting)
-            const totalCards = projectsGrid.querySelectorAll('.project-card').length;
-            if (totalCards === originalCards.length) {
-                originalCards.forEach(card => {
-                    const clone = card.cloneNode(true);
-                    projectsGrid.appendChild(clone);
-                });
-            }
-        }
+        let recycleWidth = 0;
         
         // Set scroll behavior to auto for smooth animation
         projectsGrid.style.scrollBehavior = 'auto';
         
-        // Calculate the width of one complete set of cards (including gaps)
-        // This is where the duplicate set starts, which is where we should reset
-        let oneSetWidth = 0;
-        setTimeout(() => {
-            const allCards = projectsGrid.querySelectorAll('.project-card');
-            const originalCount = originalCards.length;
-            if (allCards.length >= originalCount * 2 && originalCount > 0) {
-                // Measure the width from the start of the first card to the start of its duplicate
-                const firstCard = allCards[0];
-                const firstDuplicateCard = allCards[originalCount];
-                if (firstCard && firstDuplicateCard) {
-                    const firstCardLeft = firstCard.offsetLeft;
-                    const duplicateCardLeft = firstDuplicateCard.offsetLeft;
-                    oneSetWidth = duplicateCardLeft - firstCardLeft;
-                }
-            }
-        }, 200);
+        const updateScrollLimits = () => {
+            const firstCard = projectsGrid.querySelector('.project-card');
+            const gridStyles = window.getComputedStyle(projectsGrid);
+            const gap = parseFloat(gridStyles.columnGap || gridStyles.gap || 0);
+            recycleWidth = firstCard ? firstCard.offsetWidth + gap : 0;
+        };
+        setTimeout(updateScrollLimits, 200);
+        window.addEventListener('resize', debounce(updateScrollLimits, 150));
         
         function autoScroll() {
             if (isPaused) {
@@ -236,12 +226,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Move forward
             projectsGrid.scrollLeft += scrollSpeed;
             
-            // If we've scrolled past one complete set, seamlessly reset
-            // Reset to the equivalent position in the first set (accounting for the gap)
-            if (oneSetWidth > 0 && projectsGrid.scrollLeft >= oneSetWidth) {
-                // Reset by subtracting exactly one set's width
-                // This maintains the exact same visual position because cards are duplicated
-                projectsGrid.scrollLeft = projectsGrid.scrollLeft - oneSetWidth;
+            // Seamless loop by recycling the first card to the end
+            if (recycleWidth > 0 && projectsGrid.scrollLeft >= recycleWidth) {
+                const firstCard = projectsGrid.querySelector('.project-card');
+                if (firstCard) {
+                    projectsGrid.appendChild(firstCard);
+                    projectsGrid.scrollLeft -= recycleWidth;
+                }
             }
             
             animationId = requestAnimationFrame(autoScroll);
@@ -282,4 +273,3 @@ function debounce(func, wait) {
         timeout = setTimeout(later, wait);
     };
 }
-

@@ -45,14 +45,18 @@
     
     .hero-layout {
         grid-template-columns: 1fr;
-        gap: var(--spacing-md);
+        gap: var(--hero-gap);
         text-align: center;
     }
     
-    .hero-headshot {
-        max-width: 300px;
+    .hero-photo {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+        min-height: 0; /* overrides desktop min-height: 480px */
         margin: 0 auto;
     }
+
     
     .hero h1 {
         font-size: 2rem;
@@ -280,12 +284,13 @@
     
     .hero-layout {
         grid-template-columns: 1fr;
-        gap: var(--spacing-md);
+        gap: var(--hero-gap);
         text-align: center;
     }
     
-    .hero-headshot {
-        max-width: 350px;
+    .hero-photo {
+        width: min(100%, var(--hero-image-crop));
+        height: var(--hero-image-size);
         margin: 0 auto;
     }
     
@@ -388,16 +393,17 @@
     
     /* Hero */
     .hero-layout {
-        grid-template-columns: 1fr 1.5fr;
-        gap: var(--spacing-md);
+        grid-template-columns: minmax(240px, var(--hero-image-crop)) minmax(0, 1fr);
+        gap: var(--hero-gap);
     }
     
     .hero h1 {
         font-size: 2.75rem;
     }
     
-    .hero-headshot {
-        max-width: 100%;
+    .hero-photo {
+        width: min(100%, var(--hero-image-crop));
+        height: var(--hero-image-height);
     }
     
     /* Project Cards - Horizontal scroll */
@@ -539,8 +545,8 @@
     
     /* Hero */
     .hero-layout {
-        grid-template-columns: 1fr 1.5fr;
-        gap: var(--spacing-md);
+        grid-template-columns: minmax(280px, 600px) minmax(0, 1fr);
+        gap: var(--hero-gap);
     }
     
     .hero h1 {
@@ -602,7 +608,7 @@
     
     /* Hero */
     .hero {
-        min-height: 90vh;
+        min-height: auto;
     }
     
     .hero h1 {
@@ -728,7 +734,7 @@
    ============================================ */
 @media (max-width: 1023px) and (orientation: landscape) {
     .hero {
-        min-height: 100vh;
+        /*min-height: 80vh;    disabled for now*/
         padding: var(--spacing-md) var(--spacing-lg);
     }
     
@@ -838,4 +844,3 @@
         border: 1px solid #ccc;
     }
 }
-

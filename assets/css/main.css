@@ -18,11 +18,15 @@
     --accent-alt: #1e3a8a;
     --background: #ffffff;
     --background-alt: #fafafa;
+    --surface: #ffffff;
+    --surface-alt: #f5f5f5;
+    --badge-bg: rgba(255, 255, 255, 0.95);
     --text: #000000;
     --text-light: #666666;
     --success: #000000;
     --border: #e5e5e5;
     --border-light: #f0f0f0;
+    color-scheme: light;
     
     /* Typography */
     --font-heading: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -47,6 +51,56 @@
     --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+:root[data-theme="dark"] {
+    --primary: #f5f5f5;
+    --primary-dark: #d9dbe2;
+    --accent: #7aa2ff;
+    --accent-bright: #8cb4ff;
+    --accent-alt: #6f96ff;
+    --background: #0b0d12;
+    --background-alt: #11141d;
+    --surface: #0f1117;
+    --surface-alt: #151a24;
+    --badge-bg: rgba(15, 18, 26, 0.9);
+    --text: #f4f6fb;
+    --text-light: #b8c0cc;
+    --success: #a7f3d0;
+    --border: #2a3240;
+    --border-light: #1f2633;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 6px 14px rgba(0, 0, 0, 0.4);
+    color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]):not([data-theme="dark"]) {
+        --primary: #f5f5f5;
+        --primary-dark: #d9dbe2;
+        --accent: #7aa2ff;
+        --accent-bright: #8cb4ff;
+        --accent-alt: #6f96ff;
+        --background: #0b0d12;
+        --background-alt: #11141d;
+        --surface: #0f1117;
+        --surface-alt: #151a24;
+        --badge-bg: rgba(15, 18, 26, 0.9);
+        --text: #f4f6fb;
+        --text-light: #b8c0cc;
+        --success: #a7f3d0;
+        --border: #2a3240;
+        --border-light: #1f2633;
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+        --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.35);
+        --shadow-lg: 0 6px 14px rgba(0, 0, 0, 0.4);
+        color-scheme: dark;
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -57,6 +111,29 @@ body {
     line-height: 1.6;
     color: var(--text);
     background-color: var(--background);
+}
+
+/* Load reveal for above-the-fold content (JS adds .reveal-ready and .is-revealed) */
+html.reveal-ready [data-load-reveal] {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 1000ms cubic-bezier(0.22, 0.61, 0.36, 1),
+        opacity 500ms ease;
+    transition-delay: 100ms;
+    will-change: clip-path, opacity;
+}
+
+html.reveal-ready [data-load-reveal].is-revealed {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html.reveal-ready [data-load-reveal] {
+        transition: none;
+        clip-path: none;
+        opacity: 1;
+    }
 }
 
 /* Typography Scale (1.25 modular scale) */
@@ -133,18 +210,18 @@ img {
 /* Skip Link for Accessibility */
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: 0;
     left: 0;
     background: var(--primary);
-    color: white;
+    color: var(--background);
     padding: 8px;
     text-decoration: none;
     z-index: 100;
+    transform: translateY(-200%);
 }
 
 .skip-link:focus {
-    top: 0;
+    transform: translateY(0);
 }
 
 /* Base responsive adjustments - more specific overrides in responsive.css */
-
