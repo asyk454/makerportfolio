@@ -1,0 +1,841 @@
+/* ============================================
+   Responsive Design - All Screen Sizes
+   ============================================ */
+
+/* CSS Custom Properties for dynamic viewport height */
+:root {
+    --vh: 1vh;
+}
+
+/* Breakpoints:
+   - Phone: < 480px
+   - Large Phone: 480px - 767px
+   - Tablet: 768px - 1023px
+   - Laptop: 1024px - 1439px
+   - Desktop: 1440px - 1919px
+   - TV/Large: >= 1920px
+*/
+
+/* ============================================
+   PHONE (< 480px)
+   ============================================ */
+@media (max-width: 479px) {
+    /* Typography */
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+    h4 { font-size: 1.125rem; }
+    
+    /* Spacing */
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .section,
+    .section-alt {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-lg) 0;
+        margin-top: 60px;
+    }
+    
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    .hero-headshot {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .hero-intro {
+        font-size: 0.875rem;
+    }
+    
+    .hero-buttons {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.875rem;
+    }
+    
+    .btn-large {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    
+    /* Project Cards */
+    .project-card-image {
+        height: 200px;
+    }
+    
+    .project-card-title {
+        font-size: 1.25rem;
+    }
+    
+    /* About Section */
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+    
+    /* Header adjustments */
+    .site-header {
+        border-bottom-width: 1px;
+    }
+    
+    .mobile-menu {
+        top: 70px;
+    }
+    
+    .header-container {
+        gap: var(--spacing-sm);
+    }
+    
+    .header-nav-left,
+    .header-social {
+        display: none;
+    }
+    
+    .header-title {
+        justify-self: start;
+    }
+    
+    .site-logo {
+        font-size: 1.5rem;
+    }
+    
+    /* Navigation */
+    .header-container {
+        height: 70px;
+        padding: 0 var(--spacing-sm);
+        grid-template-columns: 1fr auto;
+        justify-items: start;
+    }
+    
+    .mobile-dropdown {
+        justify-self: end;
+    }
+    
+    .site-logo {
+        font-size: 1.5rem;
+    }
+    
+    .site-header {
+        border-bottom-width: 1px;
+    }
+    
+    .mobile-menu {
+        top: 60px;
+        padding: var(--spacing-md);
+    }
+    
+    .mobile-menu .nav-link {
+        padding: var(--spacing-md) 0;
+        font-size: 1rem;
+    }
+    
+    .mobile-menu-toggle {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+    
+    .mobile-menu-toggle span {
+        width: 22px;
+        height: 2px;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    /* Project Hero */
+    .project-hero {
+        height: 40vh;
+        min-height: 250px;
+        margin-top: 60px;
+    }
+    
+    .project-hero-title {
+        font-size: 1.75rem;
+    }
+    
+    /* Breadcrumb */
+    .breadcrumb {
+        margin-top: 60px;
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .breadcrumb-container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .breadcrumb-links {
+        font-size: 0.75rem;
+    }
+    
+    /* Metrics */
+    .key-metrics {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .metric-card-value {
+        font-size: 2rem;
+    }
+    
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    /* Grid System */
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Process Timeline */
+    .process-timeline {
+        padding-left: var(--spacing-md);
+    }
+    
+    .process-step {
+        padding-left: var(--spacing-md);
+    }
+    
+    /* Tables */
+    .specs-table {
+        font-size: 0.875rem;
+    }
+    
+    .specs-table th,
+    .specs-table td {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    /* Ensure content starts below header */
+    main {
+        margin-top: 60px;
+    }
+    
+    section.section:first-of-type {
+        margin-top: 0;
+    }
+    
+    /* Resume page specific */
+    section.section[style*="margin-top"] {
+        margin-top: 60px !important;
+    }
+}
+
+/* ============================================
+   LARGE PHONE (480px - 767px)
+   ============================================ */
+@media (min-width: 480px) and (max-width: 767px) {
+    /* Typography */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    
+    /* Container */
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-xl) 0;
+        margin-top: 65px;
+    }
+    
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    .hero-headshot {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+    
+    .hero-intro {
+        font-size: 1.0625rem;
+    }
+    
+    /* Project Cards */
+    .project-card-image {
+        height: 250px;
+    }
+    
+    /* About */
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+    
+    /* Project Hero */
+    .project-hero {
+        height: 50vh;
+        min-height: 300px;
+        margin-top: 60px;
+    }
+    
+    .project-hero-title {
+        font-size: 2rem;
+    }
+    
+    /* Header */
+    .header-container {
+        height: 70px;
+        padding: 0 var(--spacing-md);
+        gap: var(--spacing-sm);
+    }
+    
+    .header-nav-left,
+    .header-social {
+        display: none;
+    }
+    
+    .header-title {
+        justify-self: start;
+    }
+    
+    .site-logo {
+        font-size: 1.5rem;
+    }
+    
+    .header-container {
+        grid-template-columns: 1fr auto;
+        justify-items: start;
+    }
+    
+    .mobile-dropdown {
+        justify-self: end;
+    }
+    
+    .mobile-menu {
+        top: 70px;
+    }
+    
+    /* Breadcrumb */
+    .breadcrumb {
+        margin-top: 65px;
+    }
+    
+    /* Metrics */
+    .key-metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Grid System */
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
+   TABLET (768px - 1023px)
+   ============================================ */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Typography */
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    
+    /* Hero */
+    .hero-layout {
+        grid-template-columns: 1fr 1.5fr;
+        gap: var(--spacing-md);
+    }
+    
+    .hero h1 {
+        font-size: 2.75rem;
+    }
+    
+    .hero-headshot {
+        max-width: 100%;
+    }
+    
+    /* Project Cards - Horizontal scroll */
+    .project-card {
+        width: 320px;
+        min-width: 280px;
+        max-width: 350px;
+    }
+    
+    .project-card-image {
+        height: 200px;
+    }
+    
+    /* About Section */
+    .about-section {
+        grid-template-columns: 200px 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    /* Project Overview */
+    .project-overview {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    /* Metrics */
+    .key-metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Process Timeline */
+    .process-timeline {
+        padding-left: var(--spacing-lg);
+    }
+    
+    /* Grid System */
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Header - Mobile menu should be active at this size */
+    .header-container {
+        height: 70px;
+        padding: 0 var(--spacing-lg);
+        gap: var(--spacing-md);
+    }
+    
+    .site-logo {
+        font-size: 1.5rem;
+        max-width: none;
+    }
+    
+    /* Navigation hidden at this breakpoint, mobile menu shown */
+    .site-nav {
+        display: none !important;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex !important;
+    }
+}
+
+/* ============================================
+   LAPTOP (1024px - 1439px)
+   ============================================ */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    /* Container max-width adjustment */
+    .container {
+        max-width: 1100px;
+    }
+    
+    /* Project Cards - Horizontal scroll (no grid needed) */
+    .project-card {
+        width: 420px;
+        min-width: 380px;
+        max-width: 480px;
+    }
+    
+    .project-card-image {
+        height: 280px;
+    }
+    
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Metrics */
+    .key-metrics {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Header */
+    .header-container {
+        height: 70px;
+        padding: 0 var(--spacing-lg);
+    }
+    
+    .site-logo {
+        font-size: 1.5rem;
+    }
+    
+    .site-nav {
+        gap: var(--spacing-lg);
+    }
+    
+    .nav-link {
+        font-size: 1rem;
+        padding: var(--spacing-xs) 0;
+    }
+}
+
+/* ============================================
+   DESKTOP (1440px - 1919px)
+   ============================================ */
+@media (min-width: 1440px) and (max-width: 1919px) {
+    /* Container */
+    .container {
+        max-width: 1400px;
+    }
+    
+    /* Typography scaling */
+    html {
+        font-size: 18px;
+    }
+    
+    /* Hero */
+    .hero-layout {
+        grid-template-columns: 1fr 1.5fr;
+        gap: var(--spacing-md);
+    }
+    
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-intro {
+        font-size: 1.25rem;
+    }
+    
+    /* Project Cards - Horizontal scroll */
+    .project-card {
+        width: 480px;
+        min-width: 420px;
+        max-width: 550px;
+    }
+    
+    .project-card-image {
+        height: 320px;
+    }
+    
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Header */
+    .header-container {
+        height: 70px;
+        padding: 0 var(--spacing-xl);
+    }
+    
+    .site-logo {
+        font-size: 1.5rem;
+    }
+    
+    .site-nav {
+        gap: var(--spacing-xl);
+    }
+    
+    .nav-link {
+        font-size: 1.0625rem;
+    }
+}
+
+/* ============================================
+   TV / LARGE SCREENS (>= 1920px)
+   ============================================ */
+@media (min-width: 1920px) {
+    /* Container */
+    .container {
+        max-width: 1600px;
+    }
+    
+    /* Typography scaling */
+    html {
+        font-size: 20px;
+    }
+    
+    /* Hero */
+    .hero {
+        min-height: 90vh;
+    }
+    
+    .hero h1 {
+        font-size: 4.5rem;
+    }
+    
+    .hero-tagline {
+        font-size: 2rem;
+    }
+    
+    .hero-intro {
+        font-size: 1.25rem;
+    }
+    
+    /* Project Cards - Horizontal scroll */
+    .project-card {
+        width: 550px;
+        min-width: 480px;
+        max-width: 600px;
+    }
+    
+    .project-card-image {
+        height: 380px;
+    }
+    
+    .projects-grid {
+        gap: var(--spacing-xl);
+    }
+    
+    .project-card-title {
+        font-size: 1.75rem;
+    }
+    
+    /* About Section */
+    .about-section {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .profile-photo {
+        width: 250px;
+        height: 250px;
+    }
+    
+    /* Project Hero */
+    .project-hero {
+        height: 70vh;
+        min-height: 600px;
+    }
+    
+    .project-hero-title {
+        font-size: 3.5rem;
+    }
+    
+    /* Metrics */
+    .key-metrics {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .metric-card-value {
+        font-size: 3rem;
+    }
+    
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    
+    /* Process Timeline */
+    .process-timeline {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    /* Tables */
+    .specs-table {
+        max-width: 1000px;
+        margin: 0 auto;
+        font-size: 1.125rem;
+    }
+    
+    /* Footer */
+    .footer-container {
+        max-width: 1600px;
+    }
+    
+    /* Header */
+    .header-container {
+        max-width: 1600px;
+        height: 70px;
+        padding: 0 var(--spacing-xl);
+    }
+    
+    .site-logo {
+        font-size: 1.5rem;
+    }
+    
+    .site-nav {
+        gap: var(--spacing-xl);
+    }
+    
+    .nav-link {
+        font-size: 1.125rem;
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .mobile-menu-toggle {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .mobile-menu-toggle span {
+        width: 28px;
+        height: 3px;
+    }
+}
+
+/* ============================================
+   LANDSCAPE ORIENTATION (Tablets/Phones)
+   ============================================ */
+@media (max-width: 1023px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .project-hero {
+        height: 50vh;
+    }
+    
+    /* Header - smaller in landscape */
+    .header-container {
+        height: 70px;
+    }
+    
+    .mobile-menu {
+        top: 70px;
+    }
+    
+    .site-logo {
+        font-size: 1.5rem;
+    }
+}
+
+/* ============================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ============================================ */
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets */
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .nav-link {
+        padding: var(--spacing-sm) var(--spacing-md);
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Remove hover effects, use active instead */
+    .card:hover,
+    .project-card:hover,
+    .gallery-item:hover {
+        transform: none;
+    }
+    
+    .card:active,
+    .project-card:active {
+        transform: scale(0.98);
+    }
+    
+    /* Larger project card images for easier tapping */
+    .project-card-image {
+        height: 250px;
+    }
+}
+
+/* ============================================
+   HIGH DPI / RETINA DISPLAYS
+   ============================================ */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Ensure crisp borders and shadows */
+    .card,
+    .project-card,
+    .btn {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+    .site-header,
+    .site-footer,
+    .mobile-menu,
+    .mobile-menu-toggle,
+    .hero-cta,
+    .contact-section {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .section,
+    .section-alt {
+        padding: var(--spacing-md) 0;
+        page-break-inside: avoid;
+    }
+    
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+    
+    .project-card,
+    .card {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+
