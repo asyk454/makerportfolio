@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Alex Ko's Maker Portfolio">
-    <title>Alex Ko's Maker Portfolio</title>
+    <title>Engineering Sciences 51 Design Challenge Robot | Alex Ko's Maker Portfolio</title>
     <link rel="icon" type="image/png" href="../assets/images/icons/site_logo_dark.png" id="favicon">
     <script>
         (function () {
@@ -39,7 +39,7 @@
 </head>
 <body class="is-revealed" data-load-reveal>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
+
     <header class="site-header">
         <div class="header-container">
             <nav class="header-nav-left">
@@ -51,7 +51,7 @@
                 <a href="../home.html" class="site-logo">Alex Ko's Maker Portfolio</a>
             </div>
             <div class="header-social">
-                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin" aria-label="LinkedIn">
                     in
                 </a>
                 <a href="https://github.com/asyk454" target="_blank" rel="noopener noreferrer" class="social-link social-github" aria-label="GitHub">
@@ -59,7 +59,7 @@
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
                 </a>
-                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Email">
+                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link social-email" aria-label="Email">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
                         <path d="M3 7l9 6 9-6"></path>
@@ -81,240 +81,262 @@
     </header>
 
     <main id="main-content">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <div class="breadcrumb-container">
-                <div class="breadcrumb-links">
-                    <a href="../home.html">Home</a>
-                    <span class="breadcrumb-separator">/</span>
-                    <a href="../projects.html">Projects</a>
-                    <span class="breadcrumb-separator">/</span>
-                    <span>Custom Actuator Design</span>
-                </div>
-            </div>
-        </nav>
 
         <section class="project-hero">
-            <img src="https://via.placeholder.com/1920x1080/92400e/ffffff?text=Custom+Actuator+Design" alt="Custom Actuator Design" class="project-hero-image" loading="eager">
+            <img src="../assets/images/projects/ES-51/ES51_robot.jpg" alt="Engineering Sciences 51 Design Challenge Robot hero image" class="project-hero-image" loading="eager">
             <div class="project-hero-content">
                 <div class="container">
-                    <h1 class="project-hero-title">Custom Actuator Design</h1>
-                    <div class="project-hero-meta">
-                        <div class="project-hero-tags">
-                            <span class="tag tag-prototyping">Prototyping</span>
-                            <span class="tag">Mechanical Design</span>
+                    <div class="project-hero-grid">
+                        <div>
+                            <h1 class="project-hero-title">Two-Speed 6WD Robot with <span class="hero-title-break">4-Bar Extending Claw</span></h1>
                         </div>
-                        <span style="color: rgba(255,255,255,0.8);">2023</span>
+                        <aside class="project-hero-details">
+                            <div class="hero-detail-grid">
+                                <div class="hero-detail-stack">
+                                    <div class="hero-detail">
+                                        <span class="hero-detail-label">Class</span>
+                                        <span class="hero-detail-value">ES 51: Computer-Aided</span>
+                                        <span class="hero-detail-value hero-detail-subvalue">Machine Design</span>
+                                    </div>
+                                    <div class="hero-detail">
+                                        <span class="hero-detail-label">Timeline</span>
+                                        <span class="hero-detail-value">Jan &mdash; Apr 2025</span>
+                                    </div>
+                                </div>
+                                <div class="hero-detail">
+                                    <span class="hero-detail-label">Skills Learned</span>
+                                    <ul class="hero-detail-list">
+                                        <li>Mechanical Design</li>
+                                        <li>Lathing, Milling</li>
+                                        <li>Silicone Molding</li>
+                                        <li>Team Management</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="summary">
             <div class="container">
-                <div class="project-overview">
-                    <div class="overview-main">
-                        <h2>Overview</h2>
-                        <p>
-                            Designed and prototyped a high-torque, compact actuator system for space-constrained 
-                            robotic applications. The challenge was to achieve high torque output while maintaining 
-                            a small form factor and low cost.
-                        </p>
-                        <p>
-                            Through careful gear design and material selection, the actuator achieved the required 
-                            torque specifications while reducing unit cost by $50 compared to off-the-shelf alternatives. 
-                            The design has been used in multiple robotics projects.
-                        </p>
-                        <h3>Key Achievements</h3>
-                        <ul>
-                            <li>$50 cost reduction per unit</li>
-                            <li>15 Nm torque output in compact package</li>
-                            <li>Modular design for easy integration</li>
-                            <li>Validated through 1000+ hour testing</li>
+                <p class="summary-kicker">Summary</p>
+                <p class="summary-body">As part of a team of six, I designed, manufactured, and assembled a field-competition robot balancing maneuverability, scoring flexibility, and robustness under strict time, material, and actuator constraints. The robot featured a two-speed gear-shifting 6WD drivetrain, a four-bar arm, and a servo-driven silicone claw.</p>
+            </div>
+        </section>
+
+        <section class="section-alt" id="context">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>Context</h2>
+                        <p>A team-based mechanical design competition (ES 51: Turf Wars) involving 4-minute head to head robot matches on a turf field with 30° ramps, strict hardware constraints, and diverse game objects.</p>
+                        <h3>Design Goal:</h3>
+                        <p>We aimed to build a robot that balanced:</p>
+                        <ul class="bullet-list">
+                            <li>Quick maneuverability</li>
+                            <li>Ramp-climbing torque</li>
+                            <li>In-game strategy adaptability</li>
+                            <li>High scoring capability</li>
                         </ul>
                     </div>
-                    <div class="overview-sidebar">
-                        <h3>Project Details</h3>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Role</div>
-                            <div class="overview-item-value">Designer & Prototyper</div>
-                        </div>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Timeline</div>
-                            <div class="overview-item-value">3 months</div>
-                        </div>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Tools</div>
-                            <ul class="overview-item-list">
-                                <li>SolidWorks (CAD)</li>
-                                <li>CNC Machining</li>
-                                <li>3D Printing</li>
-                                <li>Torque Testing</li>
-                            </ul>
-                        </div>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Technologies</div>
-                            <ul class="overview-item-list">
-                                <li>Gear Design</li>
-                                <li>Actuator Systems</li>
-                                <li>Mechanical Design</li>
-                                <li>Prototyping</li>
-                            </ul>
+                    <div>
+                        <div class="image-carousel" data-carousel>
+                            <div class="carousel-track">
+                                <figure class="carousel-slide is-active" data-carousel-slide>
+                                    <img src="../assets/images/projects/ES-51/ES-51-Field.jpg" alt="ES 51 field layout" loading="lazy">
+                                    <figcaption class="carousel-caption">Competition field layout</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/ES-51/ES-51-Scoring-Elements.jpg" alt="ES 51 scoring items" loading="lazy">
+                                    <figcaption class="carousel-caption">Scoring elements</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img class="crop-top" src="../assets/images/projects/ES-51/ES-51-Tic-Tac-Toe-Board.jpg" alt="ES 51 tic-tac-toe board" loading="lazy">
+                                    <figcaption class="carousel-caption">Tic-tac-toe scoring board</figcaption>
+                                </figure>
+                            </div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous image">
+                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
+                            </button>
+                            <button class="carousel-btn next" type="button" aria-label="Next image">
+                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
+                            </button>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
+        <section class="section" id="role">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>My Role</h2>
+                        <p>I served as the team lead/organizer, owning these roles:</p>
+                        <ul class="bullet-list">
+                            <li>Managed team project timeline accountability</li>
+                            <li>Authored match strategy design</li>
+                            <li>Manufactured wheels and axels along with mechanical assembly</li>
+                            <li class="bullet-spacer">Significantly contributed to mechanical assembly</li>
+                        </ul>
+                        <p>While calculations, CAD design, and other manufacturing elements were shared across the team, I focused on coordinating design decisions and ensuring the robot could be built, repaired, and deployed on time.</p>
+                    </div>
+                    <div>
+                        <div class="image-carousel" data-carousel data-carousel-mode="video">
+                            <div class="carousel-track">
+                                <figure class="carousel-slide is-active" data-carousel-slide>
+                                    <img src="../assets/images/projects/ES-51/ES-51-Gantt-Chart.jpg" alt="ES 51 project gantt chart" loading="lazy">
+                                    <figcaption class="carousel-caption">Project timeline I created and managed</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <video class="carousel-media" muted playsinline preload="metadata" autoplay>
+                                        <source src="../assets/videos/projects/ES-51/ES-51-Soldering.mp4" type="video/mp4">
+                                        <source src="../assets/videos/projects/ES-51/ES-51-Soldering.mov" type="video/quicktime">
+                                    </video>
+                                    <figcaption class="carousel-caption">Soldering motor electronics for assembly</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <video class="carousel-media" muted playsinline preload="metadata" autoplay>
+                                        <source src="../assets/videos/projects/ES-51/ES-51-Tapping.mp4" type="video/mp4">
+                                    </video>
+                                    <figcaption class="carousel-caption">Tapping + assembly</figcaption>
+                                </figure>
+                            </div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous video">
+                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
+                            </button>
+                            <button class="carousel-btn next" type="button" aria-label="Next video">
+                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-alt" id="strategy">
+            <div class="container">
+                <h2>Design Prototyping and Selection</h2>
+                <p>Drove early-stage prototyping and design selection (sketches to cardboard builds) culminating in a two-speed 6WD drivetrain and four-bar telescoping arm.</p>
+                <div class="gallery-grid gallery-grid-2x2">
+                    <figure class="gallery-item gallery-item--carousel">
+                        <div class="image-carousel is-embedded" data-carousel>
+                            <div class="carousel-track">
+                                <figure class="carousel-slide is-active" data-carousel-slide>
+                                    <img class="crop-top-37_5" src="../assets/images/projects/ES-51/ES-51-Sketch-1.jpg" alt="ES 51 concept sketch 1" loading="lazy">
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img class="crop-top-20" src="../assets/images/projects/ES-51/ES-51-Sketch-2.jpg" alt="ES 51 concept sketch 2" loading="lazy">
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img class="crop-top-10" src="../assets/images/projects/ES-51/ES-51-Sketch-3.jpg" alt="ES 51 concept sketch 3" loading="lazy">
+                                </figure>
+                            </div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous sketch">
+                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
+                            </button>
+                            <button class="carousel-btn next" type="button" aria-label="Next sketch">
+                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
+                            </button>
+                        </div>
+                        <figcaption class="gallery-label">Preliminary notebook prototype sketches</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="../assets/images/projects/ES-51/ES-51-Prototype-1.jpg" alt="ES 51 prototype 1" loading="lazy">
+                        <figcaption class="gallery-label">Cardboard four-bar prototype</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="../assets/images/projects/ES-51/ES-51-Prototype-2.png" alt="ES 51 prototype 2" loading="lazy">
+                        <figcaption class="gallery-label">Pivoting four-bar on six wheel drive train CAD</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="../assets/images/projects/ES-51/ES-51-Prototype-3.png" alt="ES 51 prototype 3" loading="lazy">
+                        <figcaption class="gallery-label">Telescoping arm CAD</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="build">
+            <div class="container">
+                <h2>Implementation / Build Evidence</h2>
+                <p>Fabricated laser-cut acrylic chassis plates, 3D printed mounts and gears, silicone-cast wheels and grippers, and lathe-turned shafts for precise fits.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../assets/images/projects/ES-51/ES51_robot.jpg" alt="ES 51 chassis fabrication" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/projects/ES-51/ES51_robot.jpg" alt="ES 51 arm assembly" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/projects/ES-51/ES51_robot.jpg" alt="ES 51 claw and wheels" loading="lazy">
+                    </div>
+                </div>
+                <p><a class="deliverable-link" href="../assets/docs/projects/ES-51/ES-51-Final-Report.pdf">Read the full report (PDF)</a></p>
+            </div>
+        </section>
+
+        <section class="section-alt" id="results">
+            <div class="container">
+                <h2>Testing & Results</h2>
+                <p>We assembled the robot under deadline pressure and had limited integration testing. The first match failed due to tolerance and assembly issues, while the second match succeeded defensively after quick fixes. The drivetrain remained reliable after a gearbox redesign that reduced part count.</p>
                 <div class="key-metrics">
                     <div class="metric-card">
-                        <div class="metric-card-value">15 Nm</div>
-                        <div class="metric-card-label">Torque Output</div>
+                        <div class="metric-card-value">1.09 m/s</div>
+                        <div class="metric-card-label">Calculated Speed</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-card-value">45 mm</div>
-                        <div class="metric-card-label">Diameter</div>
+                        <div class="metric-card-value">8:1</div>
+                        <div class="metric-card-label">Arm Gear Ratio</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-card-value">$50</div>
-                        <div class="metric-card-label">Cost Savings</div>
+                        <div class="metric-card-value">3 kg</div>
+                        <div class="metric-card-label">Design Mass</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-card-value">1000+</div>
-                        <div class="metric-card-label">Test Hours</div>
+                        <div class="metric-card-value">15 deg</div>
+                        <div class="metric-card-label">Required Ramp</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-alt">
+        <section class="section" id="reflection">
             <div class="container">
-                <div class="process-section">
-                    <h2>Design Process</h2>
-                    <div class="process-timeline">
-                        <div class="process-step">
-                            <span class="process-step-number">1</span>
-                            <h3>Requirements & Analysis</h3>
-                            <p>
-                                Defined specifications: 15 Nm torque, 45mm max diameter, cost under $100. Analyzed 
-                                existing solutions to identify improvement opportunities.
-                            </p>
-                        </div>
-                        <div class="process-step">
-                            <span class="process-step-number">2</span>
-                            <h3>Gear Design</h3>
-                            <p>
-                                Designed custom planetary gear system for high torque density. Optimized gear ratios 
-                                and tooth profiles for efficiency and manufacturability.
-                            </p>
-                        </div>
-                        <div class="process-step">
-                            <span class="process-step-number">3</span>
-                            <h3>Prototyping</h3>
-                            <p>
-                                Built multiple iterations using 3D printing and CNC machining. Tested torque output, 
-                                efficiency, and durability under various load conditions.
-                            </p>
-                        </div>
-                        <div class="process-step">
-                            <span class="process-step-number">4</span>
-                            <h3>Optimization</h3>
-                            <p>
-                                Refined design based on test results. Reduced part count and simplified assembly 
-                                process to lower manufacturing cost while maintaining performance.
-                            </p>
-                        </div>
+                <div class="story-grid">
+                    <div>
+                        <h2>Reflection & Improvements</h2>
+                        <ul class="learnings-list">
+                            <li>Schedule full-system testing earlier to catch tolerance stackups.</li>
+                            <li>Improve arm tolerancing and QC checks before competition day.</li>
+                            <li>Allocate time for tuning the shifter so it delivers real match value.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <figure class="story-figure">
+                            <img src="../assets/images/projects/ES-51/ES51_robot.jpg" alt="ES 51 post-competition assessment" loading="lazy">
+                            <figcaption>Post-competition assessment of reliability and areas for refinement.</figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section-alt" id="skills">
             <div class="container">
-                <div class="technical-details">
-                    <h2>Technical Specifications</h2>
-                    <table class="specs-table">
-                        <thead>
-                            <tr>
-                                <th>Parameter</th>
-                                <th>Value</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Torque Output</td>
-                                <td>15 Nm</td>
-                            </tr>
-                            <tr>
-                                <td>Max Diameter</td>
-                                <td>45 mm</td>
-                            </tr>
-                            <tr>
-                                <td>Length</td>
-                                <td>60 mm</td>
-                            </tr>
-                            <tr>
-                                <td>Gear Ratio</td>
-                                <td>50:1</td>
-                            </tr>
-                            <tr>
-                                <td>Efficiency</td>
-                                <td>85%</td>
-                            </tr>
-                            <tr>
-                                <td>Weight</td>
-                                <td>180g</td>
-                            </tr>
-                            <tr>
-                                <td>Cost</td>
-                                <td>$75/unit</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-alt">
-            <div class="container">
-                <div class="iteration-section">
-                    <h2>Design Iterations & Tradeoffs</h2>
-                    
-                    <div class="iteration-card">
-                        <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 1: Standard Gearbox</h3>
-                        </div>
-                        <p><strong>What Changed:</strong> Used off-the-shelf gearbox components</p>
-                        <p><strong>Why:</strong> Quick prototype to validate concept</p>
-                        <p><strong>Result:</strong> Met torque requirements but too expensive ($125/unit)</p>
-                    </div>
-
-                    <div class="iteration-card">
-                        <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 2: Custom Design</h3>
-                        </div>
-                        <p><strong>What Changed:</strong> Designed custom planetary gear system with optimized geometry</p>
-                        <p><strong>Why:</strong> Need to reduce cost while maintaining performance</p>
-                        <p><strong>Tradeoff:</strong> Longer design time, required custom tooling</p>
-                        <p><strong>Result:</strong> $50 cost reduction ($75/unit), same performance, validated through testing</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="media-gallery">
-                    <h2>Media Gallery</h2>
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/92400e/ffffff?text=Actuator+Assembly" alt="Actuator assembly" loading="lazy">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/f97316/ffffff?text=Gear+System+Detail" alt="Gear system detail" loading="lazy">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/10b981/ffffff?text=Torque+Testing+Setup" alt="Torque testing setup" loading="lazy">
-                        </div>
-                    </div>
-                </div>
+                <h2>Skills Takeaways</h2>
+                <ul class="skill-chip-list">
+                    <li><span class="tag">Pugh matrix</span></li>
+                    <li><span class="tag">SolidWorks CAD</span></li>
+                    <li><span class="tag">Gear train design</span></li>
+                    <li><span class="tag">Laser cutting</span></li>
+                    <li><span class="tag">3D printing</span></li>
+                    <li><span class="tag">Silicone casting</span></li>
+                    <li><span class="tag">Lathe machining</span></li>
+                    <li><span class="tag">System integration</span></li>
+                </ul>
             </div>
         </section>
 
@@ -322,10 +344,10 @@
             <div class="container">
                 <div class="project-navigation">
                     <a href="SladeLab.html" class="project-nav-link prev">
-                        ← Previous Project
+                        &larr; Previous Project
                     </a>
-                    <a href="../projects.html" class="project-nav-link next">
-                        Back to Projects →
+                    <a href="MediaLab.html" class="project-nav-link next">
+                        Next Project &rarr;
                     </a>
                 </div>
             </div>
@@ -337,7 +359,7 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <h3>Alex Ko's Maker Portfolio</h3>
-                    <p>Showcasing mechanical engineering, robotics, and biomechatronics projects.</p>
+                    <p>Showcasing my engineering and robotics projects in addition to other interesting things about me!</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -350,13 +372,15 @@
                 <div class="footer-links">
                     <h4>Connect</h4>
                     <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
-                        <a href="https://github.com/asyk454" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin">
+                            in
+                        </a>
+                        <a href="https://github.com/asyk454" class="social-github" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                             <svg class="icon-github" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                             </svg>
                         </a>
-                        <a href="mailto:alexko.harvard.edu" aria-label="Email">
+                        <a href="mailto:alexko@college.harvard.edu" class="social-email" aria-label="Email">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
                                 <path d="M3 7l9 6 9-6"></path>
@@ -372,5 +396,137 @@
     </footer>
 
     <script src="../assets/js/main.js"></script>
+    <script>
+        (function () {
+            var carousels = document.querySelectorAll('[data-carousel]');
+            if (!carousels.length) {
+                return;
+            }
+
+            carousels.forEach(function (carousel) {
+                var slides = carousel.querySelectorAll('[data-carousel-slide]');
+                var prevButton = carousel.querySelector('.carousel-btn.prev');
+                var nextButton = carousel.querySelector('.carousel-btn.next');
+                var currentIndex = 0;
+                var intervalId = null;
+                var imageTimeoutId = null;
+                var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                var isVideoCarousel = carousel.getAttribute('data-carousel-mode') === 'video' || carousel.querySelector('video');
+
+                slides.forEach(function (slide, index) {
+                    if (slide.classList.contains('is-active')) {
+                        currentIndex = index;
+                    }
+                });
+
+                var pauseVideos = function () {
+                    slides.forEach(function (slide) {
+                        var video = slide.querySelector('video');
+                        if (video) {
+                            video.pause();
+                            video.currentTime = 0;
+                        }
+                    });
+                };
+
+                var clearImageTimeout = function () {
+                    if (imageTimeoutId) {
+                        window.clearTimeout(imageTimeoutId);
+                        imageTimeoutId = null;
+                    }
+                };
+
+                var playActiveVideo = function () {
+                    if (!isVideoCarousel || reduceMotion) {
+                        return;
+                    }
+                    var activeSlide = slides[currentIndex];
+                    var video = activeSlide.querySelector('video');
+                    if (video) {
+                        video.play().catch(function () {});
+                    }
+                };
+
+                var scheduleImageAdvance = function () {
+                    if (reduceMotion || !isVideoCarousel) {
+                        return;
+                    }
+                    var activeSlide = slides[currentIndex];
+                    var hasVideo = activeSlide.querySelector('video');
+                    if (hasVideo) {
+                        return;
+                    }
+                    clearImageTimeout();
+                    imageTimeoutId = window.setTimeout(function () {
+                        showSlide(currentIndex + 1);
+                    }, 2500);
+                };
+
+                var showSlide = function (index) {
+                    slides[currentIndex].classList.remove('is-active');
+                    currentIndex = (index + slides.length) % slides.length;
+                    slides[currentIndex].classList.add('is-active');
+
+                    if (isVideoCarousel) {
+                        clearImageTimeout();
+                        pauseVideos();
+                        playActiveVideo();
+                        scheduleImageAdvance();
+                    }
+                };
+
+                var startAuto = function () {
+                    if (reduceMotion || isVideoCarousel) {
+                        return;
+                    }
+                    intervalId = window.setInterval(function () {
+                        showSlide(currentIndex + 1);
+                    }, 2500);
+                };
+
+                var resetAuto = function () {
+                    if (isVideoCarousel) {
+                        return;
+                    }
+                    if (intervalId) {
+                        window.clearInterval(intervalId);
+                    }
+                    startAuto();
+                };
+
+                if (prevButton) {
+                    prevButton.addEventListener('click', function () {
+                        showSlide(currentIndex - 1);
+                        resetAuto();
+                    });
+                }
+
+                if (nextButton) {
+                    nextButton.addEventListener('click', function () {
+                        showSlide(currentIndex + 1);
+                        resetAuto();
+                    });
+                }
+
+                if (isVideoCarousel) {
+                    slides.forEach(function (slide) {
+                        var video = slide.querySelector('video');
+                        if (!video) {
+                            return;
+                        }
+                        video.addEventListener('ended', function () {
+                            if (slide.classList.contains('is-active')) {
+                                showSlide(currentIndex + 1);
+                            }
+                        });
+                    });
+                    scheduleImageAdvance();
+                    playActiveVideo();
+                } else {
+                    startAuto();
+                }
+            });
+        })();
+    </script>
 </body>
 </html>

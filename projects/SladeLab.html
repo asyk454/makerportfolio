@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Alex Ko's Maker Portfolio">
-    <title>Alex Ko's Maker Portfolio</title>
+    <title>VLA-Controlled Supernumerary Arm | Alex Ko's Maker Portfolio</title>
     <link rel="icon" type="image/png" href="../assets/images/icons/site_logo_dark.png" id="favicon">
     <script>
         (function () {
@@ -39,7 +39,7 @@
 </head>
 <body class="is-revealed" data-load-reveal>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
+
     <header class="site-header">
         <div class="header-container">
             <nav class="header-nav-left">
@@ -51,7 +51,7 @@
                 <a href="../home.html" class="site-logo">Alex Ko's Maker Portfolio</a>
             </div>
             <div class="header-social">
-                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin" aria-label="LinkedIn">
                     in
                 </a>
                 <a href="https://github.com/asyk454" target="_blank" rel="noopener noreferrer" class="social-link social-github" aria-label="GitHub">
@@ -59,7 +59,7 @@
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
                 </a>
-                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Email">
+                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link social-email" aria-label="Email">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
                         <path d="M3 7l9 6 9-6"></path>
@@ -81,155 +81,253 @@
     </header>
 
     <main id="main-content">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <div class="breadcrumb-container">
-                <div class="breadcrumb-links">
-                    <a href="../home.html">Home</a>
-                    <span class="breadcrumb-separator">/</span>
-                    <a href="../projects.html">Projects</a>
-                    <span class="breadcrumb-separator">/</span>
-                    <span>Biomechatronic Device</span>
-                </div>
-            </div>
-        </nav>
 
         <section class="project-hero">
-            <img src="https://via.placeholder.com/1920x1080/065f46/ffffff?text=Biomechatronic+Device" alt="Biomechatronic Device" class="project-hero-image" loading="eager">
+            <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="VLA-Controlled Supernumerary Arm hero image" class="project-hero-image" loading="eager">
             <div class="project-hero-content">
                 <div class="container">
-                    <h1 class="project-hero-title">Biomechatronic Device</h1>
+                    <h1 class="project-hero-title">VLA-Controlled Supernumerary Arm</h1>
                     <div class="project-hero-meta">
                         <div class="project-hero-tags">
-                            <span class="tag tag-biomechatronics">Biomechatronics</span>
+                            <span class="tag tag-robotics">Robotics</span>
                             <span class="tag">Research</span>
                         </div>
-                        <span style="color: rgba(255,255,255,0.8);">2024</span>
+                        <span class="project-hero-year">2025</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section project-summary" id="summary">
             <div class="container">
-                <div class="project-overview">
-                    <div class="overview-main">
-                        <h2>Overview</h2>
-                        <p>
-                            Developed a research device for studying human-machine interfaces with real-time motion 
-                            tracking and feedback systems. This project was part of research at the MIT Media Lab 
-                            Biomechatronics group, focusing on understanding how humans interact with assistive devices.
-                        </p>
-                        <p>
-                            The device integrates multiple sensors including IMUs, force sensors, and EMG electrodes 
-                            to capture comprehensive motion and muscle activity data. The system achieved 95% accuracy 
-                            in motion tracking compared to gold-standard motion capture systems.
-                        </p>
-                        <h3>Key Achievements</h3>
-                        <ul>
-                            <li>95% accuracy in motion tracking</li>
-                            <li>Real-time data acquisition at 100Hz</li>
-                            <li>Multi-modal sensor fusion</li>
-                            <li>Used in 3 published research studies</li>
-                        </ul>
+                <div class="project-summary-grid">
+                    <div class="project-summary-main">
+                        <p class="summary-kicker">Outcome</p>
+                        <h2>Designed a [system] that [impact], achieving [metric] under [constraint].</h2>
+                        <p class="summary-body">My contribution: [specific subsystem, method, or experiment you owned].</p>
+                        <div class="summary-highlights">
+                            <div class="summary-highlight">
+                                <span class="summary-highlight-label">Impact</span>
+                                <span class="summary-highlight-value">[Outcome or award]</span>
+                            </div>
+                            <div class="summary-highlight">
+                                <span class="summary-highlight-label">Performance</span>
+                                <span class="summary-highlight-value">[Key metric]</span>
+                            </div>
+                            <div class="summary-highlight">
+                                <span class="summary-highlight-label">Scope</span>
+                                <span class="summary-highlight-value">[Scale, users, or deployment]</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="overview-sidebar">
+                    <aside class="project-summary-card">
                         <h3>Project Details</h3>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Role</div>
-                            <div class="overview-item-value">Research Assistant</div>
+                        <div class="summary-item">
+                            <div class="summary-item-label">Role</div>
+                            <div class="summary-item-value">[Your role]</div>
                         </div>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Timeline</div>
-                            <div class="overview-item-value">8 months</div>
+                        <div class="summary-item">
+                            <div class="summary-item-label">Team</div>
+                            <div class="summary-item-value">[Team size or collaborators]</div>
                         </div>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Tools</div>
-                            <ul class="overview-item-list">
-                                <li>Fusion 360 (CAD)</li>
-                                <li>Python (Data Processing)</li>
-                                <li>Arduino (Control)</li>
-                                <li>MATLAB (Analysis)</li>
+                        <div class="summary-item">
+                            <div class="summary-item-label">Timeline</div>
+                            <div class="summary-item-value">[Duration + dates]</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-item-label">Tools</div>
+                            <ul class="summary-item-list">
+                                <li>[Tool or platform]</li>
+                                <li>[Tool or platform]</li>
+                                <li>[Tool or platform]</li>
                             </ul>
                         </div>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Technologies</div>
-                            <ul class="overview-item-list">
-                                <li>Sensor Integration</li>
-                                <li>Signal Processing</li>
-                                <li>Biomechanics</li>
-                                <li>Data Acquisition</li>
+                        <div class="summary-item">
+                            <div class="summary-item-label">Skills Focus</div>
+                            <ul class="summary-item-list">
+                                <li>[Skill or method]</li>
+                                <li>[Skill or method]</li>
+                                <li>[Skill or method]</li>
                             </ul>
                         </div>
-                    </div>
+                    </aside>
                 </div>
 
-                <div class="key-metrics">
-                    <div class="metric-card">
-                        <div class="metric-card-value">95%</div>
-                        <div class="metric-card-label">Tracking Accuracy</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-card-value">100 Hz</div>
-                        <div class="metric-card-label">Sampling Rate</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-card-value">8</div>
-                        <div class="metric-card-label">Sensor Channels</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-card-value">3</div>
-                        <div class="metric-card-label">Research Studies</div>
+                <div class="project-toc">
+                    <span class="project-toc-label">On this page</span>
+                    <div class="project-toc-links">
+                        <a href="#objective">Objective</a>
+                        <a href="#contribution">Contribution</a>
+                        <a href="#process">Process</a>
+                        <a href="#results">Results</a>
+                        <a href="#skills">Skills + Learnings</a>
+                        <a href="#deliverables">Deliverables</a>
+                        <a href="#details">Technical Details</a>
+                        <a href="#gallery">Gallery</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-alt">
+        <section class="section-alt project-story" id="objective">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>Objective & Motivation</h2>
+                        <p>[Explain the problem, why it matters, and the high-level requirements.]</p>
+
+                        <div class="story-card">
+                            <h3>Constraints & Success Criteria</h3>
+                            <ul class="constraints-list">
+                                <li>[Constraint: budget, time, safety, size, etc.]</li>
+                                <li>[Requirement: accuracy, load, speed, reliability]</li>
+                                <li>[Requirement: usability, manufacturability, or cost]</li>
+                            </ul>
+                        </div>
+
+                        <div class="story-card" id="contribution">
+                            <h3>My Contribution</h3>
+                            <ul class="contribution-list">
+                                <li>Designed [component] and validated it with [test].</li>
+                                <li>Built [prototype] and iterated based on [feedback or data].</li>
+                                <li>Analyzed [data] to inform [design decision].</li>
+                            </ul>
+                            <div class="story-callout">
+                                <strong>What I would improve next:</strong> [brief reflection or next iteration].
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <figure class="story-figure">
+                            <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="System overview for VLA-Controlled Supernumerary Arm" loading="lazy">
+                            <figcaption>System-level view with annotations to show where your contribution lives.</figcaption>
+                        </figure>
+                        <figure class="story-figure">
+                            <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Subsystem close-up for VLA-Controlled Supernumerary Arm" loading="lazy">
+                            <figcaption>Close-up of the subsystem or analysis that highlights your technical skill.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="process">
             <div class="container">
                 <div class="process-section">
                     <h2>Design Process</h2>
                     <div class="process-timeline">
                         <div class="process-step">
                             <span class="process-step-number">1</span>
-                            <h3>Requirements Analysis</h3>
-                            <p>
-                                Defined sensor requirements based on research objectives. Identified need for 
-                                multi-modal sensing: motion (IMU), force (load cells), and muscle activity (EMG).
-                            </p>
+                            <h3>Discover + Define</h3>
+                            <p>[User research, problem framing, or requirement definition.]</p>
+                            <div class="process-step-image">
+                                <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Discovery visuals for VLA-Controlled Supernumerary Arm" loading="lazy">
+                            </div>
                         </div>
                         <div class="process-step">
                             <span class="process-step-number">2</span>
-                            <h3>Mechanical Design</h3>
-                            <p>
-                                Designed wearable device housing with proper sensor placement. Ensured minimal 
-                                interference with natural movement while maintaining sensor contact.
-                            </p>
+                            <h3>Concept & Architecture</h3>
+                            <p>[System layout, concept sketches, or early modeling.]</p>
                         </div>
                         <div class="process-step">
                             <span class="process-step-number">3</span>
-                            <h3>Sensor Integration</h3>
-                            <p>
-                                Integrated multiple sensor types with synchronized data acquisition. Developed 
-                                calibration procedures for accurate measurements.
-                            </p>
+                            <h3>Prototype & Iterate</h3>
+                            <p>[Bench testing, fabrication, or simulation loops.]</p>
                         </div>
                         <div class="process-step">
                             <span class="process-step-number">4</span>
-                            <h3>Validation & Testing</h3>
-                            <p>
-                                Validated system against gold-standard motion capture. Conducted user studies 
-                                to verify accuracy and usability in real-world conditions.
-                            </p>
+                            <h3>Validate & Deliver</h3>
+                            <p>[Verification tests, deployment, or final presentation.]</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section-alt" id="results">
+            <div class="container">
+                <h2>Results & Validation</h2>
+                <div class="key-metrics">
+                    <div class="metric-card">
+                        <div class="metric-card-value">[##]</div>
+                        <div class="metric-card-label">Performance Metric</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-card-value">[##]</div>
+                        <div class="metric-card-label">Efficiency / Cost</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-card-value">[##]</div>
+                        <div class="metric-card-label">Reliability / Accuracy</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-card-value">[##]</div>
+                        <div class="metric-card-label">User / Stakeholder Impact</div>
+                    </div>
+                </div>
+                <div class="results-notes">
+                    <p><strong>Evaluation:</strong> [Explain how results compare to the original objective and what you learned.]</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="container">
+                <h2>Skills, Learning & Growth</h2>
+                <div class="skills-grid">
+                    <div class="skills-panel">
+                        <h3>Skills Used</h3>
+                        <ul class="skill-chip-list">
+                            <li><span class="tag">[Skill]</span></li>
+                            <li><span class="tag">[Skill]</span></li>
+                            <li><span class="tag">[Skill]</span></li>
+                            <li><span class="tag">[Skill]</span></li>
+                        </ul>
+                    </div>
+                    <div class="learnings-panel">
+                        <h3>Key Learnings</h3>
+                        <ul class="learnings-list">
+                            <li>[Lesson learned or unexpected challenge.]</li>
+                            <li>[Design tradeoff you would handle differently.]</li>
+                            <li>[New capability gained or research insight.]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-alt" id="deliverables">
+            <div class="container">
+                <h2>Final Design Materials</h2>
+                <div class="deliverables-grid">
+                    <div class="deliverable-card">
+                        <h4>CAD + Drawings</h4>
+                        <p>[Link to CAD package, drawings, or BOM.]</p>
+                        <a class="deliverable-link" href="#">Add file link</a>
+                    </div>
+                    <div class="deliverable-card">
+                        <h4>Test Report</h4>
+                        <p>[Validation plan, data, and results.]</p>
+                        <a class="deliverable-link" href="#">Add report link</a>
+                    </div>
+                    <div class="deliverable-card">
+                        <h4>Code Repository</h4>
+                        <p>[Firmware, scripts, or control logic.]</p>
+                        <a class="deliverable-link" href="#">Add repo link</a>
+                    </div>
+                    <div class="deliverable-card">
+                        <h4>Demo Video</h4>
+                        <p>[Short clip or narrated demo.]</p>
+                        <a class="deliverable-link" href="#">Add video link</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="details">
             <div class="container">
                 <div class="technical-details">
-                    <h2>Technical Specifications</h2>
+                    <h2>Technical Details</h2>
                     <table class="specs-table">
                         <thead>
                             <tr>
@@ -239,28 +337,20 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Sampling Rate</td>
-                                <td>100 Hz</td>
+                                <td>Requirement</td>
+                                <td>[Target value]</td>
                             </tr>
                             <tr>
-                                <td>Sensor Channels</td>
-                                <td>8 (3 IMU + 2 Force + 3 EMG)</td>
+                                <td>Subsystem</td>
+                                <td>[Materials, sensors, or key architecture]</td>
                             </tr>
                             <tr>
-                                <td>Accuracy</td>
-                                <td>95% vs. motion capture</td>
+                                <td>Testing</td>
+                                <td>[Method, sample size, or environment]</td>
                             </tr>
                             <tr>
-                                <td>Data Storage</td>
-                                <td>Onboard SD card (32GB)</td>
-                            </tr>
-                            <tr>
-                                <td>Battery Life</td>
-                                <td>4 hours continuous</td>
-                            </tr>
-                            <tr>
-                                <td>Weight</td>
-                                <td>250g</td>
+                                <td>Manufacturing</td>
+                                <td>[Processes or suppliers]</td>
                             </tr>
                         </tbody>
                     </table>
@@ -268,43 +358,19 @@
             </div>
         </section>
 
-        <section class="section-alt">
-            <div class="container">
-                <div class="iteration-section">
-                    <h2>Design Iterations & Tradeoffs</h2>
-                    
-                    <div class="iteration-card">
-                        <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 1: Single Sensor Type</h3>
-                        </div>
-                        <p><strong>What Changed:</strong> Initial prototype with IMU only</p>
-                        <p><strong>Why:</strong> Proof of concept for motion tracking</p>
-                        <p><strong>Result:</strong> 75% accuracy, insufficient for research needs</p>
-                    </div>
-
-                    <div class="iteration-card">
-                        <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 2: Multi-Modal Sensing</h3>
-                        </div>
-                        <p><strong>What Changed:</strong> Added force sensors and EMG electrodes</p>
-                        <p><strong>Why:</strong> Need for comprehensive biomechanical data</p>
-                        <p><strong>Tradeoff:</strong> Increased complexity and power consumption</p>
-                        <p><strong>Result:</strong> 95% accuracy, suitable for research applications</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
+        <section class="section-alt" id="gallery">
             <div class="container">
                 <div class="media-gallery">
                     <h2>Media Gallery</h2>
                     <div class="gallery-grid">
                         <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/065f46/ffffff?text=Device+in+Use" alt="Device in use" loading="lazy">
+                            <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="VLA-Controlled Supernumerary Arm hero" loading="lazy">
                         </div>
                         <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/10b981/ffffff?text=Sensor+Placement" alt="Sensor placement" loading="lazy">
+                            <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="VLA-Controlled Supernumerary Arm detail view" loading="lazy">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="VLA-Controlled Supernumerary Arm in use" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -315,10 +381,10 @@
             <div class="container">
                 <div class="project-navigation">
                     <a href="FTC-23.html" class="project-nav-link prev">
-                        ← Previous Project
+                        &larr; Previous Project
                     </a>
                     <a href="ES-51.html" class="project-nav-link next">
-                        Next Project →
+                        Next Project &rarr;
                     </a>
                 </div>
             </div>
@@ -330,7 +396,7 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <h3>Alex Ko's Maker Portfolio</h3>
-                    <p>Showcasing mechanical engineering, robotics, and biomechatronics projects.</p>
+                    <p>Showcasing my engineering and robotics projects in addition to other interesting things about me!</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -343,13 +409,15 @@
                 <div class="footer-links">
                     <h4>Connect</h4>
                     <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
-                        <a href="https://github.com/asyk454" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin">
+                            in
+                        </a>
+                        <a href="https://github.com/asyk454" class="social-github" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                             <svg class="icon-github" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                             </svg>
                         </a>
-                        <a href="mailto:alexko.harvard.edu" aria-label="Email">
+                        <a href="mailto:alexko@college.harvard.edu" class="social-email" aria-label="Email">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
                                 <path d="M3 7l9 6 9-6"></path>

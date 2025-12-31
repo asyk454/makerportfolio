@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Alex Ko's Maker Portfolio">
-    <title>Alex Ko's Maker Portfolio</title>
+    <title>FIRST Tech Challenge '22-'23 Robot | Alex Ko's Maker Portfolio</title>
     <link rel="icon" type="image/png" href="../assets/images/icons/site_logo_dark.png" id="favicon">
     <script>
         (function () {
@@ -39,7 +39,7 @@
 </head>
 <body class="is-revealed" data-load-reveal>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
+
     <header class="site-header">
         <div class="header-container">
             <nav class="header-nav-left">
@@ -51,7 +51,7 @@
                 <a href="../home.html" class="site-logo">Alex Ko's Maker Portfolio</a>
             </div>
             <div class="header-social">
-                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin" aria-label="LinkedIn">
                     in
                 </a>
                 <a href="https://github.com/asyk454" target="_blank" rel="noopener noreferrer" class="social-link social-github" aria-label="GitHub">
@@ -59,7 +59,7 @@
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
                 </a>
-                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Email">
+                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link social-email" aria-label="Email">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
                         <path d="M3 7l9 6 9-6"></path>
@@ -81,167 +81,253 @@
     </header>
 
     <main id="main-content">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <div class="breadcrumb-container">
-                <div class="breadcrumb-links">
-                    <a href="../home.html">Home</a>
-                    <span class="breadcrumb-separator">/</span>
-                    <a href="../projects.html">Projects</a>
-                    <span class="breadcrumb-separator">/</span>
-                    <span>FTC Competition Robot</span>
-                </div>
-            </div>
-        </nav>
 
         <section class="project-hero">
-            <img src="https://via.placeholder.com/1920x1080/1e40af/ffffff?text=FTC+Competition+Robot" alt="FTC Competition Robot" class="project-hero-image" loading="eager">
+            <img src="../assets/images/projects/FTC-23/FTC_23_Robot.JPG" alt="FIRST Tech Challenge '22-'23 Robot hero image" class="project-hero-image" loading="eager">
             <div class="project-hero-content">
                 <div class="container">
-                    <h1 class="project-hero-title">FTC Competition Robot</h1>
+                    <h1 class="project-hero-title">FIRST Tech Challenge '22-'23 Robot</h1>
                     <div class="project-hero-meta">
                         <div class="project-hero-tags">
                             <span class="tag tag-robotics">Robotics</span>
-                            <span class="tag">Competition</span>
+                            <span class="tag">School Team</span>
                         </div>
-                        <span style="color: rgba(255,255,255,0.8);">2023</span>
+                        <span class="project-hero-year">2023</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section project-summary" id="summary">
             <div class="container">
-                <div class="project-overview">
-                    <div class="overview-main">
-                        <h2>Overview</h2>
-                        <p>
-                            Designed and built a competition robot for FIRST Tech Challenge, focusing on a custom 
-                            drivetrain and manipulator systems. The robot needed to be fast, reliable, and capable 
-                            of multiple game tasks including object manipulation and scoring.
-                        </p>
-                        <p>
-                            This project was completed as part of a team, with me leading the mechanical design 
-                            and drivetrain development. The final robot achieved 2x faster movement speed compared 
-                            to our previous season's design while maintaining reliability throughout the competition.
-                        </p>
-                        <h3>Key Achievements</h3>
-                        <ul>
-                            <li>2x faster movement speed vs. previous iteration</li>
-                            <li>Top 8 finish at regional competition</li>
-                            <li>Custom 6-wheel drivetrain with mecanum wheels</li>
-                            <li>Dual manipulator system for game objects</li>
-                        </ul>
+                <div class="project-summary-grid">
+                    <div class="project-summary-main">
+                        <p class="summary-kicker">Outcome</p>
+                        <h2>Designed a [system] that [impact], achieving [metric] under [constraint].</h2>
+                        <p class="summary-body">My contribution: [specific subsystem, method, or experiment you owned].</p>
+                        <div class="summary-highlights">
+                            <div class="summary-highlight">
+                                <span class="summary-highlight-label">Impact</span>
+                                <span class="summary-highlight-value">[Outcome or award]</span>
+                            </div>
+                            <div class="summary-highlight">
+                                <span class="summary-highlight-label">Performance</span>
+                                <span class="summary-highlight-value">[Key metric]</span>
+                            </div>
+                            <div class="summary-highlight">
+                                <span class="summary-highlight-label">Scope</span>
+                                <span class="summary-highlight-value">[Scale, users, or deployment]</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="overview-sidebar">
+                    <aside class="project-summary-card">
                         <h3>Project Details</h3>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Role</div>
-                            <div class="overview-item-value">Lead Mechanical Designer</div>
+                        <div class="summary-item">
+                            <div class="summary-item-label">Role</div>
+                            <div class="summary-item-value">[Your role]</div>
                         </div>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Timeline</div>
-                            <div class="overview-item-value">4 months</div>
+                        <div class="summary-item">
+                            <div class="summary-item-label">Team</div>
+                            <div class="summary-item-value">[Team size or collaborators]</div>
                         </div>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Tools</div>
-                            <ul class="overview-item-list">
-                                <li>OnShape (CAD)</li>
-                                <li>CNC Machining</li>
-                                <li>3D Printing</li>
-                                <li>Laser Cutting</li>
+                        <div class="summary-item">
+                            <div class="summary-item-label">Timeline</div>
+                            <div class="summary-item-value">[Duration + dates]</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-item-label">Tools</div>
+                            <ul class="summary-item-list">
+                                <li>[Tool or platform]</li>
+                                <li>[Tool or platform]</li>
+                                <li>[Tool or platform]</li>
                             </ul>
                         </div>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Technologies</div>
-                            <ul class="overview-item-list">
-                                <li>Robot Design</li>
-                                <li>Drivetrain Systems</li>
-                                <li>Mechanism Design</li>
-                                <li>Rapid Prototyping</li>
+                        <div class="summary-item">
+                            <div class="summary-item-label">Skills Focus</div>
+                            <ul class="summary-item-list">
+                                <li>[Skill or method]</li>
+                                <li>[Skill or method]</li>
+                                <li>[Skill or method]</li>
                             </ul>
                         </div>
-                    </div>
+                    </aside>
                 </div>
 
-                <div class="key-metrics">
-                    <div class="metric-card">
-                        <div class="metric-card-value">2.5 m/s</div>
-                        <div class="metric-card-label">Max Speed</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-card-value">18 kg</div>
-                        <div class="metric-card-label">Total Weight</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-card-value">Top 8</div>
-                        <div class="metric-card-label">Competition Finish</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-card-value">6</div>
-                        <div class="metric-card-label">Wheel Drive</div>
+                <div class="project-toc">
+                    <span class="project-toc-label">On this page</span>
+                    <div class="project-toc-links">
+                        <a href="#objective">Objective</a>
+                        <a href="#contribution">Contribution</a>
+                        <a href="#process">Process</a>
+                        <a href="#results">Results</a>
+                        <a href="#skills">Skills + Learnings</a>
+                        <a href="#deliverables">Deliverables</a>
+                        <a href="#details">Technical Details</a>
+                        <a href="#gallery">Gallery</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-alt">
+        <section class="section-alt project-story" id="objective">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>Objective & Motivation</h2>
+                        <p>[Explain the problem, why it matters, and the high-level requirements.]</p>
+
+                        <div class="story-card">
+                            <h3>Constraints & Success Criteria</h3>
+                            <ul class="constraints-list">
+                                <li>[Constraint: budget, time, safety, size, etc.]</li>
+                                <li>[Requirement: accuracy, load, speed, reliability]</li>
+                                <li>[Requirement: usability, manufacturability, or cost]</li>
+                            </ul>
+                        </div>
+
+                        <div class="story-card" id="contribution">
+                            <h3>My Contribution</h3>
+                            <ul class="contribution-list">
+                                <li>Designed [component] and validated it with [test].</li>
+                                <li>Built [prototype] and iterated based on [feedback or data].</li>
+                                <li>Analyzed [data] to inform [design decision].</li>
+                            </ul>
+                            <div class="story-callout">
+                                <strong>What I would improve next:</strong> [brief reflection or next iteration].
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <figure class="story-figure">
+                            <img src="../assets/images/projects/FTC-23/FTC_23_Robot.JPG" alt="System overview for FIRST Tech Challenge '22-'23 Robot" loading="lazy">
+                            <figcaption>System-level view with annotations to show where your contribution lives.</figcaption>
+                        </figure>
+                        <figure class="story-figure">
+                            <img src="../assets/images/projects/FTC-23/FTC_23_Robot.JPG" alt="Subsystem close-up for FIRST Tech Challenge '22-'23 Robot" loading="lazy">
+                            <figcaption>Close-up of the subsystem or analysis that highlights your technical skill.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="process">
             <div class="container">
                 <div class="process-section">
                     <h2>Design Process</h2>
                     <div class="process-timeline">
                         <div class="process-step">
                             <span class="process-step-number">1</span>
-                            <h3>Game Analysis</h3>
-                            <p>
-                                Analyzed competition game rules and scoring opportunities. Identified key requirements: 
-                                fast movement, object manipulation, and autonomous capabilities.
-                            </p>
+                            <h3>Discover + Define</h3>
+                            <p>[User research, problem framing, or requirement definition.]</p>
                             <div class="process-step-image">
-                                <img src="https://via.placeholder.com/1200x675/1e40af/ffffff?text=Game+Analysis" alt="Game analysis" loading="lazy">
+                                <img src="../assets/images/projects/FTC-23/FTC_23_Robot.JPG" alt="Discovery visuals for FIRST Tech Challenge '22-'23 Robot" loading="lazy">
                             </div>
                         </div>
                         <div class="process-step">
                             <span class="process-step-number">2</span>
-                            <h3>Drivetrain Design</h3>
-                            <p>
-                                Designed custom 6-wheel mecanum drivetrain for omnidirectional movement. Optimized 
-                                wheel placement and gear ratios for maximum speed and maneuverability.
-                            </p>
-                            <div class="process-step-image">
-                                <img src="https://via.placeholder.com/1200x675/3b82f6/ffffff?text=Drivetrain+Design" alt="Drivetrain design" loading="lazy">
-                            </div>
+                            <h3>Concept & Architecture</h3>
+                            <p>[System layout, concept sketches, or early modeling.]</p>
                         </div>
                         <div class="process-step">
                             <span class="process-step-number">3</span>
-                            <h3>Manipulator Systems</h3>
-                            <p>
-                                Developed dual manipulator system: one for large objects, one for precision tasks. 
-                                Used four-bar linkages and custom grippers optimized for game objects.
-                            </p>
-                            <div class="process-step-image">
-                                <img src="https://via.placeholder.com/1200x675/14b8a6/ffffff?text=Manipulator+Design" alt="Manipulator design" loading="lazy">
-                            </div>
+                            <h3>Prototype & Iterate</h3>
+                            <p>[Bench testing, fabrication, or simulation loops.]</p>
                         </div>
                         <div class="process-step">
                             <span class="process-step-number">4</span>
-                            <h3>Prototyping & Testing</h3>
-                            <p>
-                                Built multiple iterations, testing speed, reliability, and game performance. Refined 
-                                designs based on competition practice matches.
-                            </p>
-                            <div class="process-step-image">
-                                <img src="https://via.placeholder.com/1200x675/10b981/ffffff?text=Testing+Phase" alt="Testing phase" loading="lazy">
-                            </div>
+                            <h3>Validate & Deliver</h3>
+                            <p>[Verification tests, deployment, or final presentation.]</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section-alt" id="results">
+            <div class="container">
+                <h2>Results & Validation</h2>
+                <div class="key-metrics">
+                    <div class="metric-card">
+                        <div class="metric-card-value">[##]</div>
+                        <div class="metric-card-label">Performance Metric</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-card-value">[##]</div>
+                        <div class="metric-card-label">Efficiency / Cost</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-card-value">[##]</div>
+                        <div class="metric-card-label">Reliability / Accuracy</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-card-value">[##]</div>
+                        <div class="metric-card-label">User / Stakeholder Impact</div>
+                    </div>
+                </div>
+                <div class="results-notes">
+                    <p><strong>Evaluation:</strong> [Explain how results compare to the original objective and what you learned.]</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="container">
+                <h2>Skills, Learning & Growth</h2>
+                <div class="skills-grid">
+                    <div class="skills-panel">
+                        <h3>Skills Used</h3>
+                        <ul class="skill-chip-list">
+                            <li><span class="tag">[Skill]</span></li>
+                            <li><span class="tag">[Skill]</span></li>
+                            <li><span class="tag">[Skill]</span></li>
+                            <li><span class="tag">[Skill]</span></li>
+                        </ul>
+                    </div>
+                    <div class="learnings-panel">
+                        <h3>Key Learnings</h3>
+                        <ul class="learnings-list">
+                            <li>[Lesson learned or unexpected challenge.]</li>
+                            <li>[Design tradeoff you would handle differently.]</li>
+                            <li>[New capability gained or research insight.]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-alt" id="deliverables">
+            <div class="container">
+                <h2>Final Design Materials</h2>
+                <div class="deliverables-grid">
+                    <div class="deliverable-card">
+                        <h4>CAD + Drawings</h4>
+                        <p>[Link to CAD package, drawings, or BOM.]</p>
+                        <a class="deliverable-link" href="#">Add file link</a>
+                    </div>
+                    <div class="deliverable-card">
+                        <h4>Test Report</h4>
+                        <p>[Validation plan, data, and results.]</p>
+                        <a class="deliverable-link" href="#">Add report link</a>
+                    </div>
+                    <div class="deliverable-card">
+                        <h4>Code Repository</h4>
+                        <p>[Firmware, scripts, or control logic.]</p>
+                        <a class="deliverable-link" href="#">Add repo link</a>
+                    </div>
+                    <div class="deliverable-card">
+                        <h4>Demo Video</h4>
+                        <p>[Short clip or narrated demo.]</p>
+                        <a class="deliverable-link" href="#">Add video link</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="details">
             <div class="container">
                 <div class="technical-details">
-                    <h2>Technical Specifications</h2>
+                    <h2>Technical Details</h2>
                     <table class="specs-table">
                         <thead>
                             <tr>
@@ -251,28 +337,20 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Total Weight</td>
-                                <td>18 kg</td>
+                                <td>Requirement</td>
+                                <td>[Target value]</td>
                             </tr>
                             <tr>
-                                <td>Dimensions</td>
-                                <td>45 × 45 × 30 cm</td>
+                                <td>Subsystem</td>
+                                <td>[Materials, sensors, or key architecture]</td>
                             </tr>
                             <tr>
-                                <td>Drivetrain</td>
-                                <td>6-wheel mecanum</td>
+                                <td>Testing</td>
+                                <td>[Method, sample size, or environment]</td>
                             </tr>
                             <tr>
-                                <td>Max Speed</td>
-                                <td>2.5 m/s</td>
-                            </tr>
-                            <tr>
-                                <td>Manipulators</td>
-                                <td>2 (large object + precision)</td>
-                            </tr>
-                            <tr>
-                                <td>Control System</td>
-                                <td>REV Control Hub</td>
+                                <td>Manufacturing</td>
+                                <td>[Processes or suppliers]</td>
                             </tr>
                         </tbody>
                     </table>
@@ -280,46 +358,19 @@
             </div>
         </section>
 
-        <section class="section-alt">
-            <div class="container">
-                <div class="iteration-section">
-                    <h2>Design Iterations & Tradeoffs</h2>
-                    
-                    <div class="iteration-card">
-                        <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 1: Standard Drivetrain</h3>
-                        </div>
-                        <p><strong>What Changed:</strong> Traditional 4-wheel tank drive</p>
-                        <p><strong>Why:</strong> Simple and reliable baseline</p>
-                        <p><strong>Result:</strong> Functional but slow, limited maneuverability</p>
-                    </div>
-
-                    <div class="iteration-card">
-                        <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 2: Mecanum Upgrade</h3>
-                        </div>
-                        <p><strong>What Changed:</strong> Upgraded to 6-wheel mecanum drivetrain</p>
-                        <p><strong>Why:</strong> Need for omnidirectional movement and faster gameplay</p>
-                        <p><strong>Tradeoff:</strong> Increased complexity and cost</p>
-                        <p><strong>Result:</strong> 2x faster movement, better positioning, top 8 finish</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
+        <section class="section-alt" id="gallery">
             <div class="container">
                 <div class="media-gallery">
                     <h2>Media Gallery</h2>
                     <div class="gallery-grid">
                         <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/1e40af/ffffff?text=Robot+in+Competition" alt="Robot in competition" loading="lazy">
+                            <img src="../assets/images/projects/FTC-23/FTC_23_Robot.JPG" alt="FIRST Tech Challenge '22-'23 Robot hero" loading="lazy">
                         </div>
                         <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/3b82f6/ffffff?text=Drivetrain+Detail" alt="Drivetrain detail" loading="lazy">
+                            <img src="../assets/images/projects/FTC-23/FTC_23_Robot.JPG" alt="FIRST Tech Challenge '22-'23 Robot detail view" loading="lazy">
                         </div>
                         <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/14b8a6/ffffff?text=Manipulator+System" alt="Manipulator system" loading="lazy">
+                            <img src="../assets/images/projects/FTC-23/FTC_23_Robot.JPG" alt="FIRST Tech Challenge '22-'23 Robot in use" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -330,10 +381,10 @@
             <div class="container">
                 <div class="project-navigation">
                     <a href="MediaLab.html" class="project-nav-link prev">
-                        ← Previous Project
+                        &larr; Previous Project
                     </a>
                     <a href="SladeLab.html" class="project-nav-link next">
-                        Next Project →
+                        Next Project &rarr;
                     </a>
                 </div>
             </div>
@@ -345,7 +396,7 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <h3>Alex Ko's Maker Portfolio</h3>
-                    <p>Showcasing mechanical engineering, robotics, and biomechatronics projects.</p>
+                    <p>Showcasing my engineering and robotics projects in addition to other interesting things about me!</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -358,13 +409,15 @@
                 <div class="footer-links">
                     <h4>Connect</h4>
                     <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
-                        <a href="https://github.com/asyk454" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin">
+                            in
+                        </a>
+                        <a href="https://github.com/asyk454" class="social-github" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                             <svg class="icon-github" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                             </svg>
                         </a>
-                        <a href="mailto:alexko.harvard.edu" aria-label="Email">
+                        <a href="mailto:alexko@college.harvard.edu" class="social-email" aria-label="Email">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
                                 <path d="M3 7l9 6 9-6"></path>

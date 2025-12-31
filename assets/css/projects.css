@@ -158,13 +158,18 @@
     border-radius: 999px;
     padding: 0.35rem 0.9rem;
     font-size: 0.85rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    appearance: none;
+    -webkit-appearance: none;
     cursor: pointer;
     transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
 .filter-pill.is-active {
-    background: var(--accent);
-    border-color: var(--accent);
+    background-color: var(--accent-alt);
+    border-color: var(--accent-alt);
     color: #fff;
 }
 
@@ -325,6 +330,11 @@
 }
 
 @media (prefers-color-scheme: dark) {
+    .filter-pill.is-active {
+        background-color: #5b7adf;
+        border-color: #5b7adf;
+    }
+
     .projects-hero {
         background: linear-gradient(130deg, rgba(122, 162, 255, 0.14), rgba(0, 0, 0, 0));
     }
