@@ -197,6 +197,21 @@
     margin-bottom: var(--spacing-md);
 }
 
+.summary-note {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.summary-note-label {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.7rem;
+}
+
 .summary-highlights {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -363,6 +378,10 @@
     align-items: start;
 }
 
+.story-grid.single-column {
+    grid-template-columns: minmax(0, 1fr);
+}
+
 #build .story-grid {
     grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.95fr);
 }
@@ -471,6 +490,7 @@
 #reflection .story-grid {
     grid-template-columns: minmax(0, 1fr) auto;
 }
+
 
 /* Image Carousel */
 .image-carousel {
@@ -623,6 +643,26 @@
     margin-top: var(--spacing-sm);
 }
 
+#miscellaneous.section {
+    background-color: var(--surface-alt);
+}
+
+#reflections.section-alt {
+    background-color: var(--background);
+}
+
+.section-alt .story-callout {
+    background: var(--background);
+}
+
+#power-electronics .skills-line {
+    margin-top: var(--spacing-md);
+}
+
+#mqtt-telemetry .skills-line {
+    margin-top: var(--spacing-md);
+}
+
 .bullet-list {
     list-style: disc;
     padding-left: 1.25rem;
@@ -630,6 +670,16 @@
 
 .bullet-list li {
     padding: 2px 0;
+}
+
+.collaborators-line {
+    margin-top: var(--spacing-sm);
+}
+
+.collaborators-line a {
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .bullet-list li.bullet-spacer {
@@ -645,11 +695,23 @@
 }
 
 #reflection .bullet-list li {
-    margin-bottom: 6px;
+    margin-bottom: var(--spacing-sm);
 }
 
 #reflection .bullet-list li:last-child {
     margin-bottom: 0;
+}
+
+#reflections .bullet-list li {
+    margin-bottom: var(--spacing-sm);
+}
+
+#reflections .bullet-list li:last-child {
+    margin-bottom: 0;
+}
+
+#reflections .bullet-list + p {
+    margin-top: var(--spacing-md);
 }
 
 #reflection .bullet-list + .story-card {

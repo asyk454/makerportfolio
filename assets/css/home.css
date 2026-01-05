@@ -443,6 +443,7 @@
 
 .project-card-content {
     padding: var(--spacing-xs) var(--spacing-md);
+    padding-top: var(--spacing-sm);
     flex: 1;
     display: flex;
     flex-direction: column;

@@ -126,6 +126,7 @@
 .projects-gallery-subtitle {
     color: var(--text-light);
     max-width: 60ch;
+    margin-bottom: 0;
 }
 
 .projects-gallery-blurb {

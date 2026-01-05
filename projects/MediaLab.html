@@ -86,298 +86,266 @@
             <img src="../assets/images/projects/MediaLab/MediaLabLeg.png" alt="Neurally-Controlled Bionic Knee Prosthesis hero image" class="project-hero-image" loading="eager">
             <div class="project-hero-content">
                 <div class="container">
-                    <h1 class="project-hero-title">Neurally-Controlled Bionic Knee Prosthesis</h1>
-                    <div class="project-hero-meta">
-                        <div class="project-hero-tags">
-                            <span class="tag tag-biomechatronics">Biomechatronics</span>
-                            <span class="tag">Research</span>
+                    <div class="project-hero-grid">
+                        <div>
+                            <h1 class="project-hero-title">Neurally-Controlled Bionic Knee Prosthesis</h1>
                         </div>
-                        <span class="project-hero-year">2024</span>
+                        <aside class="project-hero-details">
+                            <div class="hero-detail-grid">
+                                <div class="hero-detail-stack">
+                                    <div class="hero-detail">
+                                        <span class="hero-detail-label">Organization</span>
+                                        <span class="hero-detail-value">MIT Media Lab</span>
+                                    </div>
+                                    <div class="hero-detail">
+                                        <span class="hero-detail-label">Timeline</span>
+                                        <span class="hero-detail-value">Jun 2023 &mdash; Mar 2024</span>
+                                    </div>
+                                </div>
+                                <div class="hero-detail">
+                                    <span class="hero-detail-label">Skills Learned</span>
+                                    <ul class="hero-detail-list">
+                                        <li>SolidWorks, Fusion 360</li>
+                                        <li>MATLAB</li>
+                                        <li>C++</li>
+                                        <li>Soldering + Wiring</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section project-summary" id="summary">
+        <section class="section" id="summary">
             <div class="container">
-                <div class="project-summary-grid">
-                    <div class="project-summary-main">
-                        <p class="summary-kicker">Outcome</p>
-                        <h2>Designed a [system] that [impact], achieving [metric] under [constraint].</h2>
-                        <p class="summary-body">My contribution: [specific subsystem, method, or experiment you owned].</p>
-                        <div class="summary-highlights">
-                            <div class="summary-highlight">
-                                <span class="summary-highlight-label">Impact</span>
-                                <span class="summary-highlight-value">[Outcome or award]</span>
-                            </div>
-                            <div class="summary-highlight">
-                                <span class="summary-highlight-label">Performance</span>
-                                <span class="summary-highlight-value">[Key metric]</span>
-                            </div>
-                            <div class="summary-highlight">
-                                <span class="summary-highlight-label">Scope</span>
-                                <span class="summary-highlight-value">[Scale, users, or deployment]</span>
-                            </div>
-                        </div>
-                    </div>
-                    <aside class="project-summary-card">
-                        <h3>Project Details</h3>
-                        <div class="summary-item">
-                            <div class="summary-item-label">Role</div>
-                            <div class="summary-item-value">[Your role]</div>
-                        </div>
-                        <div class="summary-item">
-                            <div class="summary-item-label">Team</div>
-                            <div class="summary-item-value">[Team size or collaborators]</div>
-                        </div>
-                        <div class="summary-item">
-                            <div class="summary-item-label">Timeline</div>
-                            <div class="summary-item-value">[Duration + dates]</div>
-                        </div>
-                        <div class="summary-item">
-                            <div class="summary-item-label">Tools</div>
-                            <ul class="summary-item-list">
-                                <li>[Tool or platform]</li>
-                                <li>[Tool or platform]</li>
-                                <li>[Tool or platform]</li>
-                            </ul>
-                        </div>
-                        <div class="summary-item">
-                            <div class="summary-item-label">Skills Focus</div>
-                            <ul class="summary-item-list">
-                                <li>[Skill or method]</li>
-                                <li>[Skill or method]</li>
-                                <li>[Skill or method]</li>
-                            </ul>
-                        </div>
-                    </aside>
-                </div>
+                <p class="summary-kicker">Summary</p>
+                <p class="summary-body">I worked on the neurally controlled bionic knee prosthesis, improving reliability, test readiness, and data capture/processing. I redesigned power electronics housing and cable routing to reduce encoder dropout, built MQTT telemetry transmission code, and facilitated preliminary testing every weekend with patients. This work was published in <a href="https://www.science.org/doi/10.1126/science.adv3223" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;"><em>Science</em></a>, where I was listed as a co-author.</p>
+                <p class="summary-note">
+                    <span class="summary-note-label">Note: In order to respect the privacy of participants, all testing media items are ones that are already publicly available.</span>
+                </p>
+            </div>
+        </section>
 
-                <div class="project-toc">
-                    <span class="project-toc-label">On this page</span>
-                    <div class="project-toc-links">
-                        <a href="#objective">Objective</a>
-                        <a href="#contribution">Contribution</a>
-                        <a href="#process">Process</a>
-                        <a href="#results">Results</a>
-                        <a href="#skills">Skills + Learnings</a>
-                        <a href="#deliverables">Deliverables</a>
-                        <a href="#details">Technical Details</a>
-                        <a href="#gallery">Gallery</a>
+        <section class="section-alt" id="context">
+            <div class="container">
+                <div class="story-grid single-column">
+                    <div>
+                        <h2>Context</h2>
+                        <p>Mobility for amputees has advanced fast, but most innovation has focused on upper-limb and below-knee devices. <strong>Above-knee (transfemoral) options remain limited</strong> and often lack active control. This project <strong>developed a bionic knee prosthesis</strong> controlled directly from the user's nervous system.</p>
+                        <h3>My Role</h3>
+                        <p>I worked on this project from the beginning of its testing phase through its publication. Here's an overview of my major contributions before I dive into more detail:</p>
+                        <ul class="bullet-list">
+                            <li>Redesigned the power electronics housing and rerouted existing cables to <strong>solve a critical encoder issue</strong>.</li>
+                            <li>Used C++ to <strong>enhance foot force sensing data transmission</strong> via the MQTT Protocol.</li>
+                            <li>Familiarized with testing protocols, eventually <strong>ran tests myself</strong>.</li>
+                            <li>Created MATLAB data processing scripts to <strong>pre-process millions of testing data points</strong>.</li>
+                        </ul>
+                        <p class="collaborators-line"><strong>Collaborators:</strong> <a href="https://www.linkedin.com/in/tonyshu/" target="_blank" rel="noopener noreferrer">Tony Shu</a> (paper first author), <a href="https://www.linkedin.com/in/seanboe/" target="_blank" rel="noopener noreferrer">Sean Boerhout</a> (co-intern), <a href="https://www.linkedin.com/in/gloria-zhu-78a079155/" target="_blank" rel="noopener noreferrer">Gloria Zhu</a> (co-intern)</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-alt project-story" id="objective">
+        <section class="section" id="power-electronics">
             <div class="container">
                 <div class="story-grid">
                     <div>
-                        <h2>Objective & Motivation</h2>
-                        <p>[Explain the problem, why it matters, and the high-level requirements.]</p>
-
-                        <div class="story-card">
-                            <h3>Constraints & Success Criteria</h3>
-                            <ul class="constraints-list">
-                                <li>[Constraint: budget, time, safety, size, etc.]</li>
-                                <li>[Requirement: accuracy, load, speed, reliability]</li>
-                                <li>[Requirement: usability, manufacturability, or cost]</li>
-                            </ul>
+                        <h2>Power Electronics Housing + Encoder Fix</h2>
+                        <p class="story-callout"><strong>Impact:</strong> Reduced knee encoder dropouts during high-torque events and consolidated cable management, improving uptime and data quality.</p>
+                        <div class="problem-statement">
+                            <h3>Problem Statement</h3>
+                            <p>During high-torque events, the knee encoder intermittently reported incorrect angles due to EMI from the motor, which paused trials and corrupted logs. I needed a retrofit that improved signal integrity and organized cable management.</p>
                         </div>
-
-                        <div class="story-card" id="contribution">
-                            <h3>My Contribution</h3>
-                            <ul class="contribution-list">
-                                <li>Designed [component] and validated it with [test].</li>
-                                <li>Built [prototype] and iterated based on [feedback or data].</li>
-                                <li>Analyzed [data] to inform [design decision].</li>
-                            </ul>
-                            <div class="story-callout">
-                                <strong>What I would improve next:</strong> [brief reflection or next iteration].
-                            </div>
-                        </div>
+                        <h3>What I Changed</h3>
+                        <ul class="bullet-list">
+                            <li>Investigated software vs. hardware root causes; confirmed an EMI coupling issue and prioritized a wiring/routing fix.</li>
+                            <li>Braided and shielded power cables and added ferrites to reduce noise coupling into encoder lines.</li>
+                            <li>Remodeled the housing to enforce separation of power and signal paths + add strain relief and space for the Arduino Feather (see below).</li>
+                        </ul>
+                        <p class="skills-line"><strong>Skills:</strong> CAD &bull; Rapid prototyping &bull; Soldering and Wiring &bull; EMI mitigation</p>
                     </div>
                     <div>
-                        <figure class="story-figure">
-                            <img src="../assets/images/projects/MediaLab/MediaLabLeg.png" alt="System overview for Neurally-Controlled Bionic Knee Prosthesis" loading="lazy">
-                            <figcaption>System-level view with annotations to show where your contribution lives.</figcaption>
-                        </figure>
-                        <figure class="story-figure">
-                            <img src="../assets/images/projects/MediaLab/MediaLabLeg.png" alt="Subsystem close-up for Neurally-Controlled Bionic Knee Prosthesis" loading="lazy">
-                            <figcaption>Close-up of the subsystem or analysis that highlights your technical skill.</figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="process">
-            <div class="container">
-                <div class="process-section">
-                    <h2>Design Process</h2>
-                    <div class="process-timeline">
-                        <div class="process-step">
-                            <span class="process-step-number">1</span>
-                            <h3>Discover + Define</h3>
-                            <p>[User research, problem framing, or requirement definition.]</p>
-                            <div class="process-step-image">
-                                <img src="../assets/images/projects/MediaLab/MediaLabLeg.png" alt="Discovery visuals for Neurally-Controlled Bionic Knee Prosthesis" loading="lazy">
+                        <div class="image-carousel" data-carousel>
+                            <div class="carousel-track">
+                                <figure class="carousel-slide is-active" data-carousel-slide>
+                                    <img src="../assets/images/projects/MediaLab/MIT_Braided_Cables.jpeg" alt="Braided and shielded encoder harness" loading="lazy">
+                                    <figcaption class="carousel-caption">One of many braided power lines with a ferrite to reduce EMI coupling</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/MediaLab/MIT_Power_Electronics_Diagram.jpeg" alt="Power electronics diagram with routing separation" loading="lazy">
+                                    <figcaption class="carousel-caption">Redesigned power electronics diagram for EMG board and Arduino Feather</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/MediaLab/MIT_Electronics_Casing.png" alt="Revised power electronics housing" loading="lazy">
+                                    <figcaption class="carousel-caption">New power electronics housing designed in Fusion 360</figcaption>
+                                </figure>
                             </div>
-                        </div>
-                        <div class="process-step">
-                            <span class="process-step-number">2</span>
-                            <h3>Concept & Architecture</h3>
-                            <p>[System layout, concept sketches, or early modeling.]</p>
-                        </div>
-                        <div class="process-step">
-                            <span class="process-step-number">3</span>
-                            <h3>Prototype & Iterate</h3>
-                            <p>[Bench testing, fabrication, or simulation loops.]</p>
-                        </div>
-                        <div class="process-step">
-                            <span class="process-step-number">4</span>
-                            <h3>Validate & Deliver</h3>
-                            <p>[Verification tests, deployment, or final presentation.]</p>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous image">
+                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
+                            </button>
+                            <button class="carousel-btn next" type="button" aria-label="Next image">
+                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-alt" id="results">
+        <section class="section-alt" id="mqtt-telemetry">
             <div class="container">
-                <h2>Results & Validation</h2>
-                <div class="key-metrics">
-                    <div class="metric-card">
-                        <div class="metric-card-value">[##]</div>
-                        <div class="metric-card-label">Performance Metric</div>
+                <div class="story-grid">
+                    <div>
+                        <h2>Foot FSR Telemetry (MQTT)</h2>
+                        <p class="story-callout"><strong>Impact:</strong> Improved foot-contact detection reliability and enabled consistent gait-event streaming to the EMG board for cleaner trial logs.</p>
+                        <div class="problem-statement">
+                            <h3>Problem Statement</h3>
+                            <p>Force sensitive resistors (FSRs) placed on the prosthesis's foot were used to detect ground contact and gait events. Transmitting this information to the central processing unit required reliable data streaming over MQTT.</p>
+                            <p><strong>My Solution:</strong> Transmit data using the MQTT protocol over WiFi using Arduino Feathers and clever bit-assignments/byte packing.</p>
+                        </div>
+                        <h3>What I Built</h3>
+                        <ul class="bullet-list">
+                            <li>Upgraded Feather and FSR setup for more reliable contact data.</li>
+                            <li>Wrote bit-assignments for efficient data packing and transmitted over MQTT before unpacking on the EMG processing board.</li>
+                            <li>Reorganized power electronics near the EMG processing board for consolidated form factor.</li>
+                        </ul>
+                        <p class="skills-line"><strong>Skills:</strong> C++ &bull; MQTT Streaming &bull; Soldering and Wiring</p>
                     </div>
-                    <div class="metric-card">
-                        <div class="metric-card-value">[##]</div>
-                        <div class="metric-card-label">Efficiency / Cost</div>
+                    <div>
+                        <div class="image-carousel" data-carousel>
+                            <div class="carousel-track">
+                                <figure class="carousel-slide is-active" data-carousel-slide>
+                                    <img src="../assets/images/projects/MediaLab/MIT_FSRs.jpeg" alt="FSR sensors mounted on prosthesis foot" loading="lazy">
+                                    <figcaption class="carousel-caption">Upgraded FSR sensor layout for improved ground contact detection</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/MediaLab/MIT_Foot_Feather.jpeg" alt="Foot-mounted Arduino Feather setup" loading="lazy">
+                                    <figcaption class="carousel-caption">Newly built Arduino Feather used for foot telemetry broadcasting</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/MediaLab/MIT_MQTT_Testing_Setup.jpeg" alt="MQTT testing setup and logging workstation" loading="lazy">
+                                    <figcaption class="carousel-caption">MQTT testing setup used to code/debug live-logging</figcaption>
+                                </figure>
+                            </div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous image">
+                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
+                            </button>
+                            <button class="carousel-btn next" type="button" aria-label="Next image">
+                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
+                            </button>
+                        </div>
                     </div>
-                    <div class="metric-card">
-                        <div class="metric-card-value">[##]</div>
-                        <div class="metric-card-label">Reliability / Accuracy</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-card-value">[##]</div>
-                        <div class="metric-card-label">User / Stakeholder Impact</div>
-                    </div>
-                </div>
-                <div class="results-notes">
-                    <p><strong>Evaluation:</strong> [Explain how results compare to the original objective and what you learned.]</p>
                 </div>
             </div>
         </section>
 
-        <section class="section" id="skills">
+        <section class="section" id="testing-protocols">
             <div class="container">
-                <h2>Skills, Learning & Growth</h2>
-                <div class="skills-grid">
-                    <div class="skills-panel">
-                        <h3>Skills Used</h3>
-                        <ul class="skill-chip-list">
-                            <li><span class="tag">[Skill]</span></li>
-                            <li><span class="tag">[Skill]</span></li>
-                            <li><span class="tag">[Skill]</span></li>
-                            <li><span class="tag">[Skill]</span></li>
+                <div class="story-grid">
+                    <div>
+                        <h2>Testing Protocols &amp; Execution</h2>
+                        <p class="story-callout"><strong>Impact:</strong> Took ownership of weekend end-to-end test execution, enabling consistent data collection without reinventing the workflow each time.</p>
+                        <div class="problem-statement">
+                            <h3>Context</h3>
+                            <p>Data collection and testing were the largest areas where I supported project progress. Every weekend, I set up the testing environment, interacted and supported patients, and eventually <strong>took ownership of running preliminary data collection</strong> activities (more strenuous, technical testing was still managed by Tony).</p>
+                        </div>
+                        <h3>Testing Workflow Highlights</h3>
+                        <ul class="bullet-list">
+                            <li><strong>Setup:</strong> prepared testing hardware, calibrated MoCap, treadmill force plates, and goniometer sensors, and provided consent materials.</li>
+                            <li><strong>Session:</strong> guided participants through preliminary sit-to-stand trials, supported with video production, data capture, and test execution.</li>
+                            <li><strong>Wrap-up:</strong> validated logs and synced data to internal servers for processing.</li>
                         </ul>
                     </div>
-                    <div class="learnings-panel">
-                        <h3>Key Learnings</h3>
-                        <ul class="learnings-list">
-                            <li>[Lesson learned or unexpected challenge.]</li>
-                            <li>[Design tradeoff you would handle differently.]</li>
-                            <li>[New capability gained or research insight.]</li>
+                    <div>
+                        <div class="video-embed">
+                            <iframe
+                                src="https://www.youtube.com/embed/ZQCVmuirYSI?autoplay=1&mute=1&loop=1&playlist=ZQCVmuirYSI&playsinline=1&rel=0"
+                                title="Testing protocols walkthrough video"
+                                frameborder="0"
+                                allow="autoplay; encrypted-media; picture-in-picture"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="miscellaneous">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>Miscellaneous</h2>
+                        <p>A collection of smaller side projects and supporting tasks that kept the lab moving.</p>
+                        <ul class="bullet-list">
+                            <li>Contracted PCB-fab companies to produce more surface electrodes.</li>
+                            <li>Designed new, compliant prosthesis abutment adapters in SolidWorks.</li>
+                            <li>Assembled spare leg for additional testing.</li>
+                            <li>Created tables for display in final paper.</li>
+                            <li>Managed lab logistics and equipment inventory.</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-alt" id="deliverables">
-            <div class="container">
-                <h2>Final Design Materials</h2>
-                <div class="deliverables-grid">
-                    <div class="deliverable-card">
-                        <h4>CAD + Drawings</h4>
-                        <p>[Link to CAD package, drawings, or BOM.]</p>
-                        <a class="deliverable-link" href="#">Add file link</a>
-                    </div>
-                    <div class="deliverable-card">
-                        <h4>Test Report</h4>
-                        <p>[Validation plan, data, and results.]</p>
-                        <a class="deliverable-link" href="#">Add report link</a>
-                    </div>
-                    <div class="deliverable-card">
-                        <h4>Code Repository</h4>
-                        <p>[Firmware, scripts, or control logic.]</p>
-                        <a class="deliverable-link" href="#">Add repo link</a>
-                    </div>
-                    <div class="deliverable-card">
-                        <h4>Demo Video</h4>
-                        <p>[Short clip or narrated demo.]</p>
-                        <a class="deliverable-link" href="#">Add video link</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="details">
-            <div class="container">
-                <div class="technical-details">
-                    <h2>Technical Details</h2>
-                    <table class="specs-table">
-                        <thead>
-                            <tr>
-                                <th>Parameter</th>
-                                <th>Value</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Requirement</td>
-                                <td>[Target value]</td>
-                            </tr>
-                            <tr>
-                                <td>Subsystem</td>
-                                <td>[Materials, sensors, or key architecture]</td>
-                            </tr>
-                            <tr>
-                                <td>Testing</td>
-                                <td>[Method, sample size, or environment]</td>
-                            </tr>
-                            <tr>
-                                <td>Manufacturing</td>
-                                <td>[Processes or suppliers]</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-alt" id="gallery">
-            <div class="container">
-                <div class="media-gallery">
-                    <h2>Media Gallery</h2>
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <img src="../assets/images/projects/MediaLab/MediaLabLeg.png" alt="Neurally-Controlled Bionic Knee Prosthesis hero" loading="lazy">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="../assets/images/projects/MediaLab/MediaLabLeg.png" alt="Neurally-Controlled Bionic Knee Prosthesis detail view" loading="lazy">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="../assets/images/projects/MediaLab/MediaLabLeg.png" alt="Neurally-Controlled Bionic Knee Prosthesis in use" loading="lazy">
+                    <div>
+                        <div class="image-carousel" data-carousel>
+                            <div class="carousel-track">
+                                <figure class="carousel-slide is-active" data-carousel-slide>
+                                    <img src="../MIT_Electrodes.jpg" alt="Electrodes used for participant testing" loading="lazy">
+                                    <figcaption class="carousel-caption">Electrodes used for EMG tests that I reordered from chip fabs</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../MIT_eOPRA_TPU_Adaptor.jpeg" alt="eOPRA TPU adaptor component" loading="lazy">
+                                    <figcaption class="carousel-caption">Flexible prosthesis abutment adapter made of TPU</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../MIT_Full_Leg.jpeg" alt="Full bionic knee leg assembly" loading="lazy">
+                                    <figcaption class="carousel-caption">Backup leg assembly I put together from spare parts in the first week</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../MIT_DataTable.png" alt="Data table prepared for analysis" loading="lazy">
+                                    <figcaption class="carousel-caption">Preliminary data table I formatted for future paper</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../MIT_SnackManagement.jpeg" alt="Snack management note and supplies" loading="lazy">
+                                    <figcaption class="carousel-caption">Managing snacks and supplies to keep morale high!</figcaption>
+                                </figure>
+                            </div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous image">
+                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
+                            </button>
+                            <button class="carousel-btn next" type="button" aria-label="Next image">
+                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section-alt" id="reflections">
+            <div class="container">
+                <div>
+                    <h2>Reflections, Learnings, &amp; Final Paper</h2>
+                    <p>This was my first engineering research role. I took away some key engineering learnings:</p>
+                    <ul class="bullet-list">
+                        <li><strong>Small changes can unlock stability:</strong> Rerouting cables, adding ferrites, and iterating housings taught me that reliable, well-organized systems are critical for smoothly functioning hardware and should be prioritized during the design process.</li>
+                        <li><strong>Efficiency is the second-greatest concern:</strong> Outside of getting the leg to work, most of my projects throughout the internship focused on making existing parts of the robot more efficient. In a moving environment, power, thermal efficiency, and quick response times all come at a premium and should always be prioritized when engineering something.</li>
+                        <li><strong>Presentation of results matters:</strong> Preparing for the publication submission, Tony stressed the need for clear, compelling visuals that emphasized a story our testing data attempted to tell. Communicating our complex findings to a broad audience in a meaningful way made all the difference in the performance of the final paper.</li>
+                    </ul>
+                    <p>More than anything, this experience put into perspective the life-changing power of applied robotics. <strong>Seeing patients get emotional</strong> while walking up and down stairs for the first time in 20 years tugged at my heartstrings and convinced me of this: <strong>I want to become an engineer</strong> to build devices with functional viability that will <strong>improve people's lives.</strong></p>
+                    <div class="deliverables-grid">
+                        <div class="deliverable-card">
+                            <h4><em>Science</em> Paper</h4>
+                            <p>Final paper published in <em>Science</em> in July, 2025. I was listed as a co-author on the work that details the neurally controlled bionic knee platform, testing outcomes, and the implications of this monumental contribution to assistive robotics.</p>
+                            <a class="deliverable-link" href="https://www.science.org/doi/10.1126/science.adv3223" target="_blank" rel="noopener noreferrer">Read the <em>Science</em> paper</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section project-nav-section">
             <div class="container">
                 <div class="project-navigation">
                     <a href="ES-51.html" class="project-nav-link prev">
@@ -433,5 +401,137 @@
     </footer>
 
     <script src="../assets/js/main.js"></script>
+    <script>
+        (function () {
+            var carousels = document.querySelectorAll('[data-carousel]');
+            if (!carousels.length) {
+                return;
+            }
+
+            carousels.forEach(function (carousel) {
+                var slides = carousel.querySelectorAll('[data-carousel-slide]');
+                var prevButton = carousel.querySelector('.carousel-btn.prev');
+                var nextButton = carousel.querySelector('.carousel-btn.next');
+                var currentIndex = 0;
+                var intervalId = null;
+                var imageTimeoutId = null;
+                var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                var isVideoCarousel = carousel.getAttribute('data-carousel-mode') === 'video' || carousel.querySelector('video');
+
+                slides.forEach(function (slide, index) {
+                    if (slide.classList.contains('is-active')) {
+                        currentIndex = index;
+                    }
+                });
+
+                var pauseVideos = function () {
+                    slides.forEach(function (slide) {
+                        var video = slide.querySelector('video');
+                        if (video) {
+                            video.pause();
+                            video.currentTime = 0;
+                        }
+                    });
+                };
+
+                var clearImageTimeout = function () {
+                    if (imageTimeoutId) {
+                        window.clearTimeout(imageTimeoutId);
+                        imageTimeoutId = null;
+                    }
+                };
+
+                var playActiveVideo = function () {
+                    if (!isVideoCarousel || reduceMotion) {
+                        return;
+                    }
+                    var activeSlide = slides[currentIndex];
+                    var video = activeSlide.querySelector('video');
+                    if (video) {
+                        video.play().catch(function () {});
+                    }
+                };
+
+                var scheduleImageAdvance = function () {
+                    if (reduceMotion || !isVideoCarousel) {
+                        return;
+                    }
+                    var activeSlide = slides[currentIndex];
+                    var hasVideo = activeSlide.querySelector('video');
+                    if (hasVideo) {
+                        return;
+                    }
+                    clearImageTimeout();
+                    imageTimeoutId = window.setTimeout(function () {
+                        showSlide(currentIndex + 1);
+                    }, 2500);
+                };
+
+                var showSlide = function (index) {
+                    slides[currentIndex].classList.remove('is-active');
+                    currentIndex = (index + slides.length) % slides.length;
+                    slides[currentIndex].classList.add('is-active');
+
+                    if (isVideoCarousel) {
+                        clearImageTimeout();
+                        pauseVideos();
+                        playActiveVideo();
+                        scheduleImageAdvance();
+                    }
+                };
+
+                var startAuto = function () {
+                    if (reduceMotion || isVideoCarousel) {
+                        return;
+                    }
+                    intervalId = window.setInterval(function () {
+                        showSlide(currentIndex + 1);
+                    }, 2500);
+                };
+
+                var resetAuto = function () {
+                    if (isVideoCarousel) {
+                        return;
+                    }
+                    if (intervalId) {
+                        window.clearInterval(intervalId);
+                    }
+                    startAuto();
+                };
+
+                if (prevButton) {
+                    prevButton.addEventListener('click', function () {
+                        showSlide(currentIndex - 1);
+                        resetAuto();
+                    });
+                }
+
+                if (nextButton) {
+                    nextButton.addEventListener('click', function () {
+                        showSlide(currentIndex + 1);
+                        resetAuto();
+                    });
+                }
+
+                if (isVideoCarousel) {
+                    slides.forEach(function (slide) {
+                        var video = slide.querySelector('video');
+                        if (!video) {
+                            return;
+                        }
+                        video.addEventListener('ended', function () {
+                            if (slide.classList.contains('is-active')) {
+                                showSlide(currentIndex + 1);
+                            }
+                        });
+                    });
+                    scheduleImageAdvance();
+                    playActiveVideo();
+                } else {
+                    startAuto();
+                }
+            });
+        })();
+    </script>
 </body>
 </html>

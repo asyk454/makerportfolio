@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Abstract machine learning sorting pipeline illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7f2e7" />
+      <stop offset="100%" stop-color="#d9ece6" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="100%" stop-color="#0ea5a4" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)" />
+
+  <g opacity="0.18">
+    <circle cx="220" cy="170" r="120" fill="#f97316" />
+    <circle cx="1460" cy="140" r="180" fill="#38bdf8" />
+    <circle cx="1330" cy="740" r="140" fill="#f97316" />
+  </g>
+
+  <g fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round" opacity="0.35">
+    <path d="M340 240 L560 240 L640 320" />
+    <path d="M640 320 L860 320" />
+    <path d="M860 320 L1150 320" />
+    <path d="M640 520 L860 520" />
+    <path d="M860 520 L1150 520" />
+  </g>
+
+  <g>
+    <rect x="240" y="250" width="240" height="170" rx="18" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
+    <rect x="520" y="200" width="260" height="220" rx="20" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
+    <rect x="840" y="250" width="240" height="170" rx="18" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
+    <rect x="1120" y="210" width="260" height="230" rx="24" fill="url(#accent)" opacity="0.95" />
+  </g>
+
+  <g fill="#0f172a" opacity="0.9">
+    <circle cx="300" cy="320" r="10" />
+    <circle cx="360" cy="320" r="10" />
+    <circle cx="640" cy="310" r="12" />
+    <circle cx="700" cy="310" r="12" />
+    <circle cx="900" cy="320" r="10" />
+    <circle cx="960" cy="320" r="10" />
+  </g>
+
+  <g fill="none" stroke="#f97316" stroke-width="10" stroke-linecap="round" opacity="0.9">
+    <path d="M300 520 L500 520" />
+    <path d="M540 560 L760 560" />
+    <path d="M820 560 L1040 560" />
+  </g>
+
+  <g fill="#ffffff" opacity="0.95">
+    <rect x="1180" y="470" width="180" height="14" rx="7" />
+    <rect x="1180" y="500" width="140" height="14" rx="7" />
+    <rect x="1180" y="530" width="200" height="14" rx="7" />
+  </g>
+</svg>
