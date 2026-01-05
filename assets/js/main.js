@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentFile = currentPath.split('/').pop();
         // Check if this link matches the current page
         if ((linkFile && currentFile === linkFile) || 
-            (currentPath.endsWith('/') && linkFile === 'home.html') ||
-            (currentPath.endsWith('home.html') && linkFile === 'home.html')) {
+            (currentPath.endsWith('/') && linkFile === 'index.html') ||
+            (currentPath.endsWith('index.html') && linkFile === 'index.html')) {
             link.classList.add('active');
         }
         // Special case for home page
-        if (currentPath.endsWith('/') || currentPath.endsWith('home.html')) {
-            if (linkFile === 'home.html' || linkPath === '/') {
+        if (currentPath.endsWith('/') || currentPath.endsWith('index.html')) {
+            if (linkFile === 'index.html' || linkPath === '/') {
                 link.classList.add('active');
             }
         }
