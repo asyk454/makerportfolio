@@ -83,33 +83,40 @@
     <main id="main-content">
 
         <section class="project-hero">
-            <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="VLA-Controlled Supernumerary Arm hero image" class="project-hero-image" loading="eager">
+            <img src="../assets/images/projects/SladeLab/SladeLab-Hero.jpg" alt="VLA-Controlled Supernumerary Arm hero image" class="project-hero-image" loading="eager">
             <div class="project-hero-content">
                 <div class="container">
                     <div class="project-hero-grid">
                         <div>
                             <h1 class="project-hero-title">VLA-Controlled Supernumerary Arm</h1>
+                            <p class="project-hero-year">Assistive, human-mounted supernumerary arm controlled by a vision-language-action model to carry out ADL tasks from natural-language prompts.</p>
+                            <div class="project-hero-tags">
+                                <span class="tag">Timeline: 10-week summer (Jun 2 - Aug 8)</span>
+                                <span class="tag">Setting: Professor Slade's lab</span>
+                                <span class="tag">Tools: SmolVLA, LeRobot, Arduino/SO-101</span>
+                                <span class="tag">Role: Prototyping, data collection, training scripts</span>
+                            </div>
                         </div>
                         <aside class="project-hero-details">
                             <div class="hero-detail-grid">
                                 <div class="hero-detail-stack">
                                     <div class="hero-detail">
                                         <span class="hero-detail-label">Lab</span>
-                                        <span class="hero-detail-value">Slade Lab</span>
-                                        <span class="hero-detail-value hero-detail-subvalue">Robotics Research</span>
+                                        <span class="hero-detail-value">Professor Slade</span>
+                                        <span class="hero-detail-value hero-detail-subvalue">Assistive Robotics</span>
                                     </div>
                                     <div class="hero-detail">
                                         <span class="hero-detail-label">Timeline</span>
-                                        <span class="hero-detail-value">2025</span>
+                                        <span class="hero-detail-value">Jun 2 - Aug 8 (10 weeks)</span>
                                     </div>
                                 </div>
                                 <div class="hero-detail">
-                                    <span class="hero-detail-label">Skills Learned</span>
+                                    <span class="hero-detail-label">Focus</span>
                                     <ul class="hero-detail-list">
-                                        <li>Lorem ipsum dolor</li>
-                                        <li>Sit amet consectetur</li>
-                                        <li>Adipiscing elit</li>
-                                        <li>Integer posuere</li>
+                                        <li>Vision-Language-Action control loop</li>
+                                        <li>Human-mounted SO-101 arm</li>
+                                        <li>Multi-camera sensing</li>
+                                        <li>ADL task design + evaluation</li>
                                     </ul>
                                 </div>
                             </div>
@@ -121,8 +128,12 @@
 
         <section class="section" id="summary">
             <div class="container">
-                <p class="summary-kicker">Summary</p>
-                <p class="summary-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="summary-kicker">TL;DR</p>
+                <ul class="bullet-list">
+                    <li><strong>Built:</strong> A 1-DOF proof-of-concept servo arm and a human-mounted SO-101 setup for VLA-controlled ADL tasks.</li>
+                    <li><strong>Challenge:</strong> Poor or limited training data and early camera placements led to overfitting and weak object recognition.</li>
+                    <li><strong>Takeaway:</strong> Data quality and sensing placement dominated policy reliability and experiment design.</li>
+                </ul>
             </div>
         </section>
 
@@ -130,31 +141,34 @@
             <div class="container">
                 <div class="story-grid">
                     <div>
-                        <h2>Context</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                        <h3>Design Goal:</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h2>Context &amp; Motivation</h2>
+                        <p>We explored how vision-language-action models can control an assistive, human-mounted supernumerary arm for activities of daily living (ADLs).</p>
+                        <p>Most VLA work targets fixed-base robots in controlled environments with minimal human-robot interaction, so we focused on a wearable, human-interactive setting instead.</p>
+                        <div class="story-card">
+                            <h3>Example instruction</h3>
+                            <p><strong>&quot;Pick up the glasses and hand them to me.&quot;</strong></p>
+                        </div>
+                        <h3>Target tasks (examples)</h3>
                         <ul class="bullet-list">
-                            <li>Lorem ipsum dolor sit amet</li>
-                            <li>Consectetur adipiscing elit</li>
-                            <li>Sed do eiusmod tempor</li>
-                            <li>Ut enim ad minim</li>
+                            <li>Find and pass glasses to a user.</li>
+                            <li>Hold a water bottle while a user drinks.</li>
+                            <li>Stabilize a forearm during brushing teeth.</li>
                         </ul>
                     </div>
                     <div>
                         <div class="image-carousel" data-carousel>
                             <div class="carousel-track">
                                 <figure class="carousel-slide is-active" data-carousel-slide>
-                                    <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Slade Lab placeholder image 1" loading="lazy">
-                                    <figcaption class="carousel-caption">Lorem ipsum dolor sit amet</figcaption>
+                                    <img src="../assets/images/projects/SladeLab/SladeLab-Context-01.jpg" alt="Wearable supernumerary arm concept" loading="lazy">
+                                    <figcaption class="carousel-caption">Human-mounted assistive arm concept</figcaption>
                                 </figure>
                                 <figure class="carousel-slide" data-carousel-slide>
-                                    <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Slade Lab placeholder image 2" loading="lazy">
-                                    <figcaption class="carousel-caption">Consectetur adipiscing elit</figcaption>
+                                    <img src="../assets/images/projects/SladeLab/SladeLab-Context-02.jpg" alt="ADL task setup with glasses" loading="lazy">
+                                    <figcaption class="carousel-caption">ADL task framing (glasses handoff)</figcaption>
                                 </figure>
                                 <figure class="carousel-slide" data-carousel-slide>
-                                    <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Slade Lab placeholder image 3" loading="lazy">
-                                    <figcaption class="carousel-caption">Sed do eiusmod tempor</figcaption>
+                                    <img src="../assets/images/projects/SladeLab/SladeLab-Context-03.jpg" alt="Vision-language-action loop sketch" loading="lazy">
+                                    <figcaption class="carousel-caption">VLA observation-to-action loop</figcaption>
                                 </figure>
                             </div>
                             <button class="carousel-btn prev" type="button" aria-label="Previous image">
@@ -174,29 +188,30 @@
                 <div class="story-grid">
                     <div>
                         <h2>My Role</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                        <p>I owned day-to-day prototyping, data work, and integration tasks while co-developing the research plan with the team.</p>
                         <ul class="bullet-list">
-                            <li>Lorem ipsum dolor sit amet</li>
-                            <li>Consectetur adipiscing elit</li>
-                            <li class="bullet-spacer">Sed do eiusmod tempor incididunt</li>
+                            <li><strong>I built and debugged</strong> the 1-DOF proof-of-concept servo arm with Arduino wiring and basic circuitry.</li>
+                            <li><strong>I designed and 3D-printed</strong> mounting hardware (handles, mounting board + straps) and physical ROM stops for safety.</li>
+                            <li><strong>I assembled and modified</strong> the SO-101 arm for mobile use, including strap routing and camera mounts.</li>
+                            <li><strong>I wrote and maintained</strong> data-collection and training scripts and ran SmolVLA fine-tuning experiments.</li>
+                            <li><strong>I drafted</strong> trial designs and protocol notes (base tasks, variations, and scoring) for future evaluations.</li>
                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien ut libero venenatis faucibus.</p>
-                        <p><strong>Collaborators:</strong> Lorem ipsum, Dolor sit, Amet consectetur</p>
+                        <p class="collaborators-line"><strong>Collaborators:</strong> Professor Slade, Charlie Chen, Raymond Liu</p>
                     </div>
                     <div>
                         <div class="image-carousel" data-carousel>
                             <div class="carousel-track">
                                 <figure class="carousel-slide is-active" data-carousel-slide>
-                                    <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Slade Lab process image 1" loading="lazy">
-                                    <figcaption class="carousel-caption">Lorem ipsum dolor sit amet</figcaption>
+                                    <img src="../assets/images/projects/SladeLab/SladeLab-Role-01.jpg" alt="Mounting hardware and strap prototypes" loading="lazy">
+                                    <figcaption class="carousel-caption">Mounting hardware + strap iterations</figcaption>
                                 </figure>
                                 <figure class="carousel-slide" data-carousel-slide>
-                                    <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Slade Lab process image 2" loading="lazy">
-                                    <figcaption class="carousel-caption">Consectetur adipiscing elit</figcaption>
+                                    <img src="../assets/images/projects/SladeLab/SladeLab-Role-02.jpg" alt="ROM stop and handle print" loading="lazy">
+                                    <figcaption class="carousel-caption">Handles and ROM stops for safety</figcaption>
                                 </figure>
                                 <figure class="carousel-slide" data-carousel-slide>
-                                    <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Slade Lab process image 3" loading="lazy">
-                                    <figcaption class="carousel-caption">Sed do eiusmod tempor</figcaption>
+                                    <img src="../assets/images/projects/SladeLab/SladeLab-Role-03.jpg" alt="Data collection setup with cameras" loading="lazy">
+                                    <figcaption class="carousel-caption">Data collection setup and camera mounts</figcaption>
                                 </figure>
                             </div>
                             <button class="carousel-btn prev" type="button" aria-label="Previous image">
@@ -211,121 +226,284 @@
             </div>
         </section>
 
-        <section class="section-alt" id="strategy">
+        <section class="section-alt" id="system-overview">
             <div class="container">
-                <h2>Design Prototyping and Selection</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-                <div class="gallery-grid gallery-grid-2x2">
-                    <figure class="gallery-item gallery-item--carousel">
-                        <div class="image-carousel is-embedded" data-carousel>
-                            <div class="carousel-track">
-                                <figure class="carousel-slide is-active" data-carousel-slide>
-                                    <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Slade Lab concept sketch 1" loading="lazy">
-                                </figure>
-                                <figure class="carousel-slide" data-carousel-slide>
-                                    <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Slade Lab concept sketch 2" loading="lazy">
-                                </figure>
-                                <figure class="carousel-slide" data-carousel-slide>
-                                    <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Slade Lab concept sketch 3" loading="lazy">
-                                </figure>
+                <div class="story-grid">
+                    <div>
+                        <h2>System Overview</h2>
+                        <p>The system follows an end-to-end observation &mdash; inference &mdash; action loop to control a wearable arm using camera inputs and natural-language prompts.</p>
+                        <div class="system-pipeline">
+                            <div class="system-step">
+                                <span class="system-step-title">Inputs</span>
+                                <span class="system-step-note">Shoulder + wrist + environment cameras, prompt, optional eye tracking</span>
                             </div>
-                            <button class="carousel-btn prev" type="button" aria-label="Previous sketch">
-                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
-                            </button>
-                            <button class="carousel-btn next" type="button" aria-label="Next sketch">
-                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
-                            </button>
+                            <div class="system-step">
+                                <span class="system-step-title">VLA inference</span>
+                                <span class="system-step-note">SmolVLA policy in LeRobot</span>
+                            </div>
+                            <div class="system-step">
+                                <span class="system-step-title">Action output</span>
+                                <span class="system-step-note">Joint targets and gripper commands</span>
+                            </div>
+                            <div class="system-step">
+                                <span class="system-step-title">Arm control</span>
+                                <span class="system-step-note">SO-101 or 1-DOF servo rig</span>
+                            </div>
+                            <div class="system-step">
+                                <span class="system-step-title">Task execution</span>
+                                <span class="system-step-note">Grasp, move, and hand-off</span>
+                            </div>
                         </div>
-                        <figcaption class="gallery-label">Lorem ipsum dolor sit amet</figcaption>
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Slade Lab prototype 1" loading="lazy">
-                        <figcaption class="gallery-label">Consectetur adipiscing elit</figcaption>
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Slade Lab prototype 2" loading="lazy">
-                        <figcaption class="gallery-label">Sed do eiusmod tempor</figcaption>
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Slade Lab prototype 3" loading="lazy">
-                        <figcaption class="gallery-label">Ut enim ad minim</figcaption>
-                    </figure>
+                    </div>
+                    <div>
+                        <div class="gallery-grid gallery-grid-2x2">
+                            <figure class="gallery-item">
+                                <img src="../assets/images/projects/SladeLab/SladeLab-System-01.png" alt="System pipeline diagram" loading="lazy">
+                                <figcaption class="gallery-label">Pipeline overview diagram</figcaption>
+                            </figure>
+                            <figure class="gallery-item">
+                                <img src="../assets/images/projects/SladeLab/SladeLab-System-02.jpg" alt="Camera and arm hardware layout" loading="lazy">
+                                <figcaption class="gallery-label">Camera + arm hardware stack</figcaption>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="section" id="build">
             <div class="container">
-                <div class="story-grid">
-                    <div>
-                        <h2>Implementation / Build Evidence</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus.</p>
-                        <h3>Build Process Highlights</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h2>Build &amp; Iteration</h2>
+                <p>Three builds took us from a simple servo proof-of-concept to a wearable arm with multi-camera sensing.</p>
+                <div class="process-timeline">
+                    <div class="process-step">
+                        <span class="process-step-number">01</span>
+                        <h3>1-DOF proof-of-concept servo arm</h3>
                         <ul class="bullet-list">
-                            <li><strong>Lorem ipsum:</strong> dolor sit amet, consectetur adipiscing elit.</li>
-                            <li><strong>Consectetur:</strong> adipiscing elit, sed do eiusmod tempor.</li>
-                            <li><strong>Sed do:</strong> eiusmod tempor incididunt ut labore.</li>
+                            <li>Built a stick-on-servo rig with Arduino and basic circuitry to validate the control loop.</li>
+                            <li>Reconfigured SmolVLA output to a single angle command for the servo.</li>
+                            <li>Goal: prove the observation-to-action loop before scaling DOF.</li>
                         </ul>
-                    </div>
-                    <div>
                         <div class="build-grid">
                             <div class="build-grid-item">
-                                <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Slade Lab build detail 1" loading="lazy">
-                                <span class="build-grid-label">Lorem ipsum dolor sit</span>
+                                <img src="../assets/images/projects/SladeLab/SladeLab-Build-01A.jpg" alt="1-DOF servo arm proof of concept" loading="lazy">
+                                <span class="build-grid-label">1-DOF servo rig</span>
                             </div>
                             <div class="build-grid-item">
-                                <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Slade Lab build detail 2" loading="lazy">
-                                <span class="build-grid-label">Consectetur adipiscing</span>
-                            </div>
-                            <div class="build-grid-item">
-                                <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Slade Lab build detail 3" loading="lazy">
-                                <span class="build-grid-label">Sed do eiusmod tempor</span>
-                            </div>
-                            <div class="build-grid-item">
-                                <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Slade Lab build detail 4" loading="lazy">
-                                <span class="build-grid-label">Ut enim ad minim</span>
+                                <img src="../assets/images/projects/SladeLab/SladeLab-Build-01B.jpg" alt="Arduino wiring and circuitry" loading="lazy">
+                                <span class="build-grid-label">Arduino + wiring</span>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="deliverables-grid">
-                    <div class="deliverable-card">
-                        <h4>Design Documentation</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis.</p>
-                        <a class="deliverable-link" href="#">View documentation</a>
+                    <div class="process-step">
+                        <span class="process-step-number">02</span>
+                        <h3>Human-mounted SO-101 modifications</h3>
+                        <ul class="bullet-list">
+                            <li>Adapted the SO-101 to a wearable setup with handles, mounting board, and straps.</li>
+                            <li>Added physical ROM stops to restrict motion near the wearer.</li>
+                            <li>Teleoperated with physical stops to keep motion safe.</li>
+                        </ul>
+                        <div class="build-grid">
+                            <div class="build-grid-item">
+                                <img src="../assets/images/projects/SladeLab/SladeLab-Build-02A.jpg" alt="SO-101 mounting board and straps" loading="lazy">
+                                <span class="build-grid-label">Mounting board + straps</span>
+                            </div>
+                            <div class="build-grid-item">
+                                <img src="../assets/images/projects/SladeLab/SladeLab-Build-02B.jpg" alt="ROM stop hardware on SO-101 arm" loading="lazy">
+                                <span class="build-grid-label">Physical ROM stops</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="deliverable-card">
-                        <h4>Research Materials</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-                        <a class="deliverable-link" href="#">View materials</a>
+                    <div class="process-step">
+                        <span class="process-step-number">03</span>
+                        <h3>Camera setup evolution (single &rarr; dual &rarr; triple)</h3>
+                        <ul class="bullet-list">
+                            <li>Single shoulder camera was not enough to see the end-effector and glasses reliably.</li>
+                            <li>Added a wrist camera to capture the glasses and hand and collected better training data.</li>
+                            <li>Added a third environment camera to improve depth perception.</li>
+                        </ul>
+                        <div class="build-grid">
+                            <div class="build-grid-item">
+                                <img src="../assets/images/projects/SladeLab/SladeLab-Build-03A.jpg" alt="Shoulder camera setup" loading="lazy">
+                                <span class="build-grid-label">Single shoulder camera</span>
+                            </div>
+                            <div class="build-grid-item">
+                                <img src="../assets/images/projects/SladeLab/SladeLab-Build-03B.jpg" alt="Wrist and environment camera setup" loading="lazy">
+                                <span class="build-grid-label">Dual + environment cameras</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-alt" id="reflection">
+        <section class="section-alt" id="results">
             <div class="container">
                 <div class="story-grid">
                     <div>
-                        <h2>Reflection, Takeaways, &amp; Performance</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <h3>Lessons I'll Take Forward</h3>
+                        <h2>Experiments &amp; Results</h2>
+                        <p>We focused on the task &quot;Pick up my glasses and hand them to me&quot; while iterating camera setups and training data.</p>
+                        <div class="results-notes">
+                            Poor quality + limited training data led to a very overfit initial model.
+                        </div>
                         <ul class="bullet-list">
-                            <li><strong>Lorem ipsum:</strong> dolor sit amet, consectetur adipiscing elit.</li>
-                            <li><strong>Consectetur:</strong> adipiscing elit, sed do eiusmod tempor.</li>
-                            <li><strong>Sed do:</strong> eiusmod tempor incididunt ut labore.</li>
+                            <li><strong>Single shoulder camera:</strong> only learned the movement pattern, lacked object recognition, failed if glasses moved, and had limited end-effector view.</li>
+                            <li><strong>Dual camera setup:</strong> consistently moved too far right, lacked depth perception, and failed to pick up glasses.</li>
+                            <li><strong>Triple camera setup:</strong> added a third environment camera for depth perception and pushed the next steps toward more data and tuning.</li>
+                        </ul>
+                        <h3>Failure Modes &amp; Fixes</h3>
+                        <table class="failure-table">
+                            <thead>
+                                <tr>
+                                    <th>Symptom</th>
+                                    <th>Likely cause</th>
+                                    <th>What we tried</th>
+                                    <th>Outcome</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Only learned movement pattern; weak object recognition.</td>
+                                    <td>Limited + poor-quality training data.</td>
+                                    <td>Collected more data and tuned hyperparameters.</td>
+                                    <td>Defined training improvements needed for the next model pass.</td>
+                                </tr>
+                                <tr>
+                                    <td>Failed if glasses moved; limited end-effector view.</td>
+                                    <td>Single shoulder camera coverage.</td>
+                                    <td>Added a wrist camera focused on glasses and hand.</td>
+                                    <td>Improved visibility for data capture.</td>
+                                </tr>
+                                <tr>
+                                    <td>Moved too far right; failed to pick up glasses.</td>
+                                    <td>Lack of depth perception in dual-camera setup.</td>
+                                    <td>Added a third environment camera.</td>
+                                    <td>Transitioned to a triple-camera setup and continued data collection.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <div class="image-carousel" data-carousel data-carousel-mode="video">
+                            <div class="carousel-track">
+                                <figure class="carousel-slide is-active" data-carousel-slide>
+                                    <img src="../assets/images/projects/SladeLab/SladeLab-Results-01.jpg" alt="Single shoulder camera field of view" loading="lazy">
+                                    <figcaption class="carousel-caption">Single shoulder camera field of view</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/SladeLab/SladeLab-Results-02.jpg" alt="Dual camera setup with wrist camera" loading="lazy">
+                                    <figcaption class="carousel-caption">Dual camera setup (shoulder + wrist)</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <video class="carousel-media" muted playsinline preload="metadata" autoplay>
+                                        <source src="../assets/videos/projects/SladeLab/SladeLab-Results-03.mp4" type="video/mp4">
+                                        <source src="../assets/videos/projects/SladeLab/SladeLab-Results-03.mov" type="video/quicktime">
+                                    </video>
+                                    <figcaption class="carousel-caption">Triple camera setup data capture</figcaption>
+                                </figure>
+                            </div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous image">
+                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
+                            </button>
+                            <button class="carousel-btn next" type="button" aria-label="Next image">
+                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="evaluation">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>Evaluation / Protocol Draft</h2>
+                        <p>Protocol draft for future multi-participant trials with consistent variations and scoring.</p>
+                        <h3>Base tasks (4)</h3>
+                        <ul class="bullet-list">
+                            <li>Pick up and place a utensil in an open drawer.</li>
+                            <li>Stack plastic cups.</li>
+                            <li>Hand me my glasses.</li>
+                            <li>Hold up a water bottle while I drink.</li>
+                        </ul>
+                        <h3>Variations</h3>
+                        <ul class="bullet-list">
+                            <li>Human movement (measured with OpenCap).</li>
+                            <li>Workspace clutter.</li>
+                            <li>Object orientation and identity.</li>
+                            <li>Initial arm position.</li>
+                        </ul>
+                        <h3>Scoring</h3>
+                        <ul class="bullet-list">
+                            <li>5 trials per task-variation combination.</li>
+                            <li>Normalized 0-1 scale with checkpoints; time-based scoring for continued interaction tasks.</li>
+                            <li>Post-task surveys: System Usability Scale and NASA TLX.</li>
+                        </ul>
+                        <p class="results-notes">Why this matters: it enables consistent, comparable trials once multi-participant testing begins.</p>
+                    </div>
+                    <div>
+                        <div class="story-card">
+                            <h3>Hardware setup notes</h3>
+                            <ul class="bullet-list">
+                                <li>SO-101 looped around the base of the neck to secure to the chest.</li>
+                                <li>iPhone shoulder mount using Continuity Camera (ultra-wide lens).</li>
+                                <li>Wrist camera mounted on the end-effector.</li>
+                                <li>Two lab iPhones recording the environment for OpenCap.</li>
+                                <li>Limitation: user must keep gaze on the task due to limited spatial awareness.</li>
+                            </ul>
+                        </div>
+                        <figure class="story-figure">
+                            <img src="../assets/images/projects/SladeLab/SladeLab-Protocol-01.jpg" alt="Evaluation setup with shoulder and wrist cameras" loading="lazy">
+                            <figcaption>Evaluation setup with shoulder + wrist cameras</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-alt" id="takeaways">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>Key Takeaways</h2>
+                        <ul class="bullet-list">
+                            <li><strong>Data quality beats model cleverness:</strong> limited training data produced an overfit model.</li>
+                            <li><strong>Sensing placement drives reliability:</strong> camera coverage determined whether the policy could see glasses and hand.</li>
+                            <li><strong>Define success metrics early:</strong> checkpoints and normalized scoring prevented ambiguous results.</li>
+                            <li><strong>Wearable safety is a hardware problem:</strong> ROM stops and mounting stability matter for human-mounted systems.</li>
                         </ul>
                         <div class="story-card">
-                            <h3>Performance Notes</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                            <h3>If I continued</h3>
+                            <ul class="bullet-list">
+                                <li>Expand datasets across more ADL tasks and camera configurations.</li>
+                                <li>Explore 3D/SLAM inputs from Aria-style sensors to improve depth perception.</li>
+                            </ul>
                         </div>
                     </div>
                     <div>
                         <figure class="story-figure story-figure-compact">
-                            <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Slade Lab final build" loading="lazy">
-                            <span class="story-figure-label">Lorem ipsum dolor sit amet</span>
+                            <img src="../assets/images/projects/SladeLab/SladeLab-Takeaways-01.jpg" alt="Human-mounted SO-101 arm in use" loading="lazy">
+                            <span class="story-figure-label">Human-mounted SO-101 prototype</span>
                         </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="deliverables">
+            <div class="container">
+                <h2>Deliverables</h2>
+                <div class="deliverables-grid">
+                    <div class="deliverable-card">
+                        <h4>End-of-Summer Slides (PDF)</h4>
+                        <p>High-level narrative + camera-setup iteration results.</p>
+                        <a class="deliverable-link" href="../assets/docs/projects/SladeLab/End-of-Summer-Slides.pdf" target="_blank" rel="noopener noreferrer">View slides</a>
+                    </div>
+                    <div class="deliverable-card">
+                        <h4>Running Doc (DOCX)</h4>
+                        <p>Full experiment notes, protocol drafts, and implementation log.</p>
+                        <a class="deliverable-link" href="../assets/docs/projects/SladeLab/Running-Doc.docx" target="_blank" rel="noopener noreferrer">Open running doc</a>
                     </div>
                 </div>
             </div>
