@@ -35,6 +35,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Project detail prev/next navigation
+    const projectNav = document.querySelector('.project-navigation');
+    if (projectNav) {
+        const projectOrder = [
+            'SladeLab.html',
+            'ES-51.html',
+            'MediaLab.html',
+            'FTC-23.html',
+            'ML-Algorithms.html'
+        ];
+        const currentFile = window.location.pathname.split('/').pop();
+        const currentIndex = projectOrder.indexOf(currentFile);
+
+        if (currentIndex !== -1) {
+            const prevIndex = (currentIndex - 1 + projectOrder.length) % projectOrder.length;
+            const nextIndex = (currentIndex + 1) % projectOrder.length;
+            const prevLink = projectNav.querySelector('.project-nav-link.prev');
+            const nextLink = projectNav.querySelector('.project-nav-link.next');
+
+            if (prevLink) {
+                prevLink.setAttribute('href', projectOrder[prevIndex]);
+            }
+            if (nextLink) {
+                nextLink.setAttribute('href', projectOrder[nextIndex]);
+            }
+        }
+    }
+
     // Projects gallery filtering (projects.html)
     const projectsGalleryGrid = document.querySelector('.projects-gallery-grid');
     const projectsFilterButtons = document.querySelectorAll('[data-filter]');

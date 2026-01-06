@@ -83,7 +83,7 @@
     <main id="main-content">
 
         <section class="project-hero">
-            <img src="../assets/images/projects/ML-Algorithms/ML-Algorithms-Hero.svg" alt="Abstract machine learning sorting pipeline illustration" class="project-hero-image" loading="eager">
+            <img src="../assets/images/profile/ML_Hero_Stock.webp" alt="Machine learning themed hero image" class="project-hero-image" loading="eager">
             <div class="project-hero-content">
                 <div class="container">
                     <div class="project-hero-grid">
@@ -94,9 +94,8 @@
                             <div class="hero-detail-grid">
                                 <div class="hero-detail-stack">
                                     <div class="hero-detail">
-                                        <span class="hero-detail-label">Project Type</span>
-                                        <span class="hero-detail-value">Applied Machine Learning</span>
-                                        <span class="hero-detail-value hero-detail-subvalue">Sustainability Research</span>
+                                        <span class="hero-detail-label">Organization</span>
+                                        <span class="hero-detail-value">Inspirit AI</span>
                                     </div>
                                     <div class="hero-detail">
                                         <span class="hero-detail-label">Timeline</span>
@@ -106,10 +105,9 @@
                                 <div class="hero-detail">
                                     <span class="hero-detail-label">Skills Learned</span>
                                     <ul class="hero-detail-list">
-                                        <li>Data Cleaning</li>
-                                        <li>Feature Engineering</li>
-                                        <li>Model Benchmarking</li>
-                                        <li>Error Analysis</li>
+                                        <li>Python; working with ML libraries</li>
+                                        <li>AI fundamentals</li>
+                                        <li>How to approach independent research</li>
                                     </ul>
                                 </div>
                             </div>
@@ -122,50 +120,16 @@
         <section class="section" id="summary">
             <div class="container">
                 <p class="summary-kicker">Summary</p>
-                <p class="summary-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="summary-body">Over the course of <strong>10 weeks</strong>, I worked closely with a mentor to explore the efficacy of <strong>three different machine learning models</strong> for consumer-end plastic recycling sorting. I then wrote a detailed report on my findings. This was my first exposure to artificial intelligence and machine learning.</p>
             </div>
         </section>
 
         <section class="section-alt" id="context">
             <div class="container">
-                <div class="story-grid">
-                    <div>
-                        <h2>Context</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                        <h3>Design Goal:</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <ul class="bullet-list">
-                            <li>Lorem ipsum dolor sit amet</li>
-                            <li>Consectetur adipiscing elit</li>
-                            <li>Sed do eiusmod tempor</li>
-                            <li>Ut enim ad minim</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div class="image-carousel" data-carousel>
-                            <div class="carousel-track">
-                                <figure class="carousel-slide is-active" data-carousel-slide>
-                                    <img src="../assets/images/projects/ML-Algorithms/ML-Algorithms-Hero.svg" alt="ML algorithms placeholder image 1" loading="lazy">
-                                    <figcaption class="carousel-caption">Lorem ipsum dolor sit amet</figcaption>
-                                </figure>
-                                <figure class="carousel-slide" data-carousel-slide>
-                                    <img src="../assets/images/projects/ML-Algorithms/ML-Algorithms-Hero.svg" alt="ML algorithms placeholder image 2" loading="lazy">
-                                    <figcaption class="carousel-caption">Consectetur adipiscing elit</figcaption>
-                                </figure>
-                                <figure class="carousel-slide" data-carousel-slide>
-                                    <img src="../assets/images/projects/ML-Algorithms/ML-Algorithms-Hero.svg" alt="ML algorithms placeholder image 3" loading="lazy">
-                                    <figcaption class="carousel-caption">Sed do eiusmod tempor</figcaption>
-                                </figure>
-                            </div>
-                            <button class="carousel-btn prev" type="button" aria-label="Previous image">
-                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
-                            </button>
-                            <button class="carousel-btn next" type="button" aria-label="Next image">
-                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <h2>Problem</h2>
+                <p>In 2018, only <strong>8.7%</strong> of U.S. plastics were actually recycled. One of the biggest reasons why this number was so low is that plastics must be <strong>sorted by type</strong> because each type melts during the recycling process at a different temperature. Manual sorting is inefficient and misses recyclable material, while advanced sorting machines are often too expensive for smaller facilities. This ecosystem therefore calls for major innovation if plastic recycling is ever to hit desireable numbers.</p>
+                <h3>Approach</h3>
+                <p>Brainstorming how this could be solved, I proposed an <strong>at-home sorting solution</strong> powered by a camera-equipped recycling can and a machine learning model so that the sorting problem could be dealt with on the front end. This project, focused on identifying a low-cost, low-power ML model.</p>
             </div>
         </section>
 
@@ -173,30 +137,24 @@
             <div class="container">
                 <div class="story-grid">
                     <div>
-                        <h2>My Role</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                        <h2>Data + Preprocessing</h2>
+                        <p>Data preparation was performed in Google Colaboratory to reduce memory demands while keeping model inputs consistent.</p>
                         <ul class="bullet-list">
-                            <li>Lorem ipsum dolor sit amet</li>
-                            <li>Consectetur adipiscing elit</li>
-                            <li class="bullet-spacer">Sed do eiusmod tempor incididunt</li>
+                            <li>Dataset/source: <a class="inline-link" href="https://wadaba.pcz.pl/" target="_blank" rel="noopener noreferrer">WaDaBa Images Database</a> (plastic waste images; filenames encode attributes).</li>
+                            <li>Dataset size: <strong>4,000 images</strong> of 100 objects, 40 photos each under varied lighting, dirtiness, deformation, caps, rings, and positions.</li>
+                            <li class="bullet-spacer">Preprocessing: resize to 224x337 then crop to <strong>224x224</strong>, convert to .npy, store as [4000, 224, 224, 3], flatten to [4000, 150528], and extract plastic-type labels from filenames.</li>
                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien ut libero venenatis faucibus.</p>
-                        <p><strong>Collaborators:</strong> Lorem ipsum, Dolor sit, Amet consectetur</p>
                     </div>
                     <div>
                         <div class="image-carousel" data-carousel>
                             <div class="carousel-track">
                                 <figure class="carousel-slide is-active" data-carousel-slide>
-                                    <img src="../assets/images/projects/ML-Algorithms/ML-Algorithms-Hero.svg" alt="ML algorithms process image 1" loading="lazy">
-                                    <figcaption class="carousel-caption">Lorem ipsum dolor sit amet</figcaption>
+                                    <img src="../assets/images/projects/ML-Algorithms/ML_Samples.jpg" alt="WaDaBa dataset sample images" loading="lazy">
+                                    <figcaption class="carousel-caption">WaDaBa dataset sample images</figcaption>
                                 </figure>
                                 <figure class="carousel-slide" data-carousel-slide>
-                                    <img src="../assets/images/projects/ML-Algorithms/ML-Algorithms-Hero.svg" alt="ML algorithms process image 2" loading="lazy">
-                                    <figcaption class="carousel-caption">Consectetur adipiscing elit</figcaption>
-                                </figure>
-                                <figure class="carousel-slide" data-carousel-slide>
-                                    <img src="../assets/images/projects/ML-Algorithms/ML-Algorithms-Hero.svg" alt="ML algorithms process image 3" loading="lazy">
-                                    <figcaption class="carousel-caption">Sed do eiusmod tempor</figcaption>
+                                    <img src="../assets/images/projects/ML-Algorithms/ML_Fig2.png" alt="Figure 2: Image count by plastic type" loading="lazy">
+                                    <figcaption class="carousel-caption">Paper Figure 2: Image count by plastic type</figcaption>
                                 </figure>
                             </div>
                             <button class="carousel-btn prev" type="button" aria-label="Previous image">
@@ -213,44 +171,15 @@
 
         <section class="section-alt" id="strategy">
             <div class="container">
-                <h2>Design Prototyping and Selection</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-                <div class="gallery-grid gallery-grid-2x2">
-                    <figure class="gallery-item gallery-item--carousel">
-                        <div class="image-carousel is-embedded" data-carousel>
-                            <div class="carousel-track">
-                                <figure class="carousel-slide is-active" data-carousel-slide>
-                                    <img src="../assets/images/projects/ML-Algorithms/ML-Algorithms-Hero.svg" alt="ML algorithms concept sketch 1" loading="lazy">
-                                </figure>
-                                <figure class="carousel-slide" data-carousel-slide>
-                                    <img src="../assets/images/projects/ML-Algorithms/ML-Algorithms-Hero.svg" alt="ML algorithms concept sketch 2" loading="lazy">
-                                </figure>
-                                <figure class="carousel-slide" data-carousel-slide>
-                                    <img src="../assets/images/projects/ML-Algorithms/ML-Algorithms-Hero.svg" alt="ML algorithms concept sketch 3" loading="lazy">
-                                </figure>
-                            </div>
-                            <button class="carousel-btn prev" type="button" aria-label="Previous sketch">
-                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
-                            </button>
-                            <button class="carousel-btn next" type="button" aria-label="Next sketch">
-                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
-                            </button>
-                        </div>
-                        <figcaption class="gallery-label">Lorem ipsum dolor sit amet</figcaption>
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/projects/ML-Algorithms/ML-Algorithms-Hero.svg" alt="ML algorithms prototype 1" loading="lazy">
-                        <figcaption class="gallery-label">Consectetur adipiscing elit</figcaption>
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/projects/ML-Algorithms/ML-Algorithms-Hero.svg" alt="ML algorithms prototype 2" loading="lazy">
-                        <figcaption class="gallery-label">Sed do eiusmod tempor</figcaption>
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/projects/ML-Algorithms/ML-Algorithms-Hero.svg" alt="ML algorithms prototype 3" loading="lazy">
-                        <figcaption class="gallery-label">Ut enim ad minim</figcaption>
-                    </figure>
-                </div>
+                <h2>Models Evaluated</h2>
+                <p>Used an 80/20 train-test split (fixed random state) and compared models with F1 scores via classification_report().</p>
+                <ul class="bullet-list">
+                    <li>Logistic Regression.</li>
+                    <li>SVM (Gaussian kernel).</li>
+                    <li>SVM (Polynomial kernel, degree 5).</li>
+                    <li>SVM (Sigmoid kernel).</li>
+                    <li>K-Nearest Neighbors (n_neighbors = 40).</li>
+                </ul>
             </div>
         </section>
 
@@ -258,47 +187,40 @@
             <div class="container">
                 <div class="story-grid">
                     <div>
-                        <h2>Implementation / Build Evidence</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus.</p>
-                        <h3>Build Process Highlights</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h2>Results</h2>
+                        <p>F1 accuracy and runtime were recorded on the 800-image test set.</p>
+                        <h3>Key Results</h3>
+                        <p>Key comparisons focus on accuracy, runtime, and memory after training.</p>
                         <ul class="bullet-list">
-                            <li><strong>Lorem ipsum:</strong> dolor sit amet, consectetur adipiscing elit.</li>
-                            <li><strong>Consectetur:</strong> adipiscing elit, sed do eiusmod tempor.</li>
-                            <li><strong>Sed do:</strong> eiusmod tempor incididunt ut labore.</li>
+                            <li><strong>Best accuracy:</strong> SVM (Polynomial kernel, degree 5) reached <strong>82% F1</strong>.</li>
+                            <li><strong>Other models:</strong> Logistic Regression, SVM (Gaussian), and SVM (Polynomial) exceeded 70% F1; SVM (Sigmoid) and KNN were much lower and far from acceptable.</li>
+                            <li><strong>Runtime (800-image test set):</strong> Logistic Regression 2.33 s, SVM (Polynomial) 304.207 s, SVM (Gaussian) 868.254 s.</li>
+                            <li><strong>Hardware fit:</strong> Logistic Regression and SVM models are relatively memory-efficient after training and can run on low-cost hardware (e.g., Raspberry Pi).</li>
                         </ul>
+                        <div class="section-spacer"></div>
+                        <p>Why this model won: SVM (Polynomial) offered the <strong>highest F1</strong> while keeping inference under half a second per object and reasonable memory use.</p>
                     </div>
                     <div>
-                        <div class="build-grid">
-                            <div class="build-grid-item">
-                                <img src="../assets/images/projects/ML-Algorithms/ML-Algorithms-Hero.svg" alt="ML algorithms build detail 1" loading="lazy">
-                                <span class="build-grid-label">Lorem ipsum dolor sit</span>
-                            </div>
-                            <div class="build-grid-item">
-                                <img src="../assets/images/projects/ML-Algorithms/ML-Algorithms-Hero.svg" alt="ML algorithms build detail 2" loading="lazy">
-                                <span class="build-grid-label">Consectetur adipiscing</span>
-                            </div>
-                            <div class="build-grid-item">
-                                <img src="../assets/images/projects/ML-Algorithms/ML-Algorithms-Hero.svg" alt="ML algorithms build detail 3" loading="lazy">
-                                <span class="build-grid-label">Sed do eiusmod tempor</span>
-                            </div>
-                            <div class="build-grid-item">
-                                <img src="../assets/images/projects/ML-Algorithms/ML-Algorithms-Hero.svg" alt="ML algorithms build detail 4" loading="lazy">
-                                <span class="build-grid-label">Ut enim ad minim</span>
+                        <div class="image-carousel">
+                            <div class="carousel-track">
+                                <figure class="carousel-slide is-active">
+                                    <img src="../assets/images/projects/ML-Algorithms/ML_F1_Scores.png" alt="Figure 3: F1 accuracy scores by model" loading="lazy">
+                                    <figcaption class="carousel-caption">Figure 3: F1 accuracy scores by model.</figcaption>
+                                </figure>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="deliverables-grid">
                     <div class="deliverable-card">
-                        <h4>Benchmark Report</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis.</p>
-                        <a class="deliverable-link" href="#">View report</a>
+                        <h4>Research Paper (PDF)</h4>
+                        <p>Full report with background, methodology, results, and discussion.</p>
+                        <a class="deliverable-link" href="../assets/docs/projects/ML-Algorithms/ML_Research_Paper.pdf" target="_blank" rel="noopener noreferrer">Read full report (PDF)</a>
                     </div>
                     <div class="deliverable-card">
-                        <h4>Dataset Summary</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-                        <a class="deliverable-link" href="#">View summary</a>
+                        <h4>Source Code</h4>
+                        <p>Google Colaboratory notebook where all data processing and model training occured.</p>
+                        <a class="deliverable-link" href="https://colab.research.google.com/drive/1p0nRmQsqU3FeYqn2gmSa1_JqcikNODQj?usp=sharing" target="_blank" rel="noopener noreferrer">View code</a>
                     </div>
                 </div>
             </div>
@@ -306,28 +228,14 @@
 
         <section class="section-alt" id="reflection">
             <div class="container">
-                <div class="story-grid">
-                    <div>
-                        <h2>Reflection, Takeaways, &amp; Performance</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <h3>Lessons I'll Take Forward</h3>
-                        <ul class="bullet-list">
-                            <li><strong>Lorem ipsum:</strong> dolor sit amet, consectetur adipiscing elit.</li>
-                            <li><strong>Consectetur:</strong> adipiscing elit, sed do eiusmod tempor.</li>
-                            <li><strong>Sed do:</strong> eiusmod tempor incididunt ut labore.</li>
-                        </ul>
-                        <div class="story-card">
-                            <h3>Performance Notes</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-                        </div>
-                    </div>
-                    <div>
-                        <figure class="story-figure story-figure-compact">
-                            <img src="../assets/images/projects/ML-Algorithms/ML-Algorithms-Hero.svg" alt="ML algorithms final visual" loading="lazy">
-                            <span class="story-figure-label">Lorem ipsum dolor sit amet</span>
-                        </figure>
-                    </div>
-                </div>
+                <h2>Conclusion</h2>
+                <p><strong>Support Vector Machine with a polynomial kernel</strong> best fits a consumer AI recycling bin by balancing accuracy, memory allocation, compute power, and time per classification. This model offers a practical tradeoff for low-cost deployment in homes.</p>
+                <h3>What I Learned</h3>
+                <ul class="bullet-list">
+                    <li>This was my first foray into machine learning, artificial intelligence, and <strong>coding in Python</strong>. I learned about the foundations of artificial intelligence and am now familiar with it at a high level.</li>
+                    <li>Prior to this experience, I had mostly worked with hardware applications and not software solutions. Working with machine learning algorithms made me realize the power of software to highly enhance low-end hardware and the importance of strong <strong>complementary hardware-software combinations.</strong></li>
+                    <li>This was the first research project I ever completed. Learning how to conceptualize, design, and <strong>execute a research project</strong> was incredibly valuable.</li>
+                </ul>
             </div>
         </section>
 
@@ -381,7 +289,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Alex Ko. All rights reserved.</p>
+                <p>&copy; 2026 Alex Ko. All rights reserved.</p>
             </div>
         </div>
     </footer>

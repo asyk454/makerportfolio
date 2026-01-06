@@ -682,8 +682,18 @@
     text-underline-offset: 4px;
 }
 
+.inline-link {
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
 .bullet-list li.bullet-spacer {
     margin-bottom: var(--spacing-sm);
+}
+
+.section-spacer {
+    height: var(--spacing-sm);
 }
 
 #build .bullet-list li {
