@@ -763,6 +763,10 @@
     height: var(--spacing-sm);
 }
 
+.section-spacer.section-spacer-xl {
+    height: var(--spacing-xl);
+}
+
 .section-cta {
     margin-top: var(--spacing-md);
     display: flex;
@@ -1010,7 +1014,7 @@
 }
 
 .results-notes {
-    background: var(--background-alt);
+    background: var(--surface);
     border-left: 2px solid var(--text);
     padding: var(--spacing-md);
     border-radius: var(--radius-md);
@@ -1265,6 +1269,37 @@
     border: 2px solid transparent;
 }
 
+.gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* SladeLab context image */
+.gallery-item.gallery-item--narrow {
+    aspect-ratio: 4 / 3;
+}
+
+/* SladeLab on-body adaptation gallery sizing */
+.onbody-section .story-grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+}
+
+.onbody-section .gallery-item {
+    aspect-ratio: 4 / 3;
+}
+
+/* SladeLab reflections layout */
+.reflections-section .story-grid {
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+    align-items: start;
+}
+
+.reflections-section .story-card {
+    min-height: 100%;
+}
+
 .gallery-label {
     position: absolute;
     left: 0;
@@ -1294,8 +1329,22 @@
     transition: none;
 }
 
+.carousel-image-focus-right {
+    object-position: 80% 50%;
+}
+
 .gallery-item:hover img {
     transform: none;
+}
+
+.gallery-stack {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+.gallery-stack .gallery-item {
+    aspect-ratio: 4 / 3;
 }
 
 .video-embed {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
@@ -10,6 +10,10 @@
         (function () {
             var favicon = document.getElementById('favicon');
             if (!favicon || !window.matchMedia) {
+                return;
+            }
+            if (document.documentElement && document.documentElement.getAttribute('data-theme') === 'light') {
+                favicon.href = '../assets/images/icons/site_logo_dark.png';
                 return;
             }
             var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -26,6 +30,7 @@
             }
         })();
     </script>
+
     <script>
         document.documentElement.classList.add('reveal-ready');
     </script>
@@ -46,7 +51,7 @@
                 <a href="../index.html" class="nav-link">Home</a>
                 <a href="../resume.html" class="nav-link">Resume</a>
                 <a href="../projects.html" class="nav-link">Projects</a>
-            </nav>
+                </nav>
             <div class="header-title">
                 <a href="../index.html" class="site-logo">Alex Ko's Maker Portfolio</a>
             </div>
@@ -100,7 +105,7 @@
                                     </div>
                                     <div class="hero-detail">
                                         <span class="hero-detail-label">Timeline</span>
-                                        <span class="hero-detail-value">Jan &mdash; Apr 2025</span>
+                                        <span class="hero-detail-value">Jan &mdash; May 2025</span>
                                     </div>
                                 </div>
                                 <div class="hero-detail">
@@ -325,7 +330,7 @@
                         </ul>
                         <div class="story-card">
                             <h3>Competition Results</h3>
-                            <p>Poor arm reliability limited scoring in early matches, so we switched to a <strong>defense-first configuration</strong>. The drivetrain <strong>outperformed other teams in maneuverability</strong> and <strong>denied opponent pickups</strong>, creating multiple stalemates. <strong>Highly praised</strong> by teaching staff, but we did not advance beyond round robin.</p>
+                            <p>Poor arm reliability limited scoring in early matches, so we switched to a <strong>defense-first configuration</strong>. The drivetrain <strong>outperformed other teams in maneuverability</strong> and <strong>denied opponent pickups</strong>, creating multiple stalemates. <strong>Highly praised</strong> by teaching staff, but we did not advance beyond round-robin.</p>
                         </div>
                     </div>
                     <div>

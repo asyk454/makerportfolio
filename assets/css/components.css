@@ -44,16 +44,16 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .btn,
-    .btn-primary,
-    .btn-secondary {
+    :root:not([data-theme="light"]) .btn,
+    :root:not([data-theme="light"]) .btn-primary,
+    :root:not([data-theme="light"]) .btn-secondary {
         background: transparent;
         color: var(--text);
         border: 1px solid var(--text);
     }
 
-    .btn-primary:hover,
-    .btn-secondary:hover {
+    :root:not([data-theme="light"]) .btn-primary:hover,
+    :root:not([data-theme="light"]) .btn-secondary:hover {
         background: rgba(255, 255, 255, 0.08);
         color: var(--text);
         border-color: var(--text);
@@ -293,7 +293,6 @@
     gap: var(--spacing-lg);
     justify-self: end;
 }
-
 
 .social-link {
     color: var(--text);
@@ -701,11 +700,11 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .social-github:hover svg {
+    :root:not([data-theme="light"]) .social-github:hover svg {
         color: #c06eff;
     }
 
-    .social-email:hover svg {
+    :root:not([data-theme="light"]) .social-email:hover svg {
         color: #ea4335;
     }
 }

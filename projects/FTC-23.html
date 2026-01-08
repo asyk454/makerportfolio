@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
@@ -10,6 +10,10 @@
         (function () {
             var favicon = document.getElementById('favicon');
             if (!favicon || !window.matchMedia) {
+                return;
+            }
+            if (document.documentElement && document.documentElement.getAttribute('data-theme') === 'light') {
+                favicon.href = '../assets/images/icons/site_logo_dark.png';
                 return;
             }
             var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -26,6 +30,7 @@
             }
         })();
     </script>
+
     <script>
         document.documentElement.classList.add('reveal-ready');
     </script>
@@ -46,7 +51,7 @@
                 <a href="../index.html" class="nav-link">Home</a>
                 <a href="../resume.html" class="nav-link">Resume</a>
                 <a href="../projects.html" class="nav-link">Projects</a>
-            </nav>
+                </nav>
             <div class="header-title">
                 <a href="../index.html" class="site-logo">Alex Ko's Maker Portfolio</a>
             </div>
@@ -122,7 +127,7 @@
         <section class="section" id="summary">
             <div class="container">
                 <p class="summary-kicker">Summary</p>
-                <p class="summary-body"><strong>I led CAD and chassis design</strong> for my high school robotics team's (aka GNCE) 2022-23 PowerPlay robot, which was a 60+ lb robot featuring a 3D-printed composite chassis with an extending, turreted arm that reached about 5 ft. That season I also worked to raise <strong>$100,000</strong> for a state of the art robotics facility in Weston, which won us the <strong>top judged award at states and the same in our division at Worlds</strong>, placing top four globally among 7000+ teams.</p>
+                <p class="summary-body"><strong>I led CAD and chassis design</strong> for my high school robotics team's (aka GNCE) 2022-23 PowerPlay robot, which was a 60+ lb robot featuring a 3D printed composite chassis with an extending, turreted arm that reached about 5 ft. That season I also worked to raise <strong>$100,000</strong> for a state-of-the-art robotics facility in Weston, which won us the <strong>top judged award at States and the same in our division at Worlds</strong>, placing top four globally among >7000 teams.</p>
             </div>
         </section>
 
@@ -162,7 +167,7 @@
                                 </figure>
                                 <figure class="carousel-slide" data-carousel-slide>
                                     <img src="../assets/images/projects/FTC-23/GNCE_School_Outreach.JPG" alt="GNCE school outreach demo with students" loading="lazy">
-                                    <figcaption class="carousel-caption">Weston high school outreach</figcaption>
+                                    <figcaption class="carousel-caption">Weston High School outreach</figcaption>
                                 </figure>
                                 <figure class="carousel-slide" data-carousel-slide>
                                     <img src="../assets/images/projects/FTC-23/GNCE_Town_Outreach.JPG" alt="GNCE town celebration outreach booth" loading="lazy">
@@ -199,7 +204,7 @@
                         <ul class="bullet-list">
                             <li><strong>CAD:</strong> Responsible for entire chassis design, CADed entire assembly for future visualization, designed claw.</li>
                             <li><strong>Software:</strong> Coded arm functionality and entire autonomous motion pathing algorithm. </li>
-                            <li class="bullet-spacer"><strong>Documentation:</strong> Documented all work throughout the season via a 108 page engineering notebook (every meeting, design review, independent work session, etc...). Not a necessity, but significantly supported the team and impressed judges at the World Championship.</li>
+                            <li class="bullet-spacer"><strong>Documentation:</strong> Documented all work throughout the season via a 108-page engineering notebook (every meeting, design review, independent work session, etc...). Not a necessity, but significantly supported the team and impressed judges at the World Championship.</li>
                         </ul>
                         <p class="collaborators-line"><strong>Collaborators:</strong> <a href="https://www.linkedin.com/in/samatefi/" target="_blank" rel="noopener noreferrer">Sam Atefi</a>, Finley Campbell, <a href="https://www.linkedin.com/in/theodoredahl/" target="_blank" rel="noopener noreferrer">Theodore Dahl</a>, <a href="https://www.linkedin.com/in/zachary-gumbert-04985b357/" target="_blank" rel="noopener noreferrer">Zack Gumbert</a>, <a href="https://www.linkedin.com/in/arjun-jasuja-959950343/" target="_blank" rel="noopener noreferrer">Arjun Jasuja</a>, <a href="https://www.linkedin.com/in/zachary-kano-25b7b92a3/" target="_blank" rel="noopener noreferrer">Zach Kano</a>, <a href="https://www.linkedin.com/in/jonathan-y-lan/" target="_blank" rel="noopener noreferrer">Jonathan Lan</a>, <a href="https://www.linkedin.com/in/rex-li-b328b4227/" target="_blank" rel="noopener noreferrer">Rex Li</a>, <a href="https://www.linkedin.com/in/shen-jessica/" target="_blank" rel="noopener noreferrer">Jessica Shen</a>, <a href="https://www.linkedin.com/in/eliana-tillman/" target="_blank" rel="noopener noreferrer">Ellie Tillman-Schwartz</a>, <a href="https://henrylwhite.com/" target="_blank" rel="noopener noreferrer">Henry White</a></p>
                     </div>
@@ -277,7 +282,7 @@
                             <h3>Intake evolution + reliability</h3>
                             <ul class="bullet-list">
                                 <li><strong>What:</strong> claw intake optimized for stacked cones and fast service.</li>
-                                <li><strong>Why:</strong> lower end-of-arm mass while keeping pickup reliable against stacked cones.</li>
+                                <li><strong>Why:</strong> lower end-of-arm mass while keeping pickups reliable against stacked cones.</li>
                                 <li><strong>How:</strong> tested sticky, octopus, and roller prototypes, then moved to an over-centered claw.</li>
                                 <li><strong>Evidence:</strong> whiteboard concept sketches + photos of the first working claw build.</li>
                             </ul>
@@ -293,7 +298,7 @@
                         <div class="story-card-content">
                             <h3>Chassis stability + industrial design</h3>
                             <ul class="bullet-list">
-                                <li><strong>What:</strong> custom 3D-printed chassis with 20 lb ballast and protective covers.</li>
+                                <li><strong>What:</strong> custom 3D printed chassis with 20 lb ballast and protective covers.</li>
                                 <li><strong>Why:</strong> lowers center of gravity, allows for narrow turning, and protects against collision displacements.</li>
                                 <li><strong>How:</strong> innovative motor stacking geometry, mecanum wheels, and smooth-curved Onyx 3D prints.</li>
                                 <li><strong>Evidence:</strong> chassis CAD render with ballast mount plus cover panel close-up.</li>
@@ -313,11 +318,11 @@
                 <div class="story-grid">
                     <div>
                         <h2>Additional Robotics Media</h2>
-                        <p>Access to project documentation files that we were judged upon for awards. Also access to our YouTube videos and a fun social photo-scroll.</p>
+                        <p>Access to project documentation files that we were judged on for awards. Also access to our YouTube videos and a fun social photo-scroll.</p>
                         <div class="video-highlights">
                             <a class="video-highlight-card" href="https://www.youtube.com/watch?v=s_dVK0E7P6E" target="_blank" rel="noopener noreferrer">
                                 <span class="video-highlight-title">Worlds Robot Hype Video</span>
-                                <span class="video-highlight-meta">YouTube &middot; Robot reveal leading into worlds (FTC tradition)</span>
+                                <span class="video-highlight-meta">YouTube &middot; Robot reveal leading into the World Championship (FTC tradition)</span>
                             </a>
                             <a class="video-highlight-card" href="https://www.youtube.com/watch?v=W0MiUBvjoPs" target="_blank" rel="noopener noreferrer">
                                 <span class="video-highlight-title">MA World Championship Recap</span>
@@ -366,7 +371,7 @@
                     </div>
                     <div class="deliverable-card">
                         <h4>Engineering Notebook</h4>
-                        <p>Weekly build log covering outreach, CAD, testing, and competition notes. 108 pages long mostly updated by me!</p>
+                        <p>Weekly build log covering outreach, CAD, testing, and competition notes. 108 pages long almost all written by me!</p>
                         <a class="deliverable-link" href="../assets/docs/projects/FTC-23/FTC_Notebook.pdf" target="_blank" rel="noopener noreferrer">View notebook</a>
                     </div>
                 </div>
@@ -379,12 +384,12 @@
                     <div>
                         <h2>Lessons Learned</h2>
                         <p>Building this robot was the first time I seriously designed something using CAD, coded beyond basic libraries and classroom assignments, and found success at an international level. Innovative design-thinking made for one of the most unique robots on the field, which certainly means I will not be forgetting this tank of a robot anytime soon.</p>
-                        <p>Moreover, raising $100,000 for a new robotics lab changed STEM education in Weston forever. In hindsight, this is the ultimate legacy of this season and it has made me realize what really matters in engineering is how <strong>great engineering improves human experiences and interaction.</strong></p>
+                        <p>Moreover, raising $100,000 for a new robotics lab changed STEM education in Weston forever. In hindsight, this is the ultimate legacy of this season and it has made me realize what really matters in engineering is how <strong>great engineering improves human experiences and interaction</strong>.</p>
                         <h3>Engineering Takeaways</h3>
                         <ul class="bullet-list">
                             <li><strong>Documentation:</strong> Document any and everything from the engineering-design process. It helps in debugging, sharing knowledge, and improving future designs and you never know when it will prove useful.</li>
                             <li><strong>Iterate:</strong> Iterate, iterate, iterate. Every part of our final robot was the result of at least five iterations per part. The first few were not very successful but the final design resulted in a high performing robot.</li>
-                            <li><strong>Collaboration Creates Stronger Results:</strong> FIRST as a whole stresses the importance of inter and cross team collaboration. Some of our robot's most innovative solutions were products of advice given to us by rival teams, such as the countersprings for our arm. These low-key design reviews go a long way.</li>
+                            <li><strong>Collaboration Creates Stronger Results:</strong> FIRST as a whole stresses the importance of inter- and cross-team collaboration. Some of our robot's most innovative solutions were products of advice given to us by rival teams, such as the countersprings for our arm. These low-key design reviews go a long way.</li>
                         </ul>
                     </div>
                     <div>

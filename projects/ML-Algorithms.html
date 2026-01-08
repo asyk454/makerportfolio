@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
@@ -10,6 +10,10 @@
         (function () {
             var favicon = document.getElementById('favicon');
             if (!favicon || !window.matchMedia) {
+                return;
+            }
+            if (document.documentElement && document.documentElement.getAttribute('data-theme') === 'light') {
+                favicon.href = '../assets/images/icons/site_logo_dark.png';
                 return;
             }
             var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -26,6 +30,7 @@
             }
         })();
     </script>
+
     <script>
         document.documentElement.classList.add('reveal-ready');
     </script>
@@ -46,7 +51,7 @@
                 <a href="../index.html" class="nav-link">Home</a>
                 <a href="../resume.html" class="nav-link">Resume</a>
                 <a href="../projects.html" class="nav-link">Projects</a>
-            </nav>
+                </nav>
             <div class="header-title">
                 <a href="../index.html" class="site-logo">Alex Ko's Maker Portfolio</a>
             </div>
@@ -127,9 +132,9 @@
         <section class="section-alt" id="context">
             <div class="container">
                 <h2>Problem</h2>
-                <p>In 2018, only <strong>8.7%</strong> of U.S. plastics were actually recycled. One of the biggest reasons why this number was so low is that plastics must be <strong>sorted by type</strong> because each type melts during the recycling process at a different temperature. Manual sorting is inefficient and misses recyclable material, while advanced sorting machines are often too expensive for smaller facilities. This ecosystem therefore calls for major innovation if plastic recycling is ever to hit desireable numbers.</p>
+                <p>In 2018, only <strong>8.7%</strong> of U.S. plastics were actually recycled. One of the biggest reasons why this number was so low is that plastics must be <strong>sorted by type</strong> because each type melts during the recycling process at a different temperature. Manual sorting is inefficient and misses recyclable material, while advanced sorting machines are often too expensive for smaller facilities. This ecosystem therefore calls for major innovation if plastic recycling is ever to hit desirable numbers.</p>
                 <h3>Approach</h3>
-                <p>Brainstorming how this could be solved, I proposed an <strong>at-home sorting solution</strong> powered by a camera-equipped recycling can and a machine learning model so that the sorting problem could be dealt with on the front end. This project, focused on identifying a low-cost, low-power ML model.</p>
+                <p>Brainstorming how this could be solved, I proposed an <strong>at-home sorting solution</strong> powered by a camera-equipped recycling can and a machine learning model so that the sorting problem could be dealt with on the front end. This project focused on identifying a low-cost, low-power ML model.</p>
             </div>
         </section>
 
@@ -219,7 +224,7 @@
                     </div>
                     <div class="deliverable-card">
                         <h4>Source Code</h4>
-                        <p>Google Colaboratory notebook where all data processing and model training occured.</p>
+                        <p>Google Colaboratory notebook where all data processing and model training occurred.</p>
                         <a class="deliverable-link" href="https://colab.research.google.com/drive/1p0nRmQsqU3FeYqn2gmSa1_JqcikNODQj?usp=sharing" target="_blank" rel="noopener noreferrer">View code</a>
                     </div>
                 </div>
@@ -233,7 +238,7 @@
                 <h3>What I Learned</h3>
                 <ul class="bullet-list">
                     <li>This was my first foray into machine learning, artificial intelligence, and <strong>coding in Python</strong>. I learned about the foundations of artificial intelligence and am now familiar with it at a high level.</li>
-                    <li>Prior to this experience, I had mostly worked with hardware applications and not software solutions. Working with machine learning algorithms made me realize the power of software to highly enhance low-end hardware and the importance of strong <strong>complementary hardware-software combinations.</strong></li>
+                    <li>Prior to this experience, I had mostly worked with hardware applications and not software solutions. Working with machine learning algorithms made me realize the power of software to highly enhance low-end hardware and the importance of strong <strong>complementary hardware-software combinations</strong>.</li>
                     <li>This was the first research project I ever completed. Learning how to conceptualize, design, and <strong>execute a research project</strong> was incredibly valuable.</li>
                 </ul>
             </div>

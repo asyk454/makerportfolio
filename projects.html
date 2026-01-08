@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
@@ -10,6 +10,10 @@
         (function () {
             var favicon = document.getElementById('favicon');
             if (!favicon || !window.matchMedia) {
+                return;
+            }
+            if (document.documentElement && document.documentElement.getAttribute('data-theme') === 'light') {
+                favicon.href = 'assets/images/icons/site_logo_dark.png';
                 return;
             }
             var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -26,6 +30,7 @@
             }
         })();
     </script>
+
     <script>
         document.documentElement.classList.add('reveal-ready');
     </script>
@@ -46,7 +51,7 @@
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="resume.html" class="nav-link">Resume</a>
                 <a href="projects.html" class="nav-link">Projects</a>
-            </nav>
+                </nav>
             <div class="header-title">
                 <a href="index.html" class="site-logo">Alex Ko's Maker Portfolio</a>
             </div>
@@ -128,7 +133,7 @@
                             <span class="project-tile-badge tag tag-biomechatronics">Research</span>
                         </div>
                         <div class="project-tile-label">
-                            <span class="project-tile-title">Neurally-Controlled Bionic Knee Prosthesis</span>
+                            <span class="project-tile-title">Neurally Controlled Bionic Knee Prosthesis</span>
                             <span class="project-tile-meta">Jun 2023 &mdash; Mar 2024</span>
                         </div>
                     </a>

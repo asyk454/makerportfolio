@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Alex Ko's Maker Portfolio">
-    <title>Neurally-Controlled Bionic Knee Prosthesis | Alex Ko's Maker Portfolio</title>
+    <title>Neurally Controlled Bionic Knee Prosthesis | Alex Ko's Maker Portfolio</title>
     <link rel="icon" type="image/png" href="../assets/images/icons/site_logo_dark.png" id="favicon">
     <script>
         (function () {
             var favicon = document.getElementById('favicon');
             if (!favicon || !window.matchMedia) {
+                return;
+            }
+            if (document.documentElement && document.documentElement.getAttribute('data-theme') === 'light') {
+                favicon.href = '../assets/images/icons/site_logo_dark.png';
                 return;
             }
             var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -26,6 +30,7 @@
             }
         })();
     </script>
+
     <script>
         document.documentElement.classList.add('reveal-ready');
     </script>
@@ -46,7 +51,7 @@
                 <a href="../index.html" class="nav-link">Home</a>
                 <a href="../resume.html" class="nav-link">Resume</a>
                 <a href="../projects.html" class="nav-link">Projects</a>
-            </nav>
+                </nav>
             <div class="header-title">
                 <a href="../index.html" class="site-logo">Alex Ko's Maker Portfolio</a>
             </div>
@@ -83,12 +88,12 @@
     <main id="main-content">
 
         <section class="project-hero">
-            <img src="../assets/images/projects/MediaLab/MediaLabLeg.png" alt="Neurally-Controlled Bionic Knee Prosthesis hero image" class="project-hero-image" loading="eager">
+            <img src="../assets/images/projects/MediaLab/MediaLabLeg.png" alt="Neurally Controlled Bionic Knee Prosthesis hero image" class="project-hero-image" loading="eager">
             <div class="project-hero-content">
                 <div class="container">
                     <div class="project-hero-grid">
                         <div>
-                            <h1 class="project-hero-title">Neurally-Controlled Bionic Knee Prosthesis</h1>
+                            <h1 class="project-hero-title">Neurally Controlled Bionic Knee Prosthesis</h1>
                         </div>
                         <aside class="project-hero-details">
                             <div class="hero-detail-grid">
@@ -199,7 +204,7 @@
                 <div class="story-grid">
                     <div>
                         <h2>Foot FSR Telemetry (MQTT)</h2>
-                        <p class="story-callout"><strong>Impact:</strong> Improved foot-contact detection reliability and enabled consistent gait-event streaming to the EMG board for cleaner trial logs.</p>
+                        <p class="story-callout"><strong>Impact:</strong> Improved foot-contact detection reliability and enabled consistent gait event streaming to the EMG board for cleaner trial logs.</p>
                         <div class="problem-statement">
                             <h3>Problem Statement</h3>
                             <p>Force sensitive resistors (FSRs) placed on the prosthesis's foot were used to detect ground contact and gait events. Transmitting this information to the central processing unit required reliable data streaming over MQTT.</p>
@@ -249,7 +254,7 @@
                         <p class="story-callout"><strong>Impact:</strong> Took ownership of weekend end-to-end test execution, enabling consistent data collection without reinventing the workflow each time.</p>
                         <div class="problem-statement">
                             <h3>Context</h3>
-                            <p>Data collection and testing were the largest areas where I supported project progress. Every weekend, I set up the testing environment, interacted and supported patients, and eventually <strong>took ownership of running preliminary data collection</strong> activities (more strenuous, technical testing was still managed by Tony).</p>
+                            <p>Data collection and testing were the largest areas where I supported project progress. Every weekend, I set up the testing environment, interacted with and supported patients, and eventually <strong>took ownership of running preliminary data collection</strong> activities (more strenuous, technical testing was still managed by Tony).</p>
                         </div>
                         <h3>Testing Workflow Highlights</h3>
                         <ul class="bullet-list">
@@ -295,7 +300,7 @@
                                     <figcaption class="carousel-caption">Electrodes used for EMG tests that I reordered from chip fabs</figcaption>
                                 </figure>
                                 <figure class="carousel-slide" data-carousel-slide>
-                                    <img src="../assets/images/projects/MediaLab/MIT_eOPRA_TPU_Adaptor.jpeg" alt="eOPRA TPU adaptor component" loading="lazy">
+                                    <img src="../assets/images/projects/MediaLab/MIT_eOPRA_TPU_Adapter.jpeg" alt="eOPRA TPU adapter component" loading="lazy">
                                     <figcaption class="carousel-caption">Flexible prosthesis abutment adapter made of TPU</figcaption>
                                 </figure>
                                 <figure class="carousel-slide" data-carousel-slide>
@@ -333,7 +338,7 @@
                         <li><strong>Efficiency is the second-greatest concern:</strong> Outside of getting the leg to work, most of my projects throughout the internship focused on making existing parts of the robot more efficient. In a moving environment, power, thermal efficiency, and quick response times all come at a premium and should always be prioritized when engineering something.</li>
                         <li><strong>Presentation of results matters:</strong> Preparing for the publication submission, Tony stressed the need for clear, compelling visuals that emphasized a story our testing data attempted to tell. Communicating our complex findings to a broad audience in a meaningful way made all the difference in the performance of the final paper.</li>
                     </ul>
-                    <p>More than anything, this experience put into perspective the life-changing power of applied robotics. <strong>Seeing patients get emotional</strong> while walking up and down stairs for the first time in 20 years tugged at my heartstrings and convinced me of this: <strong>I want to become an engineer</strong> to build devices with functional viability that will <strong>improve people's lives.</strong></p>
+                    <p>More than anything, this experience put into perspective the life-changing power of applied robotics. <strong>Seeing patients get emotional</strong> while walking up and down stairs for the first time in 20 years tugged at my heartstrings and convinced me of this: <strong>I want to become an engineer</strong> to build devices with functional viability that will <strong>improve people's lives</strong>.</p>
                     <div class="deliverables-grid">
                         <div class="deliverable-card">
                             <h4><em>Science</em> Paper</h4>

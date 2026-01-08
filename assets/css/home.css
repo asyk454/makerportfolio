@@ -180,13 +180,13 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .btn-hero {
+    :root:not([data-theme="light"]) .btn-hero {
         background: transparent;
         color: var(--text);
         border-color: var(--text);
     }
 
-    .btn-hero:hover {
+    :root:not([data-theme="light"]) .btn-hero:hover {
         background: rgba(255, 255, 255, 0.08);
         border-color: var(--text);
     }
