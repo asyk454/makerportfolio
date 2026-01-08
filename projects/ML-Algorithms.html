@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Alex Ko's Maker Portfolio">
+    <title>Machine Learning Algorithms for Consumer Plastics Identification and Sorting | Alex Ko's Maker Portfolio</title>
+    <link rel="icon" type="image/png" href="../assets/images/icons/site_logo_dark.png" id="favicon">
+    <script>
+        (function () {
+            var favicon = document.getElementById('favicon');
+            if (!favicon || !window.matchMedia) {
+                return;
+            }
+            if (document.documentElement && document.documentElement.getAttribute('data-theme') === 'light') {
+                favicon.href = '../assets/images/icons/site_logo_dark.png';
+                return;
+            }
+            var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            var setIcon = function (event) {
+                favicon.href = event.matches
+                    ? '../assets/images/icons/site_logo_light.png'
+                    : '../assets/images/icons/site_logo_dark.png';
+            };
+            setIcon(darkQuery);
+            if (darkQuery.addEventListener) {
+                darkQuery.addEventListener('change', setIcon);
+            } else if (darkQuery.addListener) {
+                darkQuery.addListener(setIcon);
+            }
+        })();
+    </script>
+
+    <script>
+        document.documentElement.classList.add('reveal-ready');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/project.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body class="is-revealed project-page" data-load-reveal>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="header-container">
+            <nav class="header-nav-left">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../resume.html" class="nav-link">Resume</a>
+                <a href="../projects.html" class="nav-link">Projects</a>
+                </nav>
+            <div class="header-title">
+                <a href="../index.html" class="site-logo">Alex Ko's Maker Portfolio</a>
+            </div>
+            <div class="header-social">
+                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin" aria-label="LinkedIn">
+                    in
+                </a>
+                <a href="https://github.com/asyk454" target="_blank" rel="noopener noreferrer" class="social-link social-github" aria-label="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                </a>
+                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link social-email" aria-label="Email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                        <path d="M3 7l9 6 9-6"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="mobile-dropdown-menu">
+                    <a href="../resume.html" class="nav-link">Resume</a>
+                    <a href="../projects.html" class="nav-link">Projects</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <section class="project-hero">
+            <img src="../assets/images/profile/ML_Hero_Stock.webp" alt="Machine learning themed hero image" class="project-hero-image" loading="eager">
+            <div class="project-hero-content">
+                <div class="container">
+                    <div class="project-hero-grid">
+                        <div>
+                            <h1 class="project-hero-title">Machine Learning Algorithms for Consumer Plastics Identification and Sorting</h1>
+                        </div>
+                        <aside class="project-hero-details">
+                            <div class="hero-detail-grid">
+                                <div class="hero-detail-stack">
+                                    <div class="hero-detail">
+                                        <span class="hero-detail-label">Organization</span>
+                                        <span class="hero-detail-value">Inspirit AI</span>
+                                    </div>
+                                    <div class="hero-detail">
+                                        <span class="hero-detail-label">Timeline</span>
+                                        <span class="hero-detail-value">Jun &mdash; Oct 2022</span>
+                                    </div>
+                                </div>
+                                <div class="hero-detail">
+                                    <span class="hero-detail-label">Skills Learned</span>
+                                    <ul class="hero-detail-list">
+                                        <li>Python; working with ML libraries</li>
+                                        <li>AI fundamentals</li>
+                                        <li>How to approach independent research</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="summary">
+            <div class="container">
+                <p class="summary-kicker">Summary</p>
+                <p class="summary-body">Over the course of <strong>10 weeks</strong>, I worked closely with a mentor to explore the efficacy of <strong>three different machine learning models</strong> for consumer-end plastic recycling sorting. I then wrote a detailed report on my findings. This was my first exposure to artificial intelligence and machine learning.</p>
+            </div>
+        </section>
+
+        <section class="section-alt" id="context">
+            <div class="container">
+                <h2>Problem</h2>
+                <p>In 2018, only <strong>8.7%</strong> of U.S. plastics were actually recycled. One of the biggest reasons why this number was so low is that plastics must be <strong>sorted by type</strong> because each type melts during the recycling process at a different temperature. Manual sorting is inefficient and misses recyclable material, while advanced sorting machines are often too expensive for smaller facilities. This ecosystem therefore calls for major innovation if plastic recycling is ever to hit desirable numbers.</p>
+                <h3>Approach</h3>
+                <p>Brainstorming how this could be solved, I proposed an <strong>at-home sorting solution</strong> powered by a camera-equipped recycling can and a machine learning model so that the sorting problem could be dealt with on the front end. This project focused on identifying a low-cost, low-power ML model.</p>
+            </div>
+        </section>
+
+        <section class="section" id="role">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>Data + Preprocessing</h2>
+                        <p>Data preparation was performed in Google Colaboratory to reduce memory demands while keeping model inputs consistent.</p>
+                        <ul class="bullet-list">
+                            <li>Dataset/source: <a class="inline-link" href="https://wadaba.pcz.pl/" target="_blank" rel="noopener noreferrer">WaDaBa Images Database</a> (plastic waste images; filenames encode attributes).</li>
+                            <li>Dataset size: <strong>4,000 images</strong> of 100 objects, 40 photos each under varied lighting, dirtiness, deformation, caps, rings, and positions.</li>
+                            <li class="bullet-spacer">Preprocessing: resize to 224x337 then crop to <strong>224x224</strong>, convert to .npy, store as [4000, 224, 224, 3], flatten to [4000, 150528], and extract plastic-type labels from filenames.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="image-carousel" data-carousel>
+                            <div class="carousel-track">
+                                <figure class="carousel-slide is-active" data-carousel-slide>
+                                    <img src="../assets/images/projects/ML-Algorithms/ML_Samples.jpg" alt="WaDaBa dataset sample images" loading="lazy">
+                                    <figcaption class="carousel-caption">WaDaBa dataset sample images</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/ML-Algorithms/ML_Fig2.png" alt="Figure 2: Image count by plastic type" loading="lazy">
+                                    <figcaption class="carousel-caption">Paper Figure 2: Image count by plastic type</figcaption>
+                                </figure>
+                            </div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous image">
+                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
+                            </button>
+                            <button class="carousel-btn next" type="button" aria-label="Next image">
+                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-alt" id="strategy">
+            <div class="container">
+                <h2>Models Evaluated</h2>
+                <p>Used an 80/20 train-test split (fixed random state) and compared models with F1 scores via classification_report().</p>
+                <ul class="bullet-list">
+                    <li>Logistic Regression.</li>
+                    <li>SVM (Gaussian kernel).</li>
+                    <li>SVM (Polynomial kernel, degree 5).</li>
+                    <li>SVM (Sigmoid kernel).</li>
+                    <li>K-Nearest Neighbors (n_neighbors = 40).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" id="build">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>Results</h2>
+                        <p>F1 accuracy and runtime were recorded on the 800-image test set.</p>
+                        <h3>Key Results</h3>
+                        <p>Key comparisons focus on accuracy, runtime, and memory after training.</p>
+                        <ul class="bullet-list">
+                            <li><strong>Best accuracy:</strong> SVM (Polynomial kernel, degree 5) reached <strong>82% F1</strong>.</li>
+                            <li><strong>Other models:</strong> Logistic Regression, SVM (Gaussian), and SVM (Polynomial) exceeded 70% F1; SVM (Sigmoid) and KNN were much lower and far from acceptable.</li>
+                            <li><strong>Runtime (800-image test set):</strong> Logistic Regression 2.33 s, SVM (Polynomial) 304.207 s, SVM (Gaussian) 868.254 s.</li>
+                            <li><strong>Hardware fit:</strong> Logistic Regression and SVM models are relatively memory-efficient after training and can run on low-cost hardware (e.g., Raspberry Pi).</li>
+                        </ul>
+                        <div class="section-spacer"></div>
+                        <p>Why this model won: SVM (Polynomial) offered the <strong>highest F1</strong> while keeping inference under half a second per object and reasonable memory use.</p>
+                    </div>
+                    <div>
+                        <div class="image-carousel">
+                            <div class="carousel-track">
+                                <figure class="carousel-slide is-active">
+                                    <img src="../assets/images/projects/ML-Algorithms/ML_F1_Scores.png" alt="Figure 3: F1 accuracy scores by model" loading="lazy">
+                                    <figcaption class="carousel-caption">Figure 3: F1 accuracy scores by model.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="deliverables-grid">
+                    <div class="deliverable-card">
+                        <h4>Research Paper (PDF)</h4>
+                        <p>Full report with background, methodology, results, and discussion.</p>
+                        <a class="deliverable-link" href="../assets/docs/projects/ML-Algorithms/ML_Research_Paper.pdf" target="_blank" rel="noopener noreferrer">Read full report (PDF)</a>
+                    </div>
+                    <div class="deliverable-card">
+                        <h4>Source Code</h4>
+                        <p>Google Colaboratory notebook where all data processing and model training occurred.</p>
+                        <a class="deliverable-link" href="https://colab.research.google.com/drive/1p0nRmQsqU3FeYqn2gmSa1_JqcikNODQj?usp=sharing" target="_blank" rel="noopener noreferrer">View code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-alt" id="reflection">
+            <div class="container">
+                <h2>Conclusion</h2>
+                <p><strong>Support Vector Machine with a polynomial kernel</strong> best fits a consumer AI recycling bin by balancing accuracy, memory allocation, compute power, and time per classification. This model offers a practical tradeoff for low-cost deployment in homes.</p>
+                <h3>What I Learned</h3>
+                <ul class="bullet-list">
+                    <li>This was my first foray into machine learning, artificial intelligence, and <strong>coding in Python</strong>. I learned about the foundations of artificial intelligence and am now familiar with it at a high level.</li>
+                    <li>Prior to this experience, I had mostly worked with hardware applications and not software solutions. Working with machine learning algorithms made me realize the power of software to highly enhance low-end hardware and the importance of strong <strong>complementary hardware-software combinations</strong>.</li>
+                    <li>This was the first research project I ever completed. Learning how to conceptualize, design, and <strong>execute a research project</strong> was incredibly valuable.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section project-nav-section">
+            <div class="container">
+                <div class="project-navigation">
+                    <a href="FTC-23.html" class="project-nav-link prev">
+                        &larr; Previous Project
+                    </a>
+                    <a href="SladeLab.html" class="project-nav-link next">
+                        Next Project &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Alex Ko's Maker Portfolio</h3>
+                    <p>Showcasing my engineering and robotics projects in addition to other interesting things about me!</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../projects.html">Projects</a></li>
+                        <li><a href="../resume.html">Resume</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin">
+                            in
+                        </a>
+                        <a href="https://github.com/asyk454" class="social-github" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                            <svg class="icon-github" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </a>
+                        <a href="mailto:alexko@college.harvard.edu" class="social-email" aria-label="Email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                                <path d="M3 7l9 6 9-6"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alex Ko. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        (function () {
+            var carousels = document.querySelectorAll('[data-carousel]');
+            if (!carousels.length) {
+                return;
+            }
+
+            carousels.forEach(function (carousel) {
+                var slides = carousel.querySelectorAll('[data-carousel-slide]');
+                var prevButton = carousel.querySelector('.carousel-btn.prev');
+                var nextButton = carousel.querySelector('.carousel-btn.next');
+                var currentIndex = 0;
+                var intervalId = null;
+                var imageTimeoutId = null;
+                var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                var isVideoCarousel = carousel.getAttribute('data-carousel-mode') === 'video' || carousel.querySelector('video');
+
+                slides.forEach(function (slide, index) {
+                    if (slide.classList.contains('is-active')) {
+                        currentIndex = index;
+                    }
+                });
+
+                var pauseVideos = function () {
+                    slides.forEach(function (slide) {
+                        var video = slide.querySelector('video');
+                        if (video) {
+                            video.pause();
+                            video.currentTime = 0;
+                        }
+                    });
+                };
+
+                var clearImageTimeout = function () {
+                    if (imageTimeoutId) {
+                        window.clearTimeout(imageTimeoutId);
+                        imageTimeoutId = null;
+                    }
+                };
+
+                var playActiveVideo = function () {
+                    if (!isVideoCarousel || reduceMotion) {
+                        return;
+                    }
+                    var activeSlide = slides[currentIndex];
+                    var video = activeSlide.querySelector('video');
+                    if (video) {
+                        video.play().catch(function () {});
+                    }
+                };
+
+                var scheduleImageAdvance = function () {
+                    if (reduceMotion || !isVideoCarousel) {
+                        return;
+                    }
+                    var activeSlide = slides[currentIndex];
+                    var hasVideo = activeSlide.querySelector('video');
+                    if (hasVideo) {
+                        return;
+                    }
+                    clearImageTimeout();
+                    imageTimeoutId = window.setTimeout(function () {
+                        showSlide(currentIndex + 1);
+                    }, 2500);
+                };
+
+                var showSlide = function (index) {
+                    slides[currentIndex].classList.remove('is-active');
+                    currentIndex = (index + slides.length) % slides.length;
+                    slides[currentIndex].classList.add('is-active');
+
+                    if (isVideoCarousel) {
+                        clearImageTimeout();
+                        pauseVideos();
+                        playActiveVideo();
+                        scheduleImageAdvance();
+                    }
+                };
+
+                var startAuto = function () {
+                    if (reduceMotion || isVideoCarousel) {
+                        return;
+                    }
+                    intervalId = window.setInterval(function () {
+                        showSlide(currentIndex + 1);
+                    }, 2500);
+                };
+
+                var resetAuto = function () {
+                    if (isVideoCarousel) {
+                        return;
+                    }
+                    if (intervalId) {
+                        window.clearInterval(intervalId);
+                    }
+                    startAuto();
+                };
+
+                if (prevButton) {
+                    prevButton.addEventListener('click', function () {
+                        showSlide(currentIndex - 1);
+                        resetAuto();
+                    });
+                }
+
+                if (nextButton) {
+                    nextButton.addEventListener('click', function () {
+                        showSlide(currentIndex + 1);
+                        resetAuto();
+                    });
+                }
+
+                if (isVideoCarousel) {
+                    slides.forEach(function (slide) {
+                        var video = slide.querySelector('video');
+                        if (!video) {
+                            return;
+                        }
+                        video.addEventListener('ended', function () {
+                            if (slide.classList.contains('is-active')) {
+                                showSlide(currentIndex + 1);
+                            }
+                        });
+                    });
+                    scheduleImageAdvance();
+                    playActiveVideo();
+                } else {
+                    startAuto();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

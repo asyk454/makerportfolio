@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Alex Ko's Maker Portfolio">
-    <title>Alex Ko's Maker Portfolio</title>
+    <title>Neurally Controlled Bionic Knee Prosthesis | Alex Ko's Maker Portfolio</title>
     <link rel="icon" type="image/png" href="../assets/images/icons/site_logo_dark.png" id="favicon">
     <script>
         (function () {
             var favicon = document.getElementById('favicon');
             if (!favicon || !window.matchMedia) {
+                return;
+            }
+            if (document.documentElement && document.documentElement.getAttribute('data-theme') === 'light') {
+                favicon.href = '../assets/images/icons/site_logo_dark.png';
                 return;
             }
             var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -26,6 +30,7 @@
             }
         })();
     </script>
+
     <script>
         document.documentElement.classList.add('reveal-ready');
     </script>
@@ -37,22 +42,21 @@
     <link rel="stylesheet" href="../assets/css/project.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
-<body data-load-reveal>
+<body class="is-revealed project-page" data-load-reveal>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- Header Navigation -->
+
     <header class="site-header">
         <div class="header-container">
             <nav class="header-nav-left">
-                <a href="../home.html" class="nav-link">Home</a>
+                <a href="../index.html" class="nav-link">Home</a>
                 <a href="../resume.html" class="nav-link">Resume</a>
-                <a href="../home.html#projects" class="nav-link">Projects</a>
-            </nav>
+                <a href="../projects.html" class="nav-link">Projects</a>
+                </nav>
             <div class="header-title">
-                <a href="../home.html" class="site-logo">Alex Ko's Maker Portfolio</a>
+                <a href="../index.html" class="site-logo">Alex Ko's Maker Portfolio</a>
             </div>
             <div class="header-social">
-                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin" aria-label="LinkedIn">
                     in
                 </a>
                 <a href="https://github.com/asyk454" target="_blank" rel="noopener noreferrer" class="social-link social-github" aria-label="GitHub">
@@ -60,7 +64,7 @@
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
                 </a>
-                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Email">
+                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link social-email" aria-label="Email">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
                         <path d="M3 7l9 6 9-6"></path>
@@ -75,366 +79,318 @@
                 </button>
                 <nav class="mobile-dropdown-menu">
                     <a href="../resume.html" class="nav-link">Resume</a>
-                    <a href="../home.html#projects" class="nav-link">Projects</a>
+                    <a href="../projects.html" class="nav-link">Projects</a>
                 </nav>
             </div>
         </div>
     </header>
 
     <main id="main-content">
-        <!-- Breadcrumb -->
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <div class="breadcrumb-container">
-                <div class="breadcrumb-links">
-                    <a href="../home.html">Home</a>
-                    <span class="breadcrumb-separator">/</span>
-                    <a href="../home.html#projects">Projects</a>
-                    <span class="breadcrumb-separator">/</span>
-                    <span>Robotic Hand Prosthesis</span>
-                </div>
-            </div>
-        </nav>
 
-        <!-- Project Hero -->
         <section class="project-hero">
-            <img src="https://via.placeholder.com/1920x1080/3b82f6/ffffff?text=Robotic+Hand+Prosthesis" alt="Robotic Hand Prosthesis" class="project-hero-image" loading="eager">
+            <img src="../assets/images/projects/MediaLab/MediaLabLeg.png" alt="Neurally Controlled Bionic Knee Prosthesis hero image" class="project-hero-image" loading="eager">
             <div class="project-hero-content">
                 <div class="container">
-                    <h1 class="project-hero-title">Robotic Hand Prosthesis</h1>
-                    <div class="project-hero-meta">
-                        <div class="project-hero-tags">
-                            <span class="tag tag-biomechatronics">Biomechatronics</span>
-                            <span class="tag">Prosthetics</span>
+                    <div class="project-hero-grid">
+                        <div>
+                            <h1 class="project-hero-title">Neurally Controlled Bionic Knee Prosthesis</h1>
                         </div>
-                        <span style="color: rgba(255,255,255,0.8);">2024</span>
+                        <aside class="project-hero-details">
+                            <div class="hero-detail-grid">
+                                <div class="hero-detail-stack">
+                                    <div class="hero-detail">
+                                        <span class="hero-detail-label">Organization</span>
+                                        <span class="hero-detail-value">MIT Media Lab</span>
+                                    </div>
+                                    <div class="hero-detail">
+                                        <span class="hero-detail-label">Timeline</span>
+                                        <span class="hero-detail-value">Jun 2023 &mdash; Mar 2024</span>
+                                    </div>
+                                </div>
+                                <div class="hero-detail">
+                                    <span class="hero-detail-label">Skills Learned</span>
+                                    <ul class="hero-detail-list">
+                                        <li>SolidWorks, Fusion 360</li>
+                                        <li>MATLAB</li>
+                                        <li>C++</li>
+                                        <li>Soldering + Wiring</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Project Overview -->
-        <section class="section">
+        <section class="section" id="summary">
             <div class="container">
-                <div class="project-overview">
-                    <div class="overview-main">
-                        <h2>Overview</h2>
-                        <p>
-                            The challenge was to design an affordable, lightweight prosthetic hand that could provide 
-                            natural grip control and sensory feedback. Commercial prosthetics are often prohibitively 
-                            expensive and heavy, limiting accessibility for many users.
-                        </p>
-                        <p>
-                            This project focused on creating a functional prototype using 3D printing and off-the-shelf 
-                            components, achieving a 40% weight reduction compared to commercial alternatives while 
-                            maintaining essential functionality. The design incorporates multiple grip patterns and 
-                            intuitive control mechanisms.
-                        </p>
-                        <h3>Key Achievements</h3>
-                        <ul>
-                            <li>40% weight reduction vs. commercial alternatives</li>
-                            <li>5 distinct grip patterns implemented</li>
-                            <li>Cost reduction of 60% using 3D printing</li>
-                            <li>User testing with 3 participants showing positive feedback</li>
+                <p class="summary-kicker">Summary</p>
+                <p class="summary-body">I worked on the neurally controlled bionic knee prosthesis, improving reliability, test readiness, and data capture/processing. I redesigned power electronics housing and cable routing to reduce encoder dropout, built MQTT telemetry transmission code, and facilitated preliminary testing every weekend with patients. This work was published in <a href="https://www.science.org/doi/10.1126/science.adv3223" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;"><em>Science</em></a>, where I was listed as a co-author.</p>
+                <p class="summary-note">
+                    <span class="summary-note-label">Note: In order to respect the privacy of participants, all testing media items are ones that are already publicly available.</span>
+                </p>
+            </div>
+        </section>
+
+        <section class="section-alt" id="context">
+            <div class="container">
+                <div class="story-grid single-column">
+                    <div>
+                        <h2>Context</h2>
+                        <p>Mobility for amputees has advanced fast, but most innovation has focused on upper-limb and below-knee devices. <strong>Above-knee (transfemoral) options remain limited</strong> and often lack active control. This project <strong>developed a bionic knee prosthesis</strong> controlled directly from the user's nervous system.</p>
+                        <h3>My Role</h3>
+                        <p>I worked on this project from the beginning of its testing phase through its publication. Here's an overview of my major contributions before I dive into more detail:</p>
+                        <ul class="bullet-list">
+                            <li>Redesigned the power electronics housing and rerouted existing cables to <strong>solve a critical encoder issue</strong>.</li>
+                            <li>Used C++ to <strong>enhance foot force sensing data transmission</strong> via the MQTT Protocol.</li>
+                            <li>Familiarized with testing protocols, eventually <strong>ran tests myself</strong>.</li>
+                            <li>Created MATLAB data processing scripts to <strong>pre-process millions of testing data points</strong>.</li>
+                        </ul>
+                        <p class="collaborators-line"><strong>Collaborators:</strong> <a href="https://www.linkedin.com/in/tonyshu/" target="_blank" rel="noopener noreferrer">Tony Shu</a> (paper first author), <a href="https://www.linkedin.com/in/seanboe/" target="_blank" rel="noopener noreferrer">Sean Boerhout</a> (co-intern), <a href="https://www.linkedin.com/in/gloria-zhu-78a079155/" target="_blank" rel="noopener noreferrer">Gloria Zhu</a> (co-intern)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="power-electronics">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>Power Electronics Housing + Encoder Fix</h2>
+                        <p class="story-callout"><strong>Impact:</strong> Reduced knee encoder dropouts during high-torque events and consolidated cable management, improving uptime and data quality.</p>
+                        <div class="problem-statement">
+                            <h3>Problem Statement</h3>
+                            <p>During high-torque events, the knee encoder intermittently reported incorrect angles due to EMI from the motor, which paused trials and corrupted logs. I needed a retrofit that improved signal integrity and organized cable management.</p>
+                        </div>
+                        <h3>What I Changed</h3>
+                        <ul class="bullet-list">
+                            <li>Investigated software vs. hardware root causes; confirmed an EMI coupling issue and prioritized a wiring/routing fix.</li>
+                            <li>Braided and shielded power cables and added ferrites to reduce noise coupling into encoder lines.</li>
+                            <li>Remodeled the housing to enforce separation of power and signal paths + add strain relief and space for the Arduino Feather (see below).</li>
+                        </ul>
+                        <p class="skills-line"><strong>Skills:</strong> CAD &bull; Rapid prototyping &bull; Soldering and Wiring &bull; EMI mitigation</p>
+                    </div>
+                    <div>
+                        <div class="image-carousel" data-carousel>
+                            <div class="carousel-track">
+                                <figure class="carousel-slide is-active" data-carousel-slide>
+                                    <img src="../assets/images/projects/MediaLab/MIT_Braided_Cables.jpeg" alt="Braided and shielded encoder harness" loading="lazy">
+                                    <figcaption class="carousel-caption">One of many braided power lines with a ferrite to reduce EMI coupling</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/MediaLab/MIT_Power_Electronics_Diagram.jpeg" alt="Power electronics diagram with routing separation" loading="lazy">
+                                    <figcaption class="carousel-caption">Redesigned power electronics diagram for EMG board and Arduino Feather</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/MediaLab/MIT_Electronics_Casing.png" alt="Revised power electronics housing" loading="lazy">
+                                    <figcaption class="carousel-caption">New power electronics housing designed in Fusion 360</figcaption>
+                                </figure>
+                            </div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous image">
+                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
+                            </button>
+                            <button class="carousel-btn next" type="button" aria-label="Next image">
+                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-alt" id="mqtt-telemetry">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>Foot FSR Telemetry (MQTT)</h2>
+                        <p class="story-callout"><strong>Impact:</strong> Improved foot-contact detection reliability and enabled consistent gait event streaming to the EMG board for cleaner trial logs.</p>
+                        <div class="problem-statement">
+                            <h3>Problem Statement</h3>
+                            <p>Force sensitive resistors (FSRs) placed on the prosthesis's foot were used to detect ground contact and gait events. Transmitting this information to the central processing unit required reliable data streaming over MQTT.</p>
+                            <p><strong>My Solution:</strong> Transmit data using the MQTT protocol over WiFi using Arduino Feathers and clever bit-assignments/byte packing.</p>
+                        </div>
+                        <h3>What I Built</h3>
+                        <ul class="bullet-list">
+                            <li>Upgraded Feather and FSR setup for more reliable contact data.</li>
+                            <li>Wrote bit-assignments for efficient data packing and transmitted over MQTT before unpacking on the EMG processing board.</li>
+                            <li>Reorganized power electronics near the EMG processing board for consolidated form factor.</li>
+                        </ul>
+                        <p class="skills-line"><strong>Skills:</strong> C++ &bull; MQTT Streaming &bull; Soldering and Wiring</p>
+                    </div>
+                    <div>
+                        <div class="image-carousel" data-carousel>
+                            <div class="carousel-track">
+                                <figure class="carousel-slide is-active" data-carousel-slide>
+                                    <img src="../assets/images/projects/MediaLab/MIT_FSRs.jpeg" alt="FSR sensors mounted on prosthesis foot" loading="lazy">
+                                    <figcaption class="carousel-caption">Upgraded FSR sensor layout for improved ground contact detection</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/MediaLab/MIT_Foot_Feather.jpeg" alt="Foot-mounted Arduino Feather setup" loading="lazy">
+                                    <figcaption class="carousel-caption">Newly built Arduino Feather used for foot telemetry broadcasting</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/MediaLab/MIT_MQTT_Testing_Setup.jpeg" alt="MQTT testing setup and logging workstation" loading="lazy">
+                                    <figcaption class="carousel-caption">MQTT testing setup used to code/debug live-logging</figcaption>
+                                </figure>
+                            </div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous image">
+                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
+                            </button>
+                            <button class="carousel-btn next" type="button" aria-label="Next image">
+                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="testing-protocols">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>Testing Protocols &amp; Execution</h2>
+                        <p class="story-callout"><strong>Impact:</strong> Took ownership of weekend end-to-end test execution, enabling consistent data collection without reinventing the workflow each time.</p>
+                        <div class="problem-statement">
+                            <h3>Context</h3>
+                            <p>Data collection and testing were the largest areas where I supported project progress. Every weekend, I set up the testing environment, interacted with and supported patients, and eventually <strong>took ownership of running preliminary data collection</strong> activities (more strenuous, technical testing was still managed by Tony).</p>
+                        </div>
+                        <h3>Testing Workflow Highlights</h3>
+                        <ul class="bullet-list">
+                            <li><strong>Setup:</strong> prepared testing hardware, calibrated MoCap, treadmill force plates, and goniometer sensors, and provided consent materials.</li>
+                            <li><strong>Session:</strong> guided participants through preliminary sit-to-stand trials, supported with video production, data capture, and test execution.</li>
+                            <li><strong>Wrap-up:</strong> validated logs and synced data to internal servers for processing.</li>
                         </ul>
                     </div>
-                    <div class="overview-sidebar">
-                        <h3>Project Details</h3>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Role</div>
-                            <div class="overview-item-value">Lead Designer & Engineer</div>
+                    <div>
+                        <div class="video-embed">
+                            <iframe
+                                src="https://www.youtube.com/embed/ZQCVmuirYSI?autoplay=1&mute=1&loop=1&playlist=ZQCVmuirYSI&playsinline=1&rel=0"
+                                title="Testing protocols walkthrough video"
+                                frameborder="0"
+                                allow="autoplay; encrypted-media; picture-in-picture"
+                                allowfullscreen
+                            ></iframe>
                         </div>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Timeline</div>
-                            <div class="overview-item-value">6 months</div>
-                        </div>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Tools</div>
-                            <ul class="overview-item-list">
-                                <li>SolidWorks (CAD)</li>
-                                <li>3D Printing (FDM)</li>
-                                <li>Arduino (Control)</li>
-                                <li>EMG Sensors</li>
-                            </ul>
-                        </div>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Technologies</div>
-                            <ul class="overview-item-list">
-                                <li>Mechanical Design</li>
-                                <li>Biomechatronics</li>
-                                <li>Rapid Prototyping</li>
-                                <li>Sensor Integration</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Key Metrics -->
-                <div class="key-metrics">
-                    <div class="metric-card">
-                        <div class="metric-card-value">350g</div>
-                        <div class="metric-card-label">Total Weight</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-card-value">5</div>
-                        <div class="metric-card-label">Grip Patterns</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-card-value">60%</div>
-                        <div class="metric-card-label">Cost Reduction</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-card-value">0.5s</div>
-                        <div class="metric-card-label">Response Time</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Process Section -->
-        <section class="section-alt">
+        <section class="section" id="miscellaneous">
             <div class="container">
-                <div class="process-section">
-                    <h2>Design Process</h2>
-                    <div class="process-timeline">
-                        <div class="process-step">
-                            <span class="process-step-number">1</span>
-                            <h3>Research & Requirements</h3>
-                            <p>
-                                Conducted user interviews and literature review to understand needs. Identified key 
-                                requirements: weight under 400g, cost under $500, support for common grip patterns, 
-                                and intuitive control.
-                            </p>
-                            <div class="process-step-image">
-                                <img src="https://via.placeholder.com/1200x675/1a365d/ffffff?text=Research+Phase" alt="Research phase" loading="lazy">
+                <div class="story-grid">
+                    <div>
+                        <h2>Miscellaneous</h2>
+                        <p>A collection of smaller side projects and supporting tasks that kept the lab moving.</p>
+                        <ul class="bullet-list">
+                            <li>Contracted PCB-fab companies to produce more surface electrodes.</li>
+                            <li>Designed new, compliant prosthesis abutment adapters in SolidWorks.</li>
+                            <li>Assembled spare leg for additional testing.</li>
+                            <li>Created tables for display in final paper.</li>
+                            <li>Managed lab logistics and equipment inventory.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="image-carousel" data-carousel>
+                            <div class="carousel-track">
+                                <figure class="carousel-slide is-active" data-carousel-slide>
+                                    <img src="../assets/images/projects/MediaLab/MIT_Electrodes.jpg" alt="Electrodes used for participant testing" loading="lazy">
+                                    <figcaption class="carousel-caption">Electrodes used for EMG tests that I reordered from chip fabs</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/MediaLab/MIT_eOPRA_TPU_Adapter.jpeg" alt="eOPRA TPU adapter component" loading="lazy">
+                                    <figcaption class="carousel-caption">Flexible prosthesis abutment adapter made of TPU</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/MediaLab/MIT_Full_Leg.jpeg" alt="Full bionic knee leg assembly" loading="lazy">
+                                    <figcaption class="carousel-caption">Backup leg assembly I put together from spare parts in the first week</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/MediaLab/MIT_DataTable.png" alt="Data table prepared for analysis" loading="lazy">
+                                    <figcaption class="carousel-caption">Preliminary data table I formatted for future paper</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/MediaLab/MIT_SnackManagement.jpeg" alt="Snack management note and supplies" loading="lazy">
+                                    <figcaption class="carousel-caption">Managing snacks and supplies to keep morale high!</figcaption>
+                                </figure>
                             </div>
-                        </div>
-                        <div class="process-step">
-                            <span class="process-step-number">2</span>
-                            <h3>Concept Development</h3>
-                            <p>
-                                Explored multiple finger actuation mechanisms: tendon-driven, linkage-based, and 
-                                direct drive. Selected tendon-driven system for balance of weight, complexity, and 
-                                force transmission.
-                            </p>
-                            <div class="process-step-image">
-                                <img src="https://via.placeholder.com/1200x675/3b82f6/ffffff?text=Concept+Sketches" alt="Concept sketches" loading="lazy">
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <span class="process-step-number">3</span>
-                            <h3>CAD Design</h3>
-                            <p>
-                                Designed full assembly in SolidWorks with focus on 3D-printable components. 
-                                Optimized geometry for strength-to-weight ratio, ensuring all parts could be 
-                                printed without supports.
-                            </p>
-                            <div class="process-step-image">
-                                <img src="https://via.placeholder.com/1200x675/14b8a6/ffffff?text=CAD+Design" alt="CAD design" loading="lazy">
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <span class="process-step-number">4</span>
-                            <h3>Prototyping & Testing</h3>
-                            <p>
-                                Built multiple iterations, testing finger strength, grip patterns, and control 
-                                algorithms. Refined finger joint design and tendon routing based on test results.
-                            </p>
-                            <div class="process-step-image">
-                                <img src="https://via.placeholder.com/1200x675/10b981/ffffff?text=Prototype+Testing" alt="Prototype testing" loading="lazy">
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <span class="process-step-number">5</span>
-                            <h3>Integration & Validation</h3>
-                            <p>
-                                Integrated EMG sensors and control system. Conducted user testing with 3 participants, 
-                                collecting feedback on comfort, control intuitiveness, and functionality.
-                            </p>
-                            <div class="process-step-image">
-                                <img src="https://via.placeholder.com/1200x675/3b82f6/ffffff?text=Final+Prototype" alt="Final prototype" loading="lazy">
-                            </div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous image">
+                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
+                            </button>
+                            <button class="carousel-btn next" type="button" aria-label="Next image">
+                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Technical Details -->
-        <section class="section">
+        <section class="section-alt" id="reflections">
             <div class="container">
-                <div class="technical-details">
-                    <h2>Technical Specifications</h2>
-                    <table class="specs-table">
-                        <thead>
-                            <tr>
-                                <th>Parameter</th>
-                                <th>Value</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Total Weight</td>
-                                <td>350g</td>
-                            </tr>
-                            <tr>
-                                <td>Dimensions (L × W × H)</td>
-                                <td>180 × 85 × 35 mm</td>
-                            </tr>
-                            <tr>
-                                <td>Finger Count</td>
-                                <td>5 (thumb + 4 fingers)</td>
-                            </tr>
-                            <tr>
-                                <td>Actuation Method</td>
-                                <td>Tendon-driven with servos</td>
-                            </tr>
-                            <tr>
-                                <td>Grip Force</td>
-                                <td>Up to 15N per finger</td>
-                            </tr>
-                            <tr>
-                                <td>Control Input</td>
-                                <td>EMG sensors (2-channel)</td>
-                            </tr>
-                            <tr>
-                                <td>Power Consumption</td>
-                                <td>~2W during operation</td>
-                            </tr>
-                            <tr>
-                                <td>Battery Life</td>
-                                <td>4-6 hours continuous use</td>
-                            </tr>
-                            <tr>
-                                <td>Materials</td>
-                                <td>PLA (3D printed), Nylon tendons, Aluminum joints</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Iteration & Tradeoffs -->
-        <section class="section-alt">
-            <div class="container">
-                <div class="iteration-section">
-                    <h2>Design Iterations & Tradeoffs</h2>
-                    
-                    <div class="iteration-card">
-                        <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 1: Initial Prototype</h3>
+                <div>
+                    <h2>Reflections, Learnings, &amp; Final Paper</h2>
+                    <p>This was my first engineering research role. I took away some key engineering learnings:</p>
+                    <ul class="bullet-list">
+                        <li><strong>Small changes can unlock stability:</strong> Rerouting cables, adding ferrites, and iterating housings taught me that reliable, well-organized systems are critical for smoothly functioning hardware and should be prioritized during the design process.</li>
+                        <li><strong>Efficiency is the second-greatest concern:</strong> Outside of getting the leg to work, most of my projects throughout the internship focused on making existing parts of the robot more efficient. In a moving environment, power, thermal efficiency, and quick response times all come at a premium and should always be prioritized when engineering something.</li>
+                        <li><strong>Presentation of results matters:</strong> Preparing for the publication submission, Tony stressed the need for clear, compelling visuals that emphasized a story our testing data attempted to tell. Communicating our complex findings to a broad audience in a meaningful way made all the difference in the performance of the final paper.</li>
+                    </ul>
+                    <p>More than anything, this experience put into perspective the life-changing power of applied robotics. <strong>Seeing patients get emotional</strong> while walking up and down stairs for the first time in 20 years tugged at my heartstrings and convinced me of this: <strong>I want to become an engineer</strong> to build devices with functional viability that will <strong>improve people's lives</strong>.</p>
+                    <div class="deliverables-grid">
+                        <div class="deliverable-card">
+                            <h4><em>Science</em> Paper</h4>
+                            <p>Final paper published in <em>Science</em> in July, 2025. I was listed as a co-author on the work that details the neurally controlled bionic knee platform, testing outcomes, and the implications of this monumental contribution to assistive robotics.</p>
+                            <a class="deliverable-link" href="https://www.science.org/doi/10.1126/science.adv3223" target="_blank" rel="noopener noreferrer">Read the <em>Science</em> paper</a>
                         </div>
-                        <p><strong>What Changed:</strong> Basic finger mechanism with simple tendon routing</p>
-                        <p><strong>Why:</strong> Proof of concept for actuation method</p>
-                        <p><strong>Result:</strong> Functional but heavy (450g), limited grip patterns</p>
-                    </div>
-
-                    <div class="iteration-card">
-                        <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 2: Weight Reduction</h3>
-                        </div>
-                        <p><strong>What Changed:</strong> Hollow finger design, optimized joint geometry, lighter servos</p>
-                        <p><strong>Why:</strong> User feedback indicated weight was primary concern</p>
-                        <p><strong>Tradeoff:</strong> Slightly reduced grip force (15N vs 20N)</p>
-                        <p><strong>Result:</strong> 40% weight reduction (270g), acceptable force for daily tasks</p>
-                        <div class="iteration-comparison">
-                            <div class="comparison-item">
-                                <div class="comparison-item-label">Before</div>
-                                <div class="comparison-item-value">450g</div>
-                            </div>
-                            <div class="comparison-item">
-                                <div class="comparison-item-label">After</div>
-                                <div class="comparison-item-value">270g</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="iteration-card">
-                        <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 3: Control System</h3>
-                        </div>
-                        <p><strong>What Changed:</strong> Improved EMG signal processing, added grip pattern selection</p>
-                        <p><strong>Why:</strong> Users needed more intuitive control and multiple grips</p>
-                        <p><strong>Tradeoff:</strong> Increased complexity and power consumption</p>
-                        <p><strong>Result:</strong> 5 distinct grip patterns, 0.5s response time, better user satisfaction</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Media Gallery -->
-        <section class="section">
-            <div class="container">
-                <div class="media-gallery">
-                    <h2>Media Gallery</h2>
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/14b8a6/ffffff?text=CAD+Render+Isometric" alt="CAD render isometric view" loading="lazy">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/3b82f6/ffffff?text=Prototype+in+Use" alt="Prototype in use" loading="lazy">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/1a365d/ffffff?text=Internal+Mechanism" alt="Internal mechanism" loading="lazy">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/10b981/ffffff?text=Grip+Pattern+Demo" alt="Grip pattern demonstration" loading="lazy">
-                        </div>
-                    </div>
-                    
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                                title="Robotic Hand Prosthesis Demo" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Project Navigation -->
-        <section class="section">
+        <section class="section project-nav-section">
             <div class="container">
                 <div class="project-navigation">
-                    <a href="../home.html#projects" class="project-nav-link prev">
-                        ← Back to Projects
+                    <a href="ES-51.html" class="project-nav-link prev">
+                        &larr; Previous Project
                     </a>
                     <a href="FTC-23.html" class="project-nav-link next">
-                        Next Project →
+                        Next Project &rarr;
                     </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-about">
                     <h3>Alex Ko's Maker Portfolio</h3>
-                    <p>Showcasing mechanical engineering, robotics, and biomechatronics projects.</p>
+                    <p>Showcasing my engineering and robotics projects in addition to other interesting things about me!</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="../home.html">Home</a></li>
-                        <li><a href="../home.html#projects">Projects</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../projects.html">Projects</a></li>
                         <li><a href="../resume.html">Resume</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Connect</h4>
                     <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
-                        <a href="https://github.com/asyk454" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin">
+                            in
+                        </a>
+                        <a href="https://github.com/asyk454" class="social-github" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                             <svg class="icon-github" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                             </svg>
                         </a>
-                        <a href="mailto:alexko.harvard.edu" aria-label="Email">
+                        <a href="mailto:alexko@college.harvard.edu" class="social-email" aria-label="Email">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
                                 <path d="M3 7l9 6 9-6"></path>
@@ -444,11 +400,143 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Alex Ko. All rights reserved.</p>
+                <p>&copy; 2026 Alex Ko. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="../assets/js/main.js"></script>
+    <script>
+        (function () {
+            var carousels = document.querySelectorAll('[data-carousel]');
+            if (!carousels.length) {
+                return;
+            }
+
+            carousels.forEach(function (carousel) {
+                var slides = carousel.querySelectorAll('[data-carousel-slide]');
+                var prevButton = carousel.querySelector('.carousel-btn.prev');
+                var nextButton = carousel.querySelector('.carousel-btn.next');
+                var currentIndex = 0;
+                var intervalId = null;
+                var imageTimeoutId = null;
+                var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                var isVideoCarousel = carousel.getAttribute('data-carousel-mode') === 'video' || carousel.querySelector('video');
+
+                slides.forEach(function (slide, index) {
+                    if (slide.classList.contains('is-active')) {
+                        currentIndex = index;
+                    }
+                });
+
+                var pauseVideos = function () {
+                    slides.forEach(function (slide) {
+                        var video = slide.querySelector('video');
+                        if (video) {
+                            video.pause();
+                            video.currentTime = 0;
+                        }
+                    });
+                };
+
+                var clearImageTimeout = function () {
+                    if (imageTimeoutId) {
+                        window.clearTimeout(imageTimeoutId);
+                        imageTimeoutId = null;
+                    }
+                };
+
+                var playActiveVideo = function () {
+                    if (!isVideoCarousel || reduceMotion) {
+                        return;
+                    }
+                    var activeSlide = slides[currentIndex];
+                    var video = activeSlide.querySelector('video');
+                    if (video) {
+                        video.play().catch(function () {});
+                    }
+                };
+
+                var scheduleImageAdvance = function () {
+                    if (reduceMotion || !isVideoCarousel) {
+                        return;
+                    }
+                    var activeSlide = slides[currentIndex];
+                    var hasVideo = activeSlide.querySelector('video');
+                    if (hasVideo) {
+                        return;
+                    }
+                    clearImageTimeout();
+                    imageTimeoutId = window.setTimeout(function () {
+                        showSlide(currentIndex + 1);
+                    }, 2500);
+                };
+
+                var showSlide = function (index) {
+                    slides[currentIndex].classList.remove('is-active');
+                    currentIndex = (index + slides.length) % slides.length;
+                    slides[currentIndex].classList.add('is-active');
+
+                    if (isVideoCarousel) {
+                        clearImageTimeout();
+                        pauseVideos();
+                        playActiveVideo();
+                        scheduleImageAdvance();
+                    }
+                };
+
+                var startAuto = function () {
+                    if (reduceMotion || isVideoCarousel) {
+                        return;
+                    }
+                    intervalId = window.setInterval(function () {
+                        showSlide(currentIndex + 1);
+                    }, 2500);
+                };
+
+                var resetAuto = function () {
+                    if (isVideoCarousel) {
+                        return;
+                    }
+                    if (intervalId) {
+                        window.clearInterval(intervalId);
+                    }
+                    startAuto();
+                };
+
+                if (prevButton) {
+                    prevButton.addEventListener('click', function () {
+                        showSlide(currentIndex - 1);
+                        resetAuto();
+                    });
+                }
+
+                if (nextButton) {
+                    nextButton.addEventListener('click', function () {
+                        showSlide(currentIndex + 1);
+                        resetAuto();
+                    });
+                }
+
+                if (isVideoCarousel) {
+                    slides.forEach(function (slide) {
+                        var video = slide.querySelector('video');
+                        if (!video) {
+                            return;
+                        }
+                        video.addEventListener('ended', function () {
+                            if (slide.classList.contains('is-active')) {
+                                showSlide(currentIndex + 1);
+                            }
+                        });
+                    });
+                    scheduleImageAdvance();
+                    playActiveVideo();
+                } else {
+                    startAuto();
+                }
+            });
+        })();
+    </script>
 </body>
 </html>

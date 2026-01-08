@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Alex Ko's Maker Portfolio">
+    <title>Alex Ko's Maker Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/images/icons/site_logo_dark.png" id="favicon">
+    <script>
+        (function () {
+            var favicon = document.getElementById('favicon');
+            if (!favicon || !window.matchMedia) {
+                return;
+            }
+            if (document.documentElement && document.documentElement.getAttribute('data-theme') === 'light') {
+                favicon.href = 'assets/images/icons/site_logo_dark.png';
+                return;
+            }
+            var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            var setIcon = function (event) {
+                favicon.href = event.matches
+                    ? 'assets/images/icons/site_logo_light.png'
+                    : 'assets/images/icons/site_logo_dark.png';
+            };
+            setIcon(darkQuery);
+            if (darkQuery.addEventListener) {
+                darkQuery.addEventListener('change', setIcon);
+            } else if (darkQuery.addListener) {
+                darkQuery.addListener(setIcon);
+            }
+        })();
+    </script>
+
+    <script>
+        document.documentElement.classList.add('reveal-ready');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="is-revealed" data-load-reveal>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="header-container">
+            <nav class="header-nav-left">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                </nav>
+            <div class="header-title">
+                <a href="index.html" class="site-logo">Alex Ko's Maker Portfolio</a>
+            </div>
+            <div class="header-social">
+                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin" aria-label="LinkedIn">
+                    in
+                </a>
+                <a href="https://github.com/asyk454" target="_blank" rel="noopener noreferrer" class="social-link social-github" aria-label="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                </a>
+                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link social-email" aria-label="Email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                        <path d="M3 7l9 6 9-6"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="mobile-dropdown-menu">
+                    <a href="resume.html" class="nav-link">Resume</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-layout">
+                <div class="hero-photo">
+                    <img src="assets/images/profile/Alex Ko Headshot copy.jpg" alt="Profile photo" class="hero-headshot" loading="eager">
+                </div>
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            <span class="hero-title-line1">
+                                Hi, I'm <span class="name-highlight">Alex Ko</span>, a
+                            </span>
+                            <span class="hero-title-line2">
+                                <span class="name-highlight">Mechanical Engineer</span>.
+                            </span>
+                        </h1>
+
+                        <p class="hero-intro">
+                            I am currently a sophomore at Harvard studying mechanical engineering. I want to push the 
+                            boundaries of what's possible by creating and supporting innovative robotic and biomechatronic  
+                            solutions using design, prototyping, and engineering excellence fundamentals.
+                        </p>
+                        <p class="hero-cta-text">
+                            Check out how I'm already working towards building the future of human-machine interfaces!
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="btn-hero">LINKEDIN</a>
+                            <a href="projects.html" class="btn-hero">PROJECTS</a>
+                            <a href="resume.html" class="btn-hero">RESUME</a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="section-alt" id="projects">
+            <div class="container">
+                <div class="projects-header">
+                    <h2>Featured Projects</h2>
+                    <p class="projects-subtitle">
+                        A selection of projects showcasing my work in robotics, biomechatronics, and mechanical design. Scroll through to learn more!
+                    </p>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project Card 1 -->
+                    <article class="project-card">
+                        <div class="image-container">
+                            <!-- TODO: This image is probably just a place holder and should be replaced with a higher quality image if Tony has one -->
+                            <img src="assets/images/projects/MediaLab/MediaLabLeg.png" alt="Tissue-integrated bionic knee prosthesis" class="project-card-image" loading="lazy">
+                            <span class="project-card-badge tag tag-biomechatronics">Research</span>
+                        </div>
+                        <div class="project-card-content">
+                            <h3 class="project-card-title">Neurally Controlled Bionic Knee Prosthesis</h3>
+                            <div class="project-card-affiliation">MIT Media Lab &mdash; Biomechatronics Group</div>
+                            <p class="project-card-description">
+                                Built and upgraded a backup prosthetic leg. Solved a critical encoder failure using braided signal routing and ferrites. Enhanced foot feedback system in C++. Facilitated testing, data collection, and created data processing scripts.
+                            </p>
+                            <div class="project-card-metric">
+                                📝 Co-Authored Publication in <a href="https://www.science.org/doi/10.1126/science.adv3223" target="_blank" rel="noopener noreferrer"><i>Science</i></a>
+                            </div>
+                            <div class="project-card-footer">
+                                <a href="projects/MediaLab.html" class="project-card-link">
+                                    Learn More&nbsp;→
+                                </a>
+                                <div class="project-card-meta meta">
+                                    <span class="meta-location">Cambridge, MA</span>
+                                    <span class="meta-sep" aria-hidden="true">·</span>
+                                    <span class="meta-dates">Jun 2023 &mdash; Mar 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 2 -->
+                    <article class="project-card">
+                        <div class="image-container">
+                            <img src="assets/images/projects/FTC-23/FTC_23_Robot.JPG" alt="FTC Competition Robot" class="project-card-image" loading="lazy">
+                            <span class="project-card-badge tag tag-robotics">School Team</span>
+                        </div>
+                        <div class="project-card-content">
+                            <h3 class="project-card-title">FIRST Tech Challenge '22-'23 Robot</h3>
+                            <div class="project-card-affiliation">Weston High School Robotics Club</div>
+                            <p class="project-card-description">
+                                Principal designer of robot chassis. Developed autonomous navigation using trigonometric localization, sensor/camera fusion, and PID control. Raised $100,000 for state-of-the-art robotics lab.
+                            </p>
+                            <div class="project-card-metric">
+                                🏆 Finished Top 4 in the World (>7000 Teams)
+                            </div>
+                            <div class="project-card-footer">
+                                <a href="projects/FTC-23.html" class="project-card-link">
+                                    Learn More&nbsp;→
+                                </a>
+                                <div class="project-card-meta meta">
+                                    <span class="meta-location">Weston, MA</span>
+                                    <span class="meta-sep" aria-hidden="true">·</span>
+                                    <span class="meta-dates">Sep 2022 &mdash; Apr 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 3 -->
+                    <article class="project-card">
+                        <div class="image-container">
+                            <img src="assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Biomechatronic Device" class="project-card-image" loading="lazy">
+                            <span class="project-card-badge tag tag-biomechatronics">Research</span>
+                        </div>
+                        <div class="project-card-content">
+                            <h3 class="project-card-title">VLA-Controlled Supernumerary Arm</h3>
+                            <div class="project-card-affiliation">Harvard Slade Agility Lab</div>
+                            <p class="project-card-description">
+                                Designed and experimented with a 6-DOF, assistive, wearable robotic arm powered by a vision language action model controller and multi-camera array.
+                            </p>
+                            <div class="project-card-metric">
+                                🎯 Achieved Tabletop Pick and Place Control
+                            </div>
+                            <div class="project-card-footer">
+                                <a href="projects/SladeLab.html" class="project-card-link">
+                                    Learn More&nbsp;→
+                                </a>
+                                <div class="project-card-meta meta">
+                                    <span class="meta-location">Cambridge, MA</span>
+                                    <span class="meta-sep" aria-hidden="true">·</span>
+                                    <span class="meta-dates">Jun &mdash; Aug 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 4 -->
+                    <article class="project-card">
+                        <div class="image-container">
+                            <img src="assets/images/projects/ES-51/ES51_robot.jpg" alt="Custom Actuator Design" class="project-card-image" loading="lazy">
+                            <span class="project-card-badge tag tag-prototyping">Class Project</span>
+                        </div>
+                        <div class="project-card-content">
+                            <h3 class="project-card-title">Engineering Sciences 51 Design Challenge Robot</h3>
+                            <div class="project-card-affiliation">Harvard ES 51 Mechanical Design Class</div>
+                            <p class="project-card-description">
+                                Managed build timeline and match strategy while leading parts manufacturing/assembly for a two-speed, gear-shifting, 6WD chassis and silicone gripping competition robot.
+                            </p>
+                            <div class="project-card-metric">
+                                ✅ Drivetrain Praised as Most Maneuverable
+                            </div>
+                            <div class="project-card-footer">
+                                <a href="projects/ES-51.html" class="project-card-link">
+                                    Learn More&nbsp;→
+                                </a>
+                                <div class="project-card-meta meta">
+                                    <span class="meta-location">Cambridge, MA</span>
+                                    <span class="meta-sep" aria-hidden="true">·</span>
+                                    <span class="meta-dates">Jan &mdash; May 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section class="contact-section">
+            <div class="container">
+                <h2>Let's Connect</h2>
+                <p class="contact-message">
+                    Interested in collaborating or learning more about my work? I'd love to hear from you.
+                </p>
+                <div class="contact-buttons">
+                    <a href="mailto:alexko@college.harvard.edu" class="btn btn-primary btn-large">Send Email</a>
+                    <a href="resume.html" class="btn btn-secondary btn-large">View Resume</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Alex Ko's Maker Portfolio</h3>
+                    <p>Showcasing my engineering and robotics projects in addition to other interesting things about me!</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin">
+                            in
+                        </a>
+                        <a href="https://github.com/asyk454" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="social-github">
+                            <svg class="icon-github" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </a>
+                        <a href="mailto:alexko@college.harvard.edu" aria-label="Email" class="social-email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                                <path d="M3 7l9 6 9-6"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alex Ko. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -114,35 +114,70 @@ body {
     background-color: var(--background);
 }
 
-/* Load reveal for above-the-fold content (JS adds .reveal-ready and .is-revealed) */
-html.reveal-ready body[data-load-reveal] {
+/* Load reveal for page content (JS adds .reveal-ready and .is-revealed) */
+html.reveal-ready header.site-header,
+html.reveal-ready main > *,
+html.reveal-ready footer.site-footer {
     opacity: 1;
+    transform: translateY(8px);
+}
+
+html.reveal-ready body.is-revealed header.site-header,
+html.reveal-ready body.is-revealed main > *,
+html.reveal-ready body.is-revealed footer.site-footer {
+    animation: reveal-rise 0.9s ease forwards;
+    animation-delay: var(--reveal-delay, 0s);
+    will-change: transform, opacity;
 }
 
 html.reveal-ready body[data-load-reveal]::before {
     content: '';
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    inset: 0;
     background: var(--background);
+    opacity: 1;
+    animation: reveal-overlay 0.9s ease forwards;
     z-index: 2000;
-    transform: translateX(0);
-    transition: transform 1000ms cubic-bezier(0.22, 0.61, 0.36, 1);
-    transition-delay: 100ms;
     pointer-events: none;
-    will-change: transform;
 }
 
-html.reveal-ready body[data-load-reveal].is-revealed::before {
-    transform: translateX(100%);
+@keyframes reveal-overlay {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes reveal-rise {
+    from {
+        opacity: 0.7;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
+    html.reveal-ready header.site-header,
+    html.reveal-ready main > *,
+    html.reveal-ready footer.site-footer {
+        opacity: 1;
+        transform: none;
+    }
+
+    html.reveal-ready body.is-revealed header.site-header,
+    html.reveal-ready body.is-revealed main > *,
+    html.reveal-ready body.is-revealed footer.site-footer {
+        animation: none;
+    }
+
     html.reveal-ready body[data-load-reveal]::before {
-        transition: none;
-        transform: translateX(100%);
+        animation: none;
+        opacity: 0;
     }
 }
 

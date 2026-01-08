@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Alex Ko's Maker Portfolio">
-    <title>Alex Ko's Maker Portfolio</title>
+    <title>Resume | Alex Ko's Maker Portfolio</title>
     <link rel="icon" type="image/png" href="assets/images/icons/site_logo_dark.png" id="favicon">
     <script>
         (function () {
             var favicon = document.getElementById('favicon');
             if (!favicon || !window.matchMedia) {
+                return;
+            }
+            if (document.documentElement && document.documentElement.getAttribute('data-theme') === 'light') {
+                favicon.href = 'assets/images/icons/site_logo_dark.png';
                 return;
             }
             var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -26,6 +30,7 @@
             }
         })();
     </script>
+
     <script>
         document.documentElement.classList.add('reveal-ready');
     </script>
@@ -36,21 +41,21 @@
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body data-load-reveal>
+<body class="is-revealed" data-load-reveal>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
     <header class="site-header">
         <div class="header-container">
             <nav class="header-nav-left">
-                <a href="home.html" class="nav-link">Home</a>
+                <a href="index.html" class="nav-link">Home</a>
                 <a href="resume.html" class="nav-link">Resume</a>
-                <a href="home.html#projects" class="nav-link">Projects</a>
-            </nav>
+                <a href="projects.html" class="nav-link">Projects</a>
+                </nav>
             <div class="header-title">
-                <a href="home.html" class="site-logo">Alex Ko's Maker Portfolio</a>
+                <a href="index.html" class="site-logo">Alex Ko's Maker Portfolio</a>
             </div>
             <div class="header-social">
-                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin" aria-label="LinkedIn">
                     in
                 </a>
                 <a href="https://github.com/asyk454" target="_blank" rel="noopener noreferrer" class="social-link social-github" aria-label="GitHub">
@@ -58,7 +63,7 @@
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
                 </a>
-                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Email">
+                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link social-email" aria-label="Email">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
                         <path d="M3 7l9 6 9-6"></path>
@@ -73,7 +78,7 @@
                 </button>
                 <nav class="mobile-dropdown-menu">
                     <a href="resume.html" class="nav-link">Resume</a>
-                    <a href="home.html#projects" class="nav-link">Projects</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
                 </nav>
             </div>
         </div>
@@ -90,7 +95,7 @@
                         Mechanical Engineer | Robotics Enthusiast | Maker
                     </p>
                     <div style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap; margin-bottom: var(--spacing-lg);">
-                        <a href="mailto:alexko.harvard.edu" class="btn btn-primary">Email Me</a>
+                        <a href="mailto:alexko@college.harvard.edu" class="btn btn-primary">Email Me</a>
                         <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn</a>
                         <a href="https://github.com/asyk454" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
                     </div>
@@ -105,131 +110,6 @@
                     </p>
                     <a href="assets/resume.pdf" class="btn btn-primary btn-large" download>Download PDF Resume</a>
                 </div>
-
-                <!-- Resume Content -->
-                <div style="max-width: 800px; margin: 0 auto;">
-                    <!-- Education -->
-                    <section style="margin: var(--spacing-xl) 0;">
-                        <h2>Education</h2>
-                        <div style="margin: var(--spacing-md) 0;">
-                            <h3>Bachelor of Science in Mechanical Engineering</h3>
-                            <p style="color: var(--text-light); margin-bottom: var(--spacing-xs);">
-                                <strong>Your University</strong> | Expected Graduation: 2026
-                            </p>
-                            <p>Relevant Coursework: Mechanical Design, Robotics, Biomechanics, CAD/CAM, Materials Science</p>
-                        </div>
-                    </section>
-
-                    <!-- Experience -->
-                    <section style="margin: var(--spacing-xl) 0;">
-                        <h2>Experience</h2>
-                        
-                        <div style="margin: var(--spacing-lg) 0;">
-                            <h3>Research Assistant</h3>
-                            <p style="color: var(--text-light); margin-bottom: var(--spacing-xs);">
-                                <strong>MIT Media Lab - Biomechatronics Group</strong> | 2024 - Present
-                            </p>
-                            <ul style="margin-left: var(--spacing-md);">
-                                <li>Developed biomechatronic devices for human-machine interface research</li>
-                                <li>Designed and prototyped sensor systems with 95% motion tracking accuracy</li>
-                                <li>Collaborated on 3 published research studies</li>
-                            </ul>
-                        </div>
-
-                        <div style="margin: var(--spacing-lg) 0;">
-                            <h3>Team Lead - Mechanical Design</h3>
-                            <p style="color: var(--text-light); margin-bottom: var(--spacing-xs);">
-                                <strong>FIRST Tech Challenge Team</strong> | 2022 - 2024
-                            </p>
-                            <ul style="margin-left: var(--spacing-md);">
-                                <li>Led mechanical design for competition robots</li>
-                                <li>Designed custom drivetrain systems achieving 2x speed improvement</li>
-                                <li>Mentored team members in CAD and prototyping</li>
-                                <li>Achieved top 8 finish at regional competition</li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <!-- Featured Projects -->
-                    <section style="margin: var(--spacing-xl) 0;">
-                        <h2>Featured Projects</h2>
-                        <div style="margin: var(--spacing-md) 0;">
-                            <h3>Robotic Hand Prosthesis</h3>
-                            <p style="color: var(--text-light); margin-bottom: var(--spacing-xs);">2024</p>
-                            <p>Designed lightweight prosthetic hand with 40% weight reduction and 5 grip patterns. 
-                            <a href="projects/MediaLab.html">View case study →</a></p>
-                        </div>
-                        <div style="margin: var(--spacing-md) 0;">
-                            <h3>FTC Competition Robot</h3>
-                            <p style="color: var(--text-light); margin-bottom: var(--spacing-xs);">2023</p>
-                            <p>Led design of competition robot with custom drivetrain achieving top 8 finish. 
-                            <a href="projects/FTC-23.html">View case study →</a></p>
-                        </div>
-                        <div style="margin: var(--spacing-md) 0;">
-                            <h3>Biomechatronic Device</h3>
-                            <p style="color: var(--text-light); margin-bottom: var(--spacing-xs);">2024</p>
-                            <p>Developed research device with 95% motion tracking accuracy for human-machine interface studies. 
-                            <a href="projects/SladeLab.html">View case study →</a></p>
-                        </div>
-                        <div style="margin: var(--spacing-md) 0;">
-                            <h3>Custom Actuator Design</h3>
-                            <p style="color: var(--text-light); margin-bottom: var(--spacing-xs);">2023</p>
-                            <p>Designed high-torque actuator with $50 cost reduction per unit. 
-                            <a href="projects/ES-51.html">View case study →</a></p>
-                        </div>
-                    </section>
-
-                    <!-- Skills -->
-                    <section style="margin: var(--spacing-xl) 0;">
-                        <h2>Skills</h2>
-                        <div style="margin: var(--spacing-md) 0;">
-                            <h3>CAD & Design</h3>
-                            <p>
-                                <span class="tag">SolidWorks</span>
-                                <span class="tag">Fusion 360</span>
-                                <span class="tag">OnShape</span>
-                                <span class="tag">AutoCAD</span>
-                            </p>
-                        </div>
-                        <div style="margin: var(--spacing-md) 0;">
-                            <h3>Prototyping & Manufacturing</h3>
-                            <p>
-                                <span class="tag">3D Printing</span>
-                                <span class="tag">CNC Machining</span>
-                                <span class="tag">Laser Cutting</span>
-                                <span class="tag">Rapid Prototyping</span>
-                            </p>
-                        </div>
-                        <div style="margin: var(--spacing-md) 0;">
-                            <h3>Engineering Domains</h3>
-                            <p>
-                                <span class="tag tag-robotics">Robotics</span>
-                                <span class="tag tag-biomechatronics">Biomechatronics</span>
-                                <span class="tag">Mechanical Design</span>
-                                <span class="tag">Actuator Systems</span>
-                                <span class="tag">Sensor Integration</span>
-                            </p>
-                        </div>
-                        <div style="margin: var(--spacing-md) 0;">
-                            <h3>Software & Tools</h3>
-                            <p>
-                                <span class="tag">Python</span>
-                                <span class="tag">MATLAB</span>
-                                <span class="tag">Arduino</span>
-                                <span class="tag">Git</span>
-                            </p>
-                        </div>
-                    </section>
-
-                    <!-- Awards & Certifications -->
-                    <section style="margin: var(--spacing-xl) 0;">
-                        <h2>Awards & Certifications</h2>
-                        <ul style="margin-left: var(--spacing-md);">
-                            <li>FIRST Tech Challenge Regional Competition - Top 8 Finish (2023)</li>
-                            <li>Dean's List - Your University (2023, 2024)</li>
-                        </ul>
-                    </section>
-                </div>
             </div>
         </section>
     </main>
@@ -239,26 +119,28 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <h3>Alex Ko's Maker Portfolio</h3>
-                    <p>Showcasing mechanical engineering, robotics, and biomechatronics projects.</p>
+                    <p>Showcasing my engineering and robotics projects in addition to other interesting things about me!</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="home.html#projects">Projects</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
                         <li><a href="resume.html">Resume</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Connect</h4>
                     <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
-                        <a href="https://github.com/asyk454" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin">
+                            in
+                        </a>
+                        <a href="https://github.com/asyk454" class="social-github" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                             <svg class="icon-github" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                             </svg>
                         </a>
-                        <a href="mailto:alexko.harvard.edu" aria-label="Email">
+                        <a href="mailto:alexko@college.harvard.edu" class="social-email" aria-label="Email">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
                                 <path d="M3 7l9 6 9-6"></path>
@@ -268,7 +150,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Alex Ko. All rights reserved.</p>
+                <p>&copy; 2026 Alex Ko. All rights reserved.</p>
             </div>
         </div>
     </footer>

@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Alex Ko's Maker Portfolio">
-    <title>Alex Ko's Maker Portfolio</title>
+    <title>FIRST Tech Challenge '22-'23 Robot | Alex Ko's Maker Portfolio</title>
     <link rel="icon" type="image/png" href="../assets/images/icons/site_logo_dark.png" id="favicon">
     <script>
         (function () {
             var favicon = document.getElementById('favicon');
             if (!favicon || !window.matchMedia) {
+                return;
+            }
+            if (document.documentElement && document.documentElement.getAttribute('data-theme') === 'light') {
+                favicon.href = '../assets/images/icons/site_logo_dark.png';
                 return;
             }
             var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -26,6 +30,7 @@
             }
         })();
     </script>
+
     <script>
         document.documentElement.classList.add('reveal-ready');
     </script>
@@ -37,21 +42,21 @@
     <link rel="stylesheet" href="../assets/css/project.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
-<body data-load-reveal>
+<body class="is-revealed project-page" data-load-reveal>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
+
     <header class="site-header">
         <div class="header-container">
             <nav class="header-nav-left">
-                <a href="../home.html" class="nav-link">Home</a>
+                <a href="../index.html" class="nav-link">Home</a>
                 <a href="../resume.html" class="nav-link">Resume</a>
-                <a href="../home.html#projects" class="nav-link">Projects</a>
-            </nav>
+                <a href="../projects.html" class="nav-link">Projects</a>
+                </nav>
             <div class="header-title">
-                <a href="../home.html" class="site-logo">Alex Ko's Maker Portfolio</a>
+                <a href="../index.html" class="site-logo">Alex Ko's Maker Portfolio</a>
             </div>
             <div class="header-social">
-                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin" aria-label="LinkedIn">
                     in
                 </a>
                 <a href="https://github.com/asyk454" target="_blank" rel="noopener noreferrer" class="social-link social-github" aria-label="GitHub">
@@ -59,7 +64,7 @@
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
                 </a>
-                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Email">
+                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link social-email" aria-label="Email">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
                         <path d="M3 7l9 6 9-6"></path>
@@ -74,266 +79,337 @@
                 </button>
                 <nav class="mobile-dropdown-menu">
                     <a href="../resume.html" class="nav-link">Resume</a>
-                    <a href="../home.html#projects" class="nav-link">Projects</a>
+                    <a href="../projects.html" class="nav-link">Projects</a>
                 </nav>
             </div>
         </div>
     </header>
 
     <main id="main-content">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <div class="breadcrumb-container">
-                <div class="breadcrumb-links">
-                    <a href="../home.html">Home</a>
-                    <span class="breadcrumb-separator">/</span>
-                    <a href="../home.html#projects">Projects</a>
-                    <span class="breadcrumb-separator">/</span>
-                    <span>FTC Competition Robot</span>
-                </div>
-            </div>
-        </nav>
 
         <section class="project-hero">
-            <img src="https://via.placeholder.com/1920x1080/1e40af/ffffff?text=FTC+Competition+Robot" alt="FTC Competition Robot" class="project-hero-image" loading="eager">
+            <img src="../assets/images/projects/FTC-23/FTC_23_Robot.JPG" alt="FIRST Tech Challenge '22-'23 Robot hero image" class="project-hero-image" loading="eager">
             <div class="project-hero-content">
                 <div class="container">
-                    <h1 class="project-hero-title">FTC Competition Robot</h1>
-                    <div class="project-hero-meta">
-                        <div class="project-hero-tags">
-                            <span class="tag tag-robotics">Robotics</span>
-                            <span class="tag">Competition</span>
+                    <div class="project-hero-grid">
+                        <div>
+                            <h1 class="project-hero-title">FIRST Tech Challenge '22-'23 Robot</h1>
                         </div>
-                        <span style="color: rgba(255,255,255,0.8);">2023</span>
+                        <aside class="project-hero-details">
+                            <div class="hero-detail-grid">
+                                <div class="hero-detail-stack">
+                                    <div class="hero-detail">
+                                        <span class="hero-detail-label">Program</span>
+                                        <span class="hero-detail-value">FIRST Tech Challenge</span>
+                                        <span class="hero-detail-value hero-detail-subvalue">Competition Robotics</span>
+                                    </div>
+                                    <div class="hero-detail">
+                                        <span class="hero-detail-label">Timeline</span>
+                                        <span class="hero-detail-value">Sep 2022 &mdash; Apr 2023</span>
+                                    </div>
+                                </div>
+                                <div class="hero-detail">
+                                    <span class="hero-detail-label">Skills Learned</span>
+                                    <ul class="hero-detail-list">
+                                        <li>CAD Mechanical Design </li>
+                                        <li>Java</li>
+                                        <li>Project Documentation and Presentation</li>
+                                        <li>Fundraising + Outreach</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="summary">
             <div class="container">
-                <div class="project-overview">
-                    <div class="overview-main">
-                        <h2>Overview</h2>
-                        <p>
-                            Designed and built a competition robot for FIRST Tech Challenge, focusing on a custom 
-                            drivetrain and manipulator systems. The robot needed to be fast, reliable, and capable 
-                            of multiple game tasks including object manipulation and scoring.
-                        </p>
-                        <p>
-                            This project was completed as part of a team, with me leading the mechanical design 
-                            and drivetrain development. The final robot achieved 2x faster movement speed compared 
-                            to our previous season's design while maintaining reliability throughout the competition.
-                        </p>
-                        <h3>Key Achievements</h3>
-                        <ul>
-                            <li>2x faster movement speed vs. previous iteration</li>
-                            <li>Top 8 finish at regional competition</li>
-                            <li>Custom 6-wheel drivetrain with mecanum wheels</li>
-                            <li>Dual manipulator system for game objects</li>
+                <p class="summary-kicker">Summary</p>
+                <p class="summary-body"><strong>I led CAD and chassis design</strong> for my high school robotics team's (aka GNCE) 2022-23 PowerPlay robot, which was a 60+ lb robot featuring a 3D printed composite chassis with an extending, turreted arm that reached about 5 ft. That season I also worked to raise <strong>$100,000</strong> for a state-of-the-art robotics facility in Weston, which won us the <strong>top judged award at States and the same in our division at Worlds</strong>, placing top four globally among >7000 teams.</p>
+            </div>
+        </section>
+
+        <section class="section-alt" id="context">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>Results &amp; Impact</h2>
+                        <p>2022-2023 PowerPlay season highlights across competition outcomes and community growth.</p>
+                        <h3>Competition outcomes</h3>
+                        <ul class="bullet-list">
+                            <li><strong>World Championship:</strong> Inspire Award (highest judged award, top four globally for Inspire); ranked 13th of 48 in our division.</li>
+                            <li><strong>MA FTC State Championship:</strong> Inspire Award; semifinalist alliance captain; ranked 4th of 36; advanced to Worlds.</li>
+                        </ul>
+                        <div class="section-spacer"></div>
+                        <h3>Community impact</h3>
+                        <ul class="bullet-list">
+                            <li><strong>Raised $100,000</strong> from nearly 600 families to build a GNCE Robotics and Engineering Lab supporting up to 3 FLL and 4 FTC teams.</li>
+                            <li><strong>Reached 2,400+ people</strong> through demos, school events, and outreach.</li>
+                            <li>Started FTC Team 22489 (10 members) and 3 FIRST Lego League teams; mentored about 270 hours total (126 hrs FTC, 144 hrs FLL).</li>
                         </ul>
                     </div>
-                    <div class="overview-sidebar">
-                        <h3>Project Details</h3>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Role</div>
-                            <div class="overview-item-value">Lead Mechanical Designer</div>
+                    <div>
+                        <div class="image-carousel" data-carousel>
+                            <div class="carousel-track">
+                                <figure class="carousel-slide is-active" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_Worlds.jpg" alt="GNCE team at the World Championship event" loading="lazy">
+                                    <figcaption class="carousel-caption">World Championship Inspire Award</figcaption>
+                                </figure>
+                                <figure class="carousel-slide is-active" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_States.jpeg" alt="GNCE team at the Massachusetts State Championship" loading="lazy">
+                                    <figcaption class="carousel-caption">MA State Championship Inspire Award</figcaption>
+                                </figure>
+                                <figure class="carousel-slide is-active" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_Lab.JPG" alt="GNCE Robotics and Engineering Lab space" loading="lazy">
+                                    <figcaption class="carousel-caption">Brand new Weston High School robotics lab from $100,000 fundraiser</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_School_Outreach.JPG" alt="GNCE school outreach demo with students" loading="lazy">
+                                    <figcaption class="carousel-caption">Weston High School outreach</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_Town_Outreach.JPG" alt="GNCE town celebration outreach booth" loading="lazy">
+                                    <figcaption class="carousel-caption">Weston town celebration outreach with kids</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_MIT_Outreach.jpg" alt="GNCE at the MIT Cambridge Science Festival" loading="lazy">
+                                    <figcaption class="carousel-caption">MIT Cambridge Science Festival outreach with teammates</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_Design_Review.jpg" alt="GNCE design review session with mentors" loading="lazy">
+                                    <figcaption class="carousel-caption">Physics teacher design review and feedback</figcaption>
+                                </figure>
+                            </div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous image">
+                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
+                            </button>
+                            <button class="carousel-btn next" type="button" aria-label="Next image">
+                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
+                            </button>
                         </div>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Timeline</div>
-                            <div class="overview-item-value">4 months</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="role">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>My Role &amp; Ownership</h2>
+                        <p>My areas of focus were CAD mechanical design, software, and documentation.</p>
+                        <h3>My role &amp; ownership</h3>
+                        <ul class="bullet-list">
+                            <li><strong>CAD:</strong> Responsible for entire chassis design, CADed entire assembly for future visualization, designed claw.</li>
+                            <li><strong>Software:</strong> Coded arm functionality and entire autonomous motion pathing algorithm. </li>
+                            <li class="bullet-spacer"><strong>Documentation:</strong> Documented all work throughout the season via a 108-page engineering notebook (every meeting, design review, independent work session, etc...). Not a necessity, but significantly supported the team and impressed judges at the World Championship.</li>
+                        </ul>
+                        <p class="collaborators-line"><strong>Collaborators:</strong> <a href="https://www.linkedin.com/in/samatefi/" target="_blank" rel="noopener noreferrer">Sam Atefi</a>, Finley Campbell, <a href="https://www.linkedin.com/in/theodoredahl/" target="_blank" rel="noopener noreferrer">Theodore Dahl</a>, <a href="https://www.linkedin.com/in/zachary-gumbert-04985b357/" target="_blank" rel="noopener noreferrer">Zack Gumbert</a>, <a href="https://www.linkedin.com/in/arjun-jasuja-959950343/" target="_blank" rel="noopener noreferrer">Arjun Jasuja</a>, <a href="https://www.linkedin.com/in/zachary-kano-25b7b92a3/" target="_blank" rel="noopener noreferrer">Zach Kano</a>, <a href="https://www.linkedin.com/in/jonathan-y-lan/" target="_blank" rel="noopener noreferrer">Jonathan Lan</a>, <a href="https://www.linkedin.com/in/rex-li-b328b4227/" target="_blank" rel="noopener noreferrer">Rex Li</a>, <a href="https://www.linkedin.com/in/shen-jessica/" target="_blank" rel="noopener noreferrer">Jessica Shen</a>, <a href="https://www.linkedin.com/in/eliana-tillman/" target="_blank" rel="noopener noreferrer">Ellie Tillman-Schwartz</a>, <a href="https://henrylwhite.com/" target="_blank" rel="noopener noreferrer">Henry White</a></p>
+                    </div>
+                    <div>
+                        <div class="image-carousel" data-carousel>
+                            <div class="carousel-track">
+                                <figure class="carousel-slide is-active" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_Early_CAD.png" alt="Early CAD layout of the GNCE robot" loading="lazy">
+                                    <figcaption class="carousel-caption">CAD after my first day of putting things together</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_Full_CAD.png" alt="Full CAD assembly of the GNCE robot" loading="lazy">
+                                    <figcaption class="carousel-caption">Final CAD assembly after months of design and refinement</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_Chassis_Cover.png" alt="Chassis cover CAD detailing sensor access" loading="lazy">
+                                    <figcaption class="carousel-caption">Chassis cover I designed</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_Chassis_Pod.png" alt="Chassis pontoon CAD detailing structural backbone" loading="lazy">
+                                    <figcaption class="carousel-caption">Sketch of robot pontoons I designed featuring innovative motor stacking geometry</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_Claw_Designs.jpg" alt="Claw concept iterations and prototypes" loading="lazy">
+                                    <figcaption class="carousel-caption">Sketching possible claw designs on the whiteboard</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_Claw_Work.JPG" alt="Claw build and integration work" loading="lazy">
+                                    <figcaption class="carousel-caption">Building the first working version of the claw</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_Early_Robot.JPG" alt="Early season robot build" loading="lazy">
+                                    <figcaption class="carousel-caption">Early season robot build</figcaption>
+                                </figure>
+                            </div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous image">
+                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
+                            </button>
+                            <button class="carousel-btn next" type="button" aria-label="Next image">
+                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
+                            </button>
                         </div>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Tools</div>
-                            <ul class="overview-item-list">
-                                <li>OnShape (CAD)</li>
-                                <li>CNC Machining</li>
-                                <li>3D Printing</li>
-                                <li>Laser Cutting</li>
+                    </div>
+                </div>
+                <div class="section-cta">
+                    <a class="btn btn-secondary" href="https://cad.onshape.com/documents/d5844ae229f5c19bdce0eeac/w/0b08cac777e6f418602e5381/e/917a95db50b678dd188d305f?renderMode=0&uiState=695ccacc129aa994abb496be" target="_blank" rel="noopener noreferrer">View OnShape CAD Assembly</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-alt" id="strategy">
+            <div class="container">
+                <h2>Design Highlights</h2>
+                <p>Three focused highlights capture the core design decisions and the evidence behind them.</p>
+                <div class="story-card">
+                    <div class="story-card-grid">
+                        <div class="story-card-content">
+                            <h3>Arm assembly reach + precision</h3>
+                            <ul class="bullet-list">
+                                <li><strong>What:</strong> turret + shoulder + dual slides + claw reaching about 5 ft.</li>
+                                <li><strong>Why:</strong> aim to score without moving the chassis and reach as many scoring junctions.</li>
+                                <li><strong>How:</strong> linear slides, double worm gear shoulder, an over-centered claw, and counter-springs.</li>
+                                <li><strong>Evidence:</strong> full extension photo showing turreted reach plus close-up of dual slides and claw.</li>
                             </ul>
                         </div>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Technologies</div>
-                            <ul class="overview-item-list">
-                                <li>Robot Design</li>
-                                <li>Drivetrain Systems</li>
-                                <li>Mechanism Design</li>
-                                <li>Rapid Prototyping</li>
+                        <figure class="story-card-figure">
+                            <img src="../assets/images/projects/FTC-23/GNCE_Linear_Slides.JPG" alt="Linear slides and arm assembly detail" class="story-card-image--top-medium" loading="lazy">
+                            <figcaption class="story-card-caption">Linear slides and arm assembly detail</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-card-grid">
+                        <div class="story-card-content">
+                            <h3>Intake evolution + reliability</h3>
+                            <ul class="bullet-list">
+                                <li><strong>What:</strong> claw intake optimized for stacked cones and fast service.</li>
+                                <li><strong>Why:</strong> lower end-of-arm mass while keeping pickups reliable against stacked cones.</li>
+                                <li><strong>How:</strong> tested sticky, octopus, and roller prototypes, then moved to an over-centered claw.</li>
+                                <li><strong>Evidence:</strong> whiteboard concept sketches + photos of the first working claw build.</li>
                             </ul>
                         </div>
+                        <figure class="story-card-figure">
+                            <img src="../assets/images/projects/FTC-23/GNCE_Octopus.JPG" alt="Octopus intake prototype" class="story-card-image--top-tight" loading="lazy">
+                            <figcaption class="story-card-caption">Octopus intake prototype</figcaption>
+                        </figure>
                     </div>
                 </div>
-
-                <div class="key-metrics">
-                    <div class="metric-card">
-                        <div class="metric-card-value">2.5 m/s</div>
-                        <div class="metric-card-label">Max Speed</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-card-value">18 kg</div>
-                        <div class="metric-card-label">Total Weight</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-card-value">Top 8</div>
-                        <div class="metric-card-label">Competition Finish</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-card-value">6</div>
-                        <div class="metric-card-label">Wheel Drive</div>
+                <div class="story-card">
+                    <div class="story-card-grid">
+                        <div class="story-card-content">
+                            <h3>Chassis stability + industrial design</h3>
+                            <ul class="bullet-list">
+                                <li><strong>What:</strong> custom 3D printed chassis with 20 lb ballast and protective covers.</li>
+                                <li><strong>Why:</strong> lowers center of gravity, allows for narrow turning, and protects against collision displacements.</li>
+                                <li><strong>How:</strong> innovative motor stacking geometry, mecanum wheels, and smooth-curved Onyx 3D prints.</li>
+                                <li><strong>Evidence:</strong> chassis CAD render with ballast mount plus cover panel close-up.</li>
+                            </ul>
+                        </div>
+                        <figure class="story-card-figure">
+                            <img src="../assets/images/projects/FTC-23/GNCE_Chassis_Only_CAD.png" alt="Chassis-only CAD render with motor stacking geometry" loading="lazy">
+                            <figcaption class="story-card-caption">Chassis-only CAD render</figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-alt">
+        <section class="section" id="build">
             <div class="container">
-                <div class="process-section">
-                    <h2>Design Process</h2>
-                    <div class="process-timeline">
-                        <div class="process-step">
-                            <span class="process-step-number">1</span>
-                            <h3>Game Analysis</h3>
-                            <p>
-                                Analyzed competition game rules and scoring opportunities. Identified key requirements: 
-                                fast movement, object manipulation, and autonomous capabilities.
-                            </p>
-                            <div class="process-step-image">
-                                <img src="https://via.placeholder.com/1200x675/1e40af/ffffff?text=Game+Analysis" alt="Game analysis" loading="lazy">
-                            </div>
+                <div class="story-grid">
+                    <div>
+                        <h2>Additional Robotics Media</h2>
+                        <p>Access to project documentation files that we were judged on for awards. Also access to our YouTube videos and a fun social photo-scroll.</p>
+                        <div class="video-highlights">
+                            <a class="video-highlight-card" href="https://www.youtube.com/watch?v=s_dVK0E7P6E" target="_blank" rel="noopener noreferrer">
+                                <span class="video-highlight-title">Worlds Robot Hype Video</span>
+                                <span class="video-highlight-meta">YouTube &middot; Robot reveal leading into the World Championship (FTC tradition)</span>
+                            </a>
+                            <a class="video-highlight-card" href="https://www.youtube.com/watch?v=W0MiUBvjoPs" target="_blank" rel="noopener noreferrer">
+                                <span class="video-highlight-title">MA World Championship Recap</span>
+                                <span class="video-highlight-meta">YouTube &middot; Celebrating MA's accomplishments as a state!</span>
+                            </a>
                         </div>
-                        <div class="process-step">
-                            <span class="process-step-number">2</span>
-                            <h3>Drivetrain Design</h3>
-                            <p>
-                                Designed custom 6-wheel mecanum drivetrain for omnidirectional movement. Optimized 
-                                wheel placement and gear ratios for maximum speed and maneuverability.
-                            </p>
-                            <div class="process-step-image">
-                                <img src="https://via.placeholder.com/1200x675/3b82f6/ffffff?text=Drivetrain+Design" alt="Drivetrain design" loading="lazy">
+                    </div>
+                    <div>
+                        <div class="image-carousel" data-carousel>
+                            <div class="carousel-track">
+                                <figure class="carousel-slide is-active" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_Thumbs_Up.jpg" alt="GNCE team giving thumbs up" loading="lazy">
+                                    <figcaption class="carousel-caption">Thumbs up and ready for a match with the drive team!</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_Scrimmage.JPG" alt="GNCE team at a scrimmage event" loading="lazy">
+                                    <figcaption class="carousel-caption">Scrimmaging for some extra practice with other teams</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_And_Friends.JPG" alt="GNCE team with other teams" loading="lazy">
+                                    <figcaption class="carousel-caption">Group photo with other MA teams</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_Team_Dinner.JPG" alt="GNCE team dinner" loading="lazy">
+                                    <figcaption class="carousel-caption">Team dinner by the hotel pool</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/FTC-23/GNCE_Pose_With_Trophy.jpg" alt="GNCE team posing with trophy" loading="lazy">
+                                    <figcaption class="carousel-caption">Celebrating with the trophy!</figcaption>
+                                </figure>
                             </div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous image">
+                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
+                            </button>
+                            <button class="carousel-btn next" type="button" aria-label="Next image">
+                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
+                            </button>
                         </div>
-                        <div class="process-step">
-                            <span class="process-step-number">3</span>
-                            <h3>Manipulator Systems</h3>
-                            <p>
-                                Developed dual manipulator system: one for large objects, one for precision tasks. 
-                                Used four-bar linkages and custom grippers optimized for game objects.
-                            </p>
-                            <div class="process-step-image">
-                                <img src="https://via.placeholder.com/1200x675/14b8a6/ffffff?text=Manipulator+Design" alt="Manipulator design" loading="lazy">
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <span class="process-step-number">4</span>
-                            <h3>Prototyping & Testing</h3>
-                            <p>
-                                Built multiple iterations, testing speed, reliability, and game performance. Refined 
-                                designs based on competition practice matches.
-                            </p>
-                            <div class="process-step-image">
-                                <img src="https://via.placeholder.com/1200x675/10b981/ffffff?text=Testing+Phase" alt="Testing phase" loading="lazy">
-                            </div>
-                        </div>
+                    </div>
+                </div>
+                <div class="deliverables-grid">
+                    <div class="deliverable-card">
+                        <h4>Final Engineering Portfolio</h4>
+                        <p>Judging portfolio with design process, motor sizing, and subsystem breakdowns. Won various awards at the state and international levels.</p>
+                        <a class="deliverable-link" href="../assets/docs/projects/FTC-23/FTC_Final_Portfolio.pdf" target="_blank" rel="noopener noreferrer">View portfolio</a>
+                    </div>
+                    <div class="deliverable-card">
+                        <h4>Engineering Notebook</h4>
+                        <p>Weekly build log covering outreach, CAD, testing, and competition notes. 108 pages long almost all written by me!</p>
+                        <a class="deliverable-link" href="../assets/docs/projects/FTC-23/FTC_Notebook.pdf" target="_blank" rel="noopener noreferrer">View notebook</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section-alt" id="reflection">
             <div class="container">
-                <div class="technical-details">
-                    <h2>Technical Specifications</h2>
-                    <table class="specs-table">
-                        <thead>
-                            <tr>
-                                <th>Parameter</th>
-                                <th>Value</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Total Weight</td>
-                                <td>18 kg</td>
-                            </tr>
-                            <tr>
-                                <td>Dimensions</td>
-                                <td>45 × 45 × 30 cm</td>
-                            </tr>
-                            <tr>
-                                <td>Drivetrain</td>
-                                <td>6-wheel mecanum</td>
-                            </tr>
-                            <tr>
-                                <td>Max Speed</td>
-                                <td>2.5 m/s</td>
-                            </tr>
-                            <tr>
-                                <td>Manipulators</td>
-                                <td>2 (large object + precision)</td>
-                            </tr>
-                            <tr>
-                                <td>Control System</td>
-                                <td>REV Control Hub</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-alt">
-            <div class="container">
-                <div class="iteration-section">
-                    <h2>Design Iterations & Tradeoffs</h2>
-                    
-                    <div class="iteration-card">
-                        <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 1: Standard Drivetrain</h3>
-                        </div>
-                        <p><strong>What Changed:</strong> Traditional 4-wheel tank drive</p>
-                        <p><strong>Why:</strong> Simple and reliable baseline</p>
-                        <p><strong>Result:</strong> Functional but slow, limited maneuverability</p>
+                <div class="story-grid">
+                    <div>
+                        <h2>Lessons Learned</h2>
+                        <p>Building this robot was the first time I seriously designed something using CAD, coded beyond basic libraries and classroom assignments, and found success at an international level. Innovative design-thinking made for one of the most unique robots on the field, which certainly means I will not be forgetting this tank of a robot anytime soon.</p>
+                        <p>Moreover, raising $100,000 for a new robotics lab changed STEM education in Weston forever. In hindsight, this is the ultimate legacy of this season and it has made me realize what really matters in engineering is how <strong>great engineering improves human experiences and interaction</strong>.</p>
+                        <h3>Engineering Takeaways</h3>
+                        <ul class="bullet-list">
+                            <li><strong>Documentation:</strong> Document any and everything from the engineering-design process. It helps in debugging, sharing knowledge, and improving future designs and you never know when it will prove useful.</li>
+                            <li><strong>Iterate:</strong> Iterate, iterate, iterate. Every part of our final robot was the result of at least five iterations per part. The first few were not very successful but the final design resulted in a high performing robot.</li>
+                            <li><strong>Collaboration Creates Stronger Results:</strong> FIRST as a whole stresses the importance of inter- and cross-team collaboration. Some of our robot's most innovative solutions were products of advice given to us by rival teams, such as the countersprings for our arm. These low-key design reviews go a long way.</li>
+                        </ul>
                     </div>
-
-                    <div class="iteration-card">
-                        <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 2: Mecanum Upgrade</h3>
-                        </div>
-                        <p><strong>What Changed:</strong> Upgraded to 6-wheel mecanum drivetrain</p>
-                        <p><strong>Why:</strong> Need for omnidirectional movement and faster gameplay</p>
-                        <p><strong>Tradeoff:</strong> Increased complexity and cost</p>
-                        <p><strong>Result:</strong> 2x faster movement, better positioning, top 8 finish</p>
+                    <div>
+                        <figure class="story-figure story-figure-compact">
+                            <img src="../assets/images/projects/FTC-23/FTC_23_Robot.JPG" alt="FTC robot final configuration" class="story-figure-image-centered" loading="lazy">
+                            <span class="story-figure-label">Final robot build</span>
+                        </figure>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
-            <div class="container">
-                <div class="media-gallery">
-                    <h2>Media Gallery</h2>
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/1e40af/ffffff?text=Robot+in+Competition" alt="Robot in competition" loading="lazy">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/3b82f6/ffffff?text=Drivetrain+Detail" alt="Drivetrain detail" loading="lazy">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/14b8a6/ffffff?text=Manipulator+System" alt="Manipulator system" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
+        <section class="section project-nav-section">
             <div class="container">
                 <div class="project-navigation">
                     <a href="MediaLab.html" class="project-nav-link prev">
-                        ← Previous Project
+                        &larr; Previous Project
                     </a>
-                    <a href="SladeLab.html" class="project-nav-link next">
-                        Next Project →
+                    <a href="ML-Algorithms.html" class="project-nav-link next">
+                        Next Project &rarr;
                     </a>
                 </div>
             </div>
@@ -345,26 +421,28 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <h3>Alex Ko's Maker Portfolio</h3>
-                    <p>Showcasing mechanical engineering, robotics, and biomechatronics projects.</p>
+                    <p>Showcasing my engineering and robotics projects in addition to other interesting things about me!</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="../home.html">Home</a></li>
-                        <li><a href="../home.html#projects">Projects</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../projects.html">Projects</a></li>
                         <li><a href="../resume.html">Resume</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Connect</h4>
                     <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
-                        <a href="https://github.com/asyk454" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin">
+                            in
+                        </a>
+                        <a href="https://github.com/asyk454" class="social-github" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                             <svg class="icon-github" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                             </svg>
                         </a>
-                        <a href="mailto:alexko.harvard.edu" aria-label="Email">
+                        <a href="mailto:alexko@college.harvard.edu" class="social-email" aria-label="Email">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
                                 <path d="M3 7l9 6 9-6"></path>
@@ -374,11 +452,143 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Alex Ko. All rights reserved.</p>
+                <p>&copy; 2026 Alex Ko. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="../assets/js/main.js"></script>
+    <script>
+        (function () {
+            var carousels = document.querySelectorAll('[data-carousel]');
+            if (!carousels.length) {
+                return;
+            }
+
+            carousels.forEach(function (carousel) {
+                var slides = carousel.querySelectorAll('[data-carousel-slide]');
+                var prevButton = carousel.querySelector('.carousel-btn.prev');
+                var nextButton = carousel.querySelector('.carousel-btn.next');
+                var currentIndex = 0;
+                var intervalId = null;
+                var imageTimeoutId = null;
+                var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                var isVideoCarousel = carousel.getAttribute('data-carousel-mode') === 'video' || carousel.querySelector('video');
+
+                slides.forEach(function (slide, index) {
+                    if (slide.classList.contains('is-active')) {
+                        currentIndex = index;
+                    }
+                });
+
+                var pauseVideos = function () {
+                    slides.forEach(function (slide) {
+                        var video = slide.querySelector('video');
+                        if (video) {
+                            video.pause();
+                            video.currentTime = 0;
+                        }
+                    });
+                };
+
+                var clearImageTimeout = function () {
+                    if (imageTimeoutId) {
+                        window.clearTimeout(imageTimeoutId);
+                        imageTimeoutId = null;
+                    }
+                };
+
+                var playActiveVideo = function () {
+                    if (!isVideoCarousel || reduceMotion) {
+                        return;
+                    }
+                    var activeSlide = slides[currentIndex];
+                    var video = activeSlide.querySelector('video');
+                    if (video) {
+                        video.play().catch(function () {});
+                    }
+                };
+
+                var scheduleImageAdvance = function () {
+                    if (reduceMotion || !isVideoCarousel) {
+                        return;
+                    }
+                    var activeSlide = slides[currentIndex];
+                    var hasVideo = activeSlide.querySelector('video');
+                    if (hasVideo) {
+                        return;
+                    }
+                    clearImageTimeout();
+                    imageTimeoutId = window.setTimeout(function () {
+                        showSlide(currentIndex + 1);
+                    }, 2500);
+                };
+
+                var showSlide = function (index) {
+                    slides[currentIndex].classList.remove('is-active');
+                    currentIndex = (index + slides.length) % slides.length;
+                    slides[currentIndex].classList.add('is-active');
+
+                    if (isVideoCarousel) {
+                        clearImageTimeout();
+                        pauseVideos();
+                        playActiveVideo();
+                        scheduleImageAdvance();
+                    }
+                };
+
+                var startAuto = function () {
+                    if (reduceMotion || isVideoCarousel) {
+                        return;
+                    }
+                    intervalId = window.setInterval(function () {
+                        showSlide(currentIndex + 1);
+                    }, 2500);
+                };
+
+                var resetAuto = function () {
+                    if (isVideoCarousel) {
+                        return;
+                    }
+                    if (intervalId) {
+                        window.clearInterval(intervalId);
+                    }
+                    startAuto();
+                };
+
+                if (prevButton) {
+                    prevButton.addEventListener('click', function () {
+                        showSlide(currentIndex - 1);
+                        resetAuto();
+                    });
+                }
+
+                if (nextButton) {
+                    nextButton.addEventListener('click', function () {
+                        showSlide(currentIndex + 1);
+                        resetAuto();
+                    });
+                }
+
+                if (isVideoCarousel) {
+                    slides.forEach(function (slide) {
+                        var video = slide.querySelector('video');
+                        if (!video) {
+                            return;
+                        }
+                        video.addEventListener('ended', function () {
+                            if (slide.classList.contains('is-active')) {
+                                showSlide(currentIndex + 1);
+                            }
+                        });
+                    });
+                    scheduleImageAdvance();
+                    playActiveVideo();
+                } else {
+                    startAuto();
+                }
+            });
+        })();
+    </script>
 </body>
 </html>

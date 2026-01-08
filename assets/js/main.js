@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentFile = currentPath.split('/').pop();
         // Check if this link matches the current page
         if ((linkFile && currentFile === linkFile) || 
-            (currentPath.endsWith('/') && linkFile === 'home.html') ||
-            (currentPath.endsWith('home.html') && linkFile === 'home.html')) {
+            (currentPath.endsWith('/') && linkFile === 'index.html') ||
+            (currentPath.endsWith('index.html') && linkFile === 'index.html')) {
             link.classList.add('active');
         }
         // Special case for home page
-        if (currentPath.endsWith('/') || currentPath.endsWith('home.html')) {
-            if (linkFile === 'home.html' || linkPath === '/') {
+        if (currentPath.endsWith('/') || currentPath.endsWith('index.html')) {
+            if (linkFile === 'index.html' || linkPath === '/') {
                 link.classList.add('active');
             }
         }
@@ -28,7 +28,155 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentPath.includes('resume.html') && linkFile === 'resume.html') {
             link.classList.add('active');
         }
+
+        // Special case for project detail pages
+        if (currentPath.includes('/projects/') && linkFile === 'projects.html') {
+            link.classList.add('active');
+        }
     });
+
+    // Project detail prev/next navigation
+    const projectNav = document.querySelector('.project-navigation');
+    if (projectNav) {
+        const projectOrder = [
+            'SladeLab.html',
+            'ES-51.html',
+            'MediaLab.html',
+            'FTC-23.html',
+            'ML-Algorithms.html'
+        ];
+        const currentFile = window.location.pathname.split('/').pop();
+        const currentIndex = projectOrder.indexOf(currentFile);
+
+        if (currentIndex !== -1) {
+            const prevIndex = (currentIndex - 1 + projectOrder.length) % projectOrder.length;
+            const nextIndex = (currentIndex + 1) % projectOrder.length;
+            const prevLink = projectNav.querySelector('.project-nav-link.prev');
+            const nextLink = projectNav.querySelector('.project-nav-link.next');
+
+            if (prevLink) {
+                prevLink.setAttribute('href', projectOrder[prevIndex]);
+            }
+            if (nextLink) {
+                nextLink.setAttribute('href', projectOrder[nextIndex]);
+            }
+        }
+    }
+
+    // Projects gallery filtering (projects.html)
+    const projectsGalleryGrid = document.querySelector('.projects-gallery-grid');
+    const projectsFilterButtons = document.querySelectorAll('[data-filter]');
+    if (projectsGalleryGrid && projectsFilterButtons.length) {
+        const tiles = Array.from(projectsGalleryGrid.querySelectorAll('.project-tile'));
+
+        const setAllFiltersInactive = () => {
+            projectsFilterButtons.forEach(button => {
+                button.classList.remove('is-active');
+                button.setAttribute('aria-pressed', 'false');
+            });
+        };
+
+        const setFilterActive = (button) => {
+            button.classList.add('is-active');
+            button.setAttribute('aria-pressed', 'true');
+        };
+
+        const refreshVisibleTiles = () => {
+            const visibleTiles = tiles.filter(tile => !tile.classList.contains('is-hidden'));
+            if (!visibleTiles.length) {
+                return;
+            }
+
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                return;
+            }
+
+            const canAnimate = typeof document.documentElement.animate === 'function';
+            if (canAnimate) {
+                visibleTiles.forEach((tile, index) => {
+                    tile.classList.remove('is-refreshing');
+                    if (typeof tile.getAnimations === 'function') {
+                        tile.getAnimations().forEach(animation => animation.cancel());
+                    }
+
+                    tile.animate(
+                        [
+                            { opacity: 0, transform: 'translateY(12px)' },
+                            { opacity: 1, transform: 'translateY(0)' }
+                        ],
+                        {
+                            duration: 500,
+                            delay: index * 50,
+                            easing: 'ease',
+                            fill: 'both'
+                        }
+                    );
+                });
+                return;
+            }
+
+            visibleTiles.forEach(tile => {
+                tile.classList.remove('is-refreshing');
+                tile.style.animation = 'none';
+            });
+
+            void projectsGalleryGrid.offsetHeight;
+
+            requestAnimationFrame(() => {
+                visibleTiles.forEach((tile, index) => {
+                    tile.style.removeProperty('animation');
+                    tile.style.setProperty('--reveal-delay', `${index * 0.05}s`);
+                    tile.classList.add('is-refreshing');
+                });
+            });
+        };
+
+        const applyFilters = (activeFilter) => {
+            tiles.forEach(tile => {
+                const isPlaceholder = tile.dataset.placeholder === 'true';
+                let shouldHide = false;
+
+                if (activeFilter !== 'all') {
+                    if (isPlaceholder) {
+                        shouldHide = true;
+                    } else {
+                        const categories = (tile.dataset.category || '').toLowerCase().split(/\s+/).filter(Boolean);
+                        shouldHide = !categories.includes(activeFilter);
+                    }
+                }
+
+                tile.classList.toggle('is-hidden', shouldHide);
+                if (shouldHide) {
+                    tile.classList.remove('is-refreshing');
+                }
+            });
+        };
+
+        projectsFilterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const isActive = button.classList.contains('is-active');
+                if (isActive) {
+                    const allButton = Array.from(projectsFilterButtons)
+                        .find(item => (item.dataset.filter || '').toLowerCase() === 'all');
+                    setAllFiltersInactive();
+                    if (allButton) {
+                        setFilterActive(allButton);
+                    }
+                    applyFilters('all');
+                    refreshVisibleTiles();
+                    return;
+                }
+
+                setAllFiltersInactive();
+                setFilterActive(button);
+                const filter = button.dataset.filter || 'all';
+                applyFilters(filter);
+                refreshVisibleTiles();
+            });
+        });
+
+        applyFilters('all');
+    }
 
     // --- Wrap project meta only when it overflows (NO frame delay) ---
     function updateProjectMetaWrap() {
@@ -61,6 +209,11 @@ document.addEventListener('DOMContentLoaded', function() {
     updateProjectMetaWrap();
     window.addEventListener('resize', debounce(updateProjectMetaWrap, 150));
 
+    // Stagger page elements for load reveal
+    const pageRevealTargets = document.querySelectorAll('header.site-header, main > *, footer.site-footer');
+    pageRevealTargets.forEach((item, index) => {
+        item.style.setProperty('--reveal-delay', `${index * 0.06}s`);
+    });
 
     // Reveal only the initially visible elements marked for load animation
     const loadRevealItems = document.querySelectorAll('[data-load-reveal]');

@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Alex Ko's Maker Portfolio">
-    <title>Alex Ko's Maker Portfolio</title>
+    <title>VLA-Controlled Supernumerary Arm | Alex Ko's Maker Portfolio</title>
     <link rel="icon" type="image/png" href="../assets/images/icons/site_logo_dark.png" id="favicon">
     <script>
         (function () {
             var favicon = document.getElementById('favicon');
             if (!favicon || !window.matchMedia) {
+                return;
+            }
+            if (document.documentElement && document.documentElement.getAttribute('data-theme') === 'light') {
+                favicon.href = '../assets/images/icons/site_logo_dark.png';
                 return;
             }
             var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -26,6 +30,7 @@
             }
         })();
     </script>
+
     <script>
         document.documentElement.classList.add('reveal-ready');
     </script>
@@ -37,21 +42,21 @@
     <link rel="stylesheet" href="../assets/css/project.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
-<body data-load-reveal>
+<body class="is-revealed project-page" data-load-reveal>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
+
     <header class="site-header">
         <div class="header-container">
             <nav class="header-nav-left">
-                <a href="../home.html" class="nav-link">Home</a>
+                <a href="../index.html" class="nav-link">Home</a>
                 <a href="../resume.html" class="nav-link">Resume</a>
-                <a href="../home.html#projects" class="nav-link">Projects</a>
-            </nav>
+                <a href="../projects.html" class="nav-link">Projects</a>
+                </nav>
             <div class="header-title">
-                <a href="../home.html" class="site-logo">Alex Ko's Maker Portfolio</a>
+                <a href="../index.html" class="site-logo">Alex Ko's Maker Portfolio</a>
             </div>
             <div class="header-social">
-                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin" aria-label="LinkedIn">
                     in
                 </a>
                 <a href="https://github.com/asyk454" target="_blank" rel="noopener noreferrer" class="social-link social-github" aria-label="GitHub">
@@ -59,7 +64,7 @@
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
                 </a>
-                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Email">
+                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link social-email" aria-label="Email">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
                         <path d="M3 7l9 6 9-6"></path>
@@ -74,251 +79,305 @@
                 </button>
                 <nav class="mobile-dropdown-menu">
                     <a href="../resume.html" class="nav-link">Resume</a>
-                    <a href="../home.html#projects" class="nav-link">Projects</a>
+                    <a href="../projects.html" class="nav-link">Projects</a>
                 </nav>
             </div>
         </div>
     </header>
 
     <main id="main-content">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <div class="breadcrumb-container">
-                <div class="breadcrumb-links">
-                    <a href="../home.html">Home</a>
-                    <span class="breadcrumb-separator">/</span>
-                    <a href="../home.html#projects">Projects</a>
-                    <span class="breadcrumb-separator">/</span>
-                    <span>Biomechatronic Device</span>
-                </div>
-            </div>
-        </nav>
 
         <section class="project-hero">
-            <img src="https://via.placeholder.com/1920x1080/065f46/ffffff?text=Biomechatronic+Device" alt="Biomechatronic Device" class="project-hero-image" loading="eager">
+            <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Human-mounted supernumerary arm prototype" class="project-hero-image" loading="eager">
             <div class="project-hero-content">
                 <div class="container">
-                    <h1 class="project-hero-title">Biomechatronic Device</h1>
-                    <div class="project-hero-meta">
-                        <div class="project-hero-tags">
-                            <span class="tag tag-biomechatronics">Biomechatronics</span>
-                            <span class="tag">Research</span>
+                    <div class="project-hero-grid">
+                        <div>
+                            <h1 class="project-hero-title">VLA-Controlled Supernumerary Arm</h1>
                         </div>
-                        <span style="color: rgba(255,255,255,0.8);">2024</span>
+                        <aside class="project-hero-details">
+                            <div class="hero-detail-grid">
+                                <div class="hero-detail-stack">
+                                    <div class="hero-detail">
+                                        <span class="hero-detail-label">Organization</span>
+                                        <span class="hero-detail-value">Harvard Slade Agility Lab</span>
+                                    </div>
+                                    <div class="hero-detail">
+                                        <span class="hero-detail-label">Timeline</span>
+                                        <span class="hero-detail-value">Jun &mdash; Aug 2025</span>
+                                    </div>
+                                </div>
+                                <div class="hero-detail">
+                                    <span class="hero-detail-label">Skills Learned</span>
+                                    <ul class="hero-detail-list">
+                                        <li>Mechanical Design</li>
+                                        <li>Modifying and Training LLMs</li>
+                                        <li>Managing a Research Project</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="summary">
             <div class="container">
-                <div class="project-overview">
-                    <div class="overview-main">
-                        <h2>Overview</h2>
-                        <p>
-                            Developed a research device for studying human-machine interfaces with real-time motion 
-                            tracking and feedback systems. This project was part of research at the MIT Media Lab 
-                            Biomechatronics group, focusing on understanding how humans interact with assistive devices.
-                        </p>
-                        <p>
-                            The device integrates multiple sensors including IMUs, force sensors, and EMG electrodes 
-                            to capture comprehensive motion and muscle activity data. The system achieved 95% accuracy 
-                            in motion tracking compared to gold-standard motion capture systems.
-                        </p>
-                        <h3>Key Achievements</h3>
-                        <ul>
-                            <li>95% accuracy in motion tracking</li>
-                            <li>Real-time data acquisition at 100Hz</li>
-                            <li>Multi-modal sensor fusion</li>
-                            <li>Used in 3 published research studies</li>
+                <p class="summary-kicker">Summary</p>
+                <p class="summary-body">I adapted an open source 6-DOF arm into a <strong>wearable, multi-camera supernumerary arm</strong> controlled by a <strong>Vision Language Action Model</strong> that could accomplish basic pick and place, activities of daily living tasks. In addition to designing custom hardware, I also <strong>collected training data</strong>, ran fine-tuning experiments on the Harvard FASRC Cluster, and drafted a future <strong>evaluation protocol</strong> to measure performance.</p>
+            </div>
+        </section>
+
+        <section class="section-alt" id="context">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>Context</h2>
+                        <p>Supernumerary robotic arms (SRAs) are still mostly <strong>bulky and teleoperated</strong>, limiting their everyday use cases. To investigate the viability of SRAs for assistive use cases, we prototyped a <strong>wearable, low-cost, on-the-body arm</strong> paired with a fine-tuned <strong>vision language action (VLA) model</strong> for near-body object manipulation.</p>
+                        <div class="section-spacer"></div>
+                        <div class="story-card">
+                            <h3>Example instruction</h3>
+                            <p><strong>&quot;Pick up the glasses and hand them to me.&quot;</strong></p>
+                        </div>
+                    </div>
+                    <div>
+                        <figure class="gallery-item gallery-item--narrow">
+                            <img src="../assets/images/projects/SladeLab/Slade_Full_Setup.png" alt="Human-mounted supernumerary arm concept" loading="lazy">
+                            <figcaption class="gallery-label">Me wearing the final setup on my chest as it attempts to pick up glasses</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="role">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>My Role</h2>
+                        <p>I owned the <strong>day-to-day prototyping</strong> and <strong>system integration</strong> for the wearable SRA. Charlie owned the core software + ML infrastructure. We jointly drove project vision, experiment execution, and documentation.</p>
+                        <ul class="bullet-list">
+                            <li><strong>Constructed</strong> a 1-DOF Arduino servo test rig to validate VLA deployability.</li>
+                            <li><strong>Developed the primary testing setup</strong>. Included a multi-camera data collection system and custom-adapted <a class="inline-link" href="https://github.com/TheRobotStudio/SO-ARM100" target="_blank" rel="noopener noreferrer">Standard Open-101 (SO-101) Arm</a>.</li>
+                            <li><strong>Wrote</strong> Harvard GPU cluster fine-tuning scripts and <strong>managed model training</strong>.</li>
+                            <li><strong>Drafted future evaluation protocol</strong> (activities of daily living (ADL) tasks, variations, scoring rubric, and participant survey plan).</li>
+                        </ul>
+                        <p class="collaborators-line"><strong>Collaborators:</strong> <a href="https://www.linkedin.com/in/patrickslade/" target="_blank" rel="noopener noreferrer">Patrick Slade</a> (principal investigator), <a href="https://www.linkedin.com/in/charliechen1742/" target="_blank" rel="noopener noreferrer">Charlie Chen</a> (co-intern)</p>
+                    </div>
+                    <div>
+                        <div class="image-carousel" data-carousel>
+                            <div class="carousel-track">
+                                <figure class="carousel-slide is-active" data-carousel-slide>
+                                    <img src="../assets/images/projects/SladeLab/Slade_Concept_Sketch.jpg" alt="Mounting hardware and strap prototypes" loading="lazy">
+                                    <figcaption class="carousel-caption">Very early concept sketch</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/SladeLab/Slade_1DOF_Setup.jpg" alt="1-DOF proof of concept setup" loading="lazy">
+                                    <figcaption class="carousel-caption">1-DOF proof of concept setup</figcaption>
+                                </figure>
+                            </div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous image">
+                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
+                            </button>
+                            <button class="carousel-btn next" type="button" aria-label="Next image">
+                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-alt" id="initial-direction">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>Meta Project Aria Proof of Concept</h2>
+                        <p>We initially aimed to use the Meta Project Aria Glasses for data streaming (RGB and SLAM cameras), as they would be an easy way for people to mount sensors. To test compatibility and familiarize ourselves with the smolVLA platform, we started with a <strong>1-DOF MVP</strong> system.</p>
+                        <ul class="bullet-list">
+                            <li><strong>Built:</strong> servo actuated, 1-DOF pointer arm powered by smolVLA ingesting Aria camera feeds.</li>
+                            <li><strong>Tested:</strong> quick &quot;point-to-object&quot; trials (glasses) with small demo datasets to check feasibility. Slow performance, but more than passable for MVP.</li>
+                            <li><strong>Learned:</strong> concluded that research direction was possible to explore using custom hardware and smolVLA hardware. Warranted further research.</li>
                         </ul>
                     </div>
-                    <div class="overview-sidebar">
-                        <h3>Project Details</h3>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Role</div>
-                            <div class="overview-item-value">Research Assistant</div>
+                    <div>
+                        <figure class="gallery-item">
+                            <video class="gallery-media" muted playsinline autoplay loop preload="metadata" data-playback-rate="2">
+                                <source src="../assets/videos/projects/SladeLab/Slade_1DOF.mp4" type="video/mp4">
+                                <source src="../assets/videos/projects/SladeLab/Slade_1DOF.MOV" type="video/quicktime">
+                            </video>
+                            <figcaption class="gallery-label">1-DOF proof of concept test using Aria glasses at 2x speed</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="section-spacer"></div>
+                <p><strong>Moving away from Aria:</strong> Early validation enabled us to test with the SO-101 arm. However library compatibility issues between the Aria and SO-101 arose and prevented full system integration. This ultimately forced us to <strong>pivot away from the Aria glasses</strong> in favor of different camera solutions.</p>
+            </div>
+        </section>
+
+        <section class="section onbody-section" id="build">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>Turning a Tabletop Arm into a Wearable System</h2>
+                        <p>The SO-101 is inexpensive and open source, but designed for tabletop use. I redesigned the interface to make it <strong>comfortable, stable, and safe for on-the-body wear</strong>.</p>
+                        <ul class="bullet-list">
+                            <li><strong>CADed</strong> a mounting plate and <strong>designed</strong> a chest mounting interface using nylon straps and foam pads to <strong>distribute load and prevent slip</strong>.</li>
+                            <li><strong>3D printed and iterated</strong> mounting plates, handles, range of motion (ROM) hard stops for <strong>fit, comfort, and safety</strong>.</li>
+                            <li><strong>Verified safe wearability</strong> through hardware and software hard stops before testing.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="gallery-grid gallery-grid-2x2">
+                            <figure class="gallery-item">
+                                <img src="../assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Concept sketch for on-the-body mounting" loading="lazy">
+                                <figcaption class="gallery-label">Fully mounted arm</figcaption>
+                            </figure>
+                            <figure class="gallery-item">
+                                <img src="../assets/images/projects/SladeLab/Slade_Frontplate.png" alt="Front plate CAD for wearable mount" loading="lazy">
+                                <figcaption class="gallery-label">Front plate CAD</figcaption>
+                            </figure>
+                            <figure class="gallery-item">
+                                <img src="../assets/images/projects/SladeLab/Slade_Backplate.jpg" alt="Back plate prototype for wearable mount" loading="lazy">
+                                <figcaption class="gallery-label">Back plate 3D print</figcaption>
+                            </figure>
+                            <figure class="gallery-item">
+                                <img src="../assets/images/projects/SladeLab/Slade_ROM_Stops.png" alt="3D printed ROM stop prototypes" loading="lazy">
+                                <figcaption class="gallery-label">ROM stop prototypes</figcaption>
+                            </figure>
                         </div>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Timeline</div>
-                            <div class="overview-item-value">8 months</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-alt" id="results">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>Testing and Different Camera Setups</h2>
+                        <p>Now in a testing state, we experimented with different camera vantage points (shoulder iPhone, end effector camera, and environment camera) and combinations to determine the most viable one. </p>
+                        <div class="results-notes">
+                            <strong>Bottom line:</strong> Camera placement and data quality dominated early performance.
                         </div>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Tools</div>
-                            <ul class="overview-item-list">
-                                <li>Fusion 360 (CAD)</li>
-                                <li>Python (Data Processing)</li>
-                                <li>Arduino (Control)</li>
-                                <li>MATLAB (Analysis)</li>
+                        <div class="section-spacer"></div>
+                        <ul class="bullet-list">
+                            <li><strong>V1 — Shoulder-only:</strong> arm learned repeatable motion, but susceptible to viewpoint drift.</li>
+                            <li><strong>V2 — Shoulder + wrist:</strong> significant pickup accuracy improvement, but still drifted.</li>
+                            <li><strong>V3 — + environment cam:</strong> improved global context, best performance.</li>
+                        </ul>
+                        <div class="section-spacer"></div>
+                        <h3>Failure Modes &amp; Fixes</h3>
+                        <table class="failure-table">
+                            <thead>
+                                <tr>
+                                    <th>Symptom</th>
+                                    <th>Likely cause</th>
+                                    <th>What we tried</th>
+                                    <th>Outcome</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Repeatable motion only</td>
+                                    <td>Single viewpoint drift</td>
+                                    <td>Added wrist camera</td>
+                                    <td><strong>Visibility improved</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Overshot to the right</td>
+                                    <td>Depth ambiguity</td>
+                                    <td>Added environment camera</td>
+                                    <td><strong>Context improved</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Inconsistent grasps</td>
+                                    <td>Data + calibration limits</td>
+                                    <td>More data + longer tuning</td>
+                                    <td><strong>Improved but could benefit from more data</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <div class="image-carousel" data-carousel data-carousel-mode="video">
+                            <div class="carousel-track">
+                                <figure class="carousel-slide is-active" data-carousel-slide>
+                                    <img src="../assets/images/projects/SladeLab/Slade_WristCam.jpeg" alt="Wrist camera view of end effector" loading="lazy">
+                                    <figcaption class="carousel-caption">Wrist cam made the end effector visible and solved depth perception issues</figcaption>
+                                </figure>
+                                <figure class="carousel-slide" data-carousel-slide>
+                                    <img src="../assets/images/projects/SladeLab/Slade_Full_Setup.png" alt="Three-camera setup on wearable arm rig" loading="lazy" class="carousel-image-focus-right">
+                                    <figcaption class="carousel-caption">Three camera setup improved reliability</figcaption>
+                                </figure>
+                            </div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous image">
+                                <span class="carousel-icon" aria-hidden="true">&#8249;</span>
+                            </button>
+                            <button class="carousel-btn next" type="button" aria-label="Next image">
+                                <span class="carousel-icon" aria-hidden="true">&#8250;</span>
+                            </button>
+                        </div>
+                        <div class="section-spacer section-spacer-xl"></div>
+                        <div class="gallery-stack">
+                            <figure class="gallery-item">
+                                <video class="gallery-media" muted playsinline autoplay loop preload="metadata">
+                                    <source src="../assets/videos/projects/SladeLab/Slade_Glasses_Pickup.mp4" type="video/mp4">
+                                    <source src="../assets/videos/projects/SladeLab/Slade_Glasses_Pickup.mov" type="video/quicktime">
+                                </video>
+                                <figcaption class="gallery-label">Camera placement testing clip</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reflections-section" id="takeaways">
+            <div class="container">
+                <div class="story-grid">
+                    <div>
+                        <h2>Reflections, Learnings, &amp; Final Report</h2>
+                        <p>My summer in the Slade Lab was my first <strong>end-to-end, independently driven research sprint</strong>: designing a question, building a <strong>wearable prototype</strong>, collecting data, and iterating on a <strong>VLA-controlled manipulation system</strong>. Here are my main engineering takeaways:</p>
+                        <ul class="bullet-list">
+                            <li><strong>Niche open source projects struggle with integration:</strong> constant updates to our open source VLA made it very difficult to adapt to our hardware. Picking a specific version of the software and then sticking to it would have greatly helped.</li>
+                            <li><strong>Sensor placement drives reliability:</strong> multiple camera angles hugely impacted our robot's performance. Being intentional with how sensors are deployed determines how data is collected and ultimately dictates performance.</li>
+                            <li><strong>Quality data leads to quality results:</strong> higher quality training data would have significantly improved our robot's performance. More generally, collecting strong telemetry data and device feedback drives quantitative-backed improvements.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="story-card">
+                            <h3>Next Steps</h3>
+                            <p>Although I did not continue with this line of research, my next steps if I had are as follows.</p>
+                            <ul class="bullet-list">
+                                <li><strong>Data:</strong> Collect larger, multi-view datasets across designed tasks for stronger fine-tuning.</li>
+                                <li><strong>Trials:</strong> Run structured trials with a finalized protocol and test subjects.</li>
+                                <li><strong>Hardware:</strong> Investigate creating a completely custom hardware setup.</li>
                             </ul>
                         </div>
-                        <div class="overview-item">
-                            <div class="overview-item-label">Technologies</div>
-                            <ul class="overview-item-list">
-                                <li>Sensor Integration</li>
-                                <li>Signal Processing</li>
-                                <li>Biomechanics</li>
-                                <li>Data Acquisition</li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
-
-                <div class="key-metrics">
-                    <div class="metric-card">
-                        <div class="metric-card-value">95%</div>
-                        <div class="metric-card-label">Tracking Accuracy</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-card-value">100 Hz</div>
-                        <div class="metric-card-label">Sampling Rate</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-card-value">8</div>
-                        <div class="metric-card-label">Sensor Channels</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-card-value">3</div>
-                        <div class="metric-card-label">Research Studies</div>
+                <div class="section-spacer"></div>
+                <p>I really enjoyed the autonomy presented with this project, but it also showed me how valuable <strong>early structure</strong> is when time is limited. With clearer milestones up front, Charlie and I could have converged faster towards what eventually became our goal and spent more of the summer on iteration instead of exploration.</p>
+                <div class="deliverables-grid">
+                    <div class="deliverable-card">
+                        <h4>End-of-Summer Slides (PDF)</h4>
+                        <p>A high-level narrative of my work over the summer that was presented to the lab graduate students. Presented jointly with Charlie.</p>
+                        <a class="deliverable-link" href="../assets/docs/projects/SladeLab/Slade_Presentation.pdf" target="_blank" rel="noopener noreferrer">View slides</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-alt">
-            <div class="container">
-                <div class="process-section">
-                    <h2>Design Process</h2>
-                    <div class="process-timeline">
-                        <div class="process-step">
-                            <span class="process-step-number">1</span>
-                            <h3>Requirements Analysis</h3>
-                            <p>
-                                Defined sensor requirements based on research objectives. Identified need for 
-                                multi-modal sensing: motion (IMU), force (load cells), and muscle activity (EMG).
-                            </p>
-                        </div>
-                        <div class="process-step">
-                            <span class="process-step-number">2</span>
-                            <h3>Mechanical Design</h3>
-                            <p>
-                                Designed wearable device housing with proper sensor placement. Ensured minimal 
-                                interference with natural movement while maintaining sensor contact.
-                            </p>
-                        </div>
-                        <div class="process-step">
-                            <span class="process-step-number">3</span>
-                            <h3>Sensor Integration</h3>
-                            <p>
-                                Integrated multiple sensor types with synchronized data acquisition. Developed 
-                                calibration procedures for accurate measurements.
-                            </p>
-                        </div>
-                        <div class="process-step">
-                            <span class="process-step-number">4</span>
-                            <h3>Validation & Testing</h3>
-                            <p>
-                                Validated system against gold-standard motion capture. Conducted user studies 
-                                to verify accuracy and usability in real-world conditions.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="technical-details">
-                    <h2>Technical Specifications</h2>
-                    <table class="specs-table">
-                        <thead>
-                            <tr>
-                                <th>Parameter</th>
-                                <th>Value</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Sampling Rate</td>
-                                <td>100 Hz</td>
-                            </tr>
-                            <tr>
-                                <td>Sensor Channels</td>
-                                <td>8 (3 IMU + 2 Force + 3 EMG)</td>
-                            </tr>
-                            <tr>
-                                <td>Accuracy</td>
-                                <td>95% vs. motion capture</td>
-                            </tr>
-                            <tr>
-                                <td>Data Storage</td>
-                                <td>Onboard SD card (32GB)</td>
-                            </tr>
-                            <tr>
-                                <td>Battery Life</td>
-                                <td>4 hours continuous</td>
-                            </tr>
-                            <tr>
-                                <td>Weight</td>
-                                <td>250g</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-alt">
-            <div class="container">
-                <div class="iteration-section">
-                    <h2>Design Iterations & Tradeoffs</h2>
-                    
-                    <div class="iteration-card">
-                        <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 1: Single Sensor Type</h3>
-                        </div>
-                        <p><strong>What Changed:</strong> Initial prototype with IMU only</p>
-                        <p><strong>Why:</strong> Proof of concept for motion tracking</p>
-                        <p><strong>Result:</strong> 75% accuracy, insufficient for research needs</p>
-                    </div>
-
-                    <div class="iteration-card">
-                        <div class="iteration-header">
-                            <h3 class="iteration-title">Iteration 2: Multi-Modal Sensing</h3>
-                        </div>
-                        <p><strong>What Changed:</strong> Added force sensors and EMG electrodes</p>
-                        <p><strong>Why:</strong> Need for comprehensive biomechanical data</p>
-                        <p><strong>Tradeoff:</strong> Increased complexity and power consumption</p>
-                        <p><strong>Result:</strong> 95% accuracy, suitable for research applications</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="media-gallery">
-                    <h2>Media Gallery</h2>
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/065f46/ffffff?text=Device+in+Use" alt="Device in use" loading="lazy">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="https://via.placeholder.com/1200x675/10b981/ffffff?text=Sensor+Placement" alt="Sensor placement" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
+        <section class="section project-nav-section">
             <div class="container">
                 <div class="project-navigation">
-                    <a href="FTC-23.html" class="project-nav-link prev">
-                        ← Previous Project
+                    <a href="ML-Algorithms.html" class="project-nav-link prev">
+                        &larr; Previous Project
                     </a>
                     <a href="ES-51.html" class="project-nav-link next">
-                        Next Project →
+                        Next Project &rarr;
                     </a>
                 </div>
             </div>
@@ -330,26 +389,28 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <h3>Alex Ko's Maker Portfolio</h3>
-                    <p>Showcasing mechanical engineering, robotics, and biomechatronics projects.</p>
+                    <p>Showcasing my engineering and robotics projects in addition to other interesting things about me!</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="../home.html">Home</a></li>
-                        <li><a href="../home.html#projects">Projects</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../projects.html">Projects</a></li>
                         <li><a href="../resume.html">Resume</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Connect</h4>
                     <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
-                        <a href="https://github.com/asyk454" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin">
+                            in
+                        </a>
+                        <a href="https://github.com/asyk454" class="social-github" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                             <svg class="icon-github" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                             </svg>
                         </a>
-                        <a href="mailto:alexko.harvard.edu" aria-label="Email">
+                        <a href="mailto:alexko@college.harvard.edu" class="social-email" aria-label="Email">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
                                 <path d="M3 7l9 6 9-6"></path>
@@ -359,11 +420,154 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Alex Ko. All rights reserved.</p>
+                <p>&copy; 2026 Alex Ko. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="../assets/js/main.js"></script>
+    <script>
+        (function () {
+            var carousels = document.querySelectorAll('[data-carousel]');
+            if (!carousels.length) {
+                return;
+            }
+
+            carousels.forEach(function (carousel) {
+                var slides = carousel.querySelectorAll('[data-carousel-slide]');
+                var prevButton = carousel.querySelector('.carousel-btn.prev');
+                var nextButton = carousel.querySelector('.carousel-btn.next');
+                var currentIndex = 0;
+                var intervalId = null;
+                var imageTimeoutId = null;
+                var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                var isVideoCarousel = carousel.getAttribute('data-carousel-mode') === 'video' || carousel.querySelector('video');
+
+                slides.forEach(function (slide, index) {
+                    if (slide.classList.contains('is-active')) {
+                        currentIndex = index;
+                    }
+                });
+
+                var pauseVideos = function () {
+                    slides.forEach(function (slide) {
+                        var video = slide.querySelector('video');
+                        if (video) {
+                            video.pause();
+                            video.currentTime = 0;
+                        }
+                    });
+                };
+
+                var clearImageTimeout = function () {
+                    if (imageTimeoutId) {
+                        window.clearTimeout(imageTimeoutId);
+                        imageTimeoutId = null;
+                    }
+                };
+
+                var playActiveVideo = function () {
+                    if (!isVideoCarousel || reduceMotion) {
+                        return;
+                    }
+                    var activeSlide = slides[currentIndex];
+                    var video = activeSlide.querySelector('video');
+                    if (video) {
+                        video.play().catch(function () {});
+                    }
+                };
+
+                var scheduleImageAdvance = function () {
+                    if (reduceMotion || !isVideoCarousel) {
+                        return;
+                    }
+                    var activeSlide = slides[currentIndex];
+                    var hasVideo = activeSlide.querySelector('video');
+                    if (hasVideo) {
+                        return;
+                    }
+                    clearImageTimeout();
+                    imageTimeoutId = window.setTimeout(function () {
+                        showSlide(currentIndex + 1);
+                    }, 2500);
+                };
+
+                var showSlide = function (index) {
+                    slides[currentIndex].classList.remove('is-active');
+                    currentIndex = (index + slides.length) % slides.length;
+                    slides[currentIndex].classList.add('is-active');
+
+                    if (isVideoCarousel) {
+                        clearImageTimeout();
+                        pauseVideos();
+                        playActiveVideo();
+                        scheduleImageAdvance();
+                    }
+                };
+
+                var startAuto = function () {
+                    if (reduceMotion || isVideoCarousel) {
+                        return;
+                    }
+                    intervalId = window.setInterval(function () {
+                        showSlide(currentIndex + 1);
+                    }, 2500);
+                };
+
+                var resetAuto = function () {
+                    if (isVideoCarousel) {
+                        return;
+                    }
+                    if (intervalId) {
+                        window.clearInterval(intervalId);
+                    }
+                    startAuto();
+                };
+
+                if (prevButton) {
+                    prevButton.addEventListener('click', function () {
+                        showSlide(currentIndex - 1);
+                        resetAuto();
+                    });
+                }
+
+                if (nextButton) {
+                    nextButton.addEventListener('click', function () {
+                        showSlide(currentIndex + 1);
+                        resetAuto();
+                    });
+                }
+
+                if (isVideoCarousel) {
+                    slides.forEach(function (slide) {
+                        var video = slide.querySelector('video');
+                        if (!video) {
+                            return;
+                        }
+                        video.addEventListener('ended', function () {
+                            if (slide.classList.contains('is-active')) {
+                                showSlide(currentIndex + 1);
+                            }
+                        });
+                    });
+                    scheduleImageAdvance();
+                    playActiveVideo();
+                } else {
+                    startAuto();
+                }
+            });
+        })();
+    </script>
+    <script>
+        (function () {
+            var videos = document.querySelectorAll('[data-playback-rate]');
+            videos.forEach(function (video) {
+                var rate = parseFloat(video.getAttribute('data-playback-rate'));
+                if (!Number.isNaN(rate)) {
+                    video.playbackRate = rate;
+                }
+            });
+        })();
+    </script>
 </body>
 </html>

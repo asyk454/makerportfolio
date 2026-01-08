@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Alex Ko's Maker Portfolio">
+    <title>Projects | Alex Ko's Maker Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/images/icons/site_logo_dark.png" id="favicon">
+    <script>
+        (function () {
+            var favicon = document.getElementById('favicon');
+            if (!favicon || !window.matchMedia) {
+                return;
+            }
+            if (document.documentElement && document.documentElement.getAttribute('data-theme') === 'light') {
+                favicon.href = 'assets/images/icons/site_logo_dark.png';
+                return;
+            }
+            var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            var setIcon = function (event) {
+                favicon.href = event.matches
+                    ? 'assets/images/icons/site_logo_light.png'
+                    : 'assets/images/icons/site_logo_dark.png';
+            };
+            setIcon(darkQuery);
+            if (darkQuery.addEventListener) {
+                darkQuery.addEventListener('change', setIcon);
+            } else if (darkQuery.addListener) {
+                darkQuery.addListener(setIcon);
+            }
+        })();
+    </script>
+
+    <script>
+        document.documentElement.classList.add('reveal-ready');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="projects-page is-revealed" data-load-reveal>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="header-container">
+            <nav class="header-nav-left">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                </nav>
+            <div class="header-title">
+                <a href="index.html" class="site-logo">Alex Ko's Maker Portfolio</a>
+            </div>
+            <div class="header-social">
+                <a href="https://www.linkedin.com/in/alexsyko/" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin" aria-label="LinkedIn">
+                    in
+                </a>
+                <a href="https://github.com/asyk454" target="_blank" rel="noopener noreferrer" class="social-link social-github" aria-label="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                </a>
+                <a href="mailto:alexko@college.harvard.edu" target="_blank" rel="noopener noreferrer" class="social-link social-email" aria-label="Email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                        <path d="M3 7l9 6 9-6"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="mobile-dropdown-menu">
+                    <a href="resume.html" class="nav-link">Resume</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="section-alt projects-gallery" id="projects-grid">
+            <div class="container">
+                <div class="projects-gallery-header">
+                    <div>
+                        <h2>Project Gallery</h2>
+                        <p class="projects-gallery-subtitle">A quick visual index of the builds, experiments, and collaborations that shaped my path. Click on a card to learn more.</p>
+                        <!-- <p class="projects-gallery-blurb"></p> -->
+                    </div>
+                    <div class="projects-controls">
+                        <div class="projects-filters" role="group" aria-label="Filter projects">
+                            <button class="filter-pill is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+                            <button class="filter-pill" type="button" data-filter="research" aria-pressed="false">Research</button>
+                            <button class="filter-pill" type="button" data-filter="class" aria-pressed="false">Class Project</button>
+                            <button class="filter-pill" type="button" data-filter="competition" aria-pressed="false">School Team</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-gallery-grid">
+                    <a class="project-tile" href="projects/SladeLab.html" data-identifier="SladeLab" data-category="research robotics">
+                        <div class="project-tile-image">
+                            <img src="assets/images/projects/SladeLab/SladeLabArm.jpeg" alt="Wearable supernumerary arm prototype" loading="lazy">
+                            <span class="project-tile-badge tag tag-robotics">Research</span>
+                        </div>
+                        <div class="project-tile-label">
+                            <span class="project-tile-title">VLA-Controlled Supernumerary Arm</span>
+                            <span class="project-tile-meta">Jun &mdash; Aug 2025</span>
+                        </div>
+                    </a>
+
+                    <a class="project-tile" href="projects/ES-51.html" data-identifier="ES-51" data-category="class prototyping">
+                        <div class="project-tile-image">
+                            <img src="assets/images/projects/ES-51/ES51_robot.jpg" alt="Custom drivetrain robot for ES 51" loading="lazy">
+                            <span class="project-tile-badge tag tag-prototyping">Class Project</span>
+                        </div>
+                        <div class="project-tile-label">
+                            <span class="project-tile-title">Engineering Sciences 51 Design Challenge Robot</span>
+                            <span class="project-tile-meta">Jan &mdash; May 2025</span>
+                        </div>
+                    </a>
+
+                    <a class="project-tile" href="projects/MediaLab.html" data-identifier="MediaLab" data-category="research biomechatronics">
+                        <div class="project-tile-image">
+                            <img src="assets/images/projects/MediaLab/MediaLabLeg.png" alt="Bionic knee prosthesis prototype" loading="lazy">
+                            <span class="project-tile-badge tag tag-biomechatronics">Research</span>
+                        </div>
+                        <div class="project-tile-label">
+                            <span class="project-tile-title">Neurally Controlled Bionic Knee Prosthesis</span>
+                            <span class="project-tile-meta">Jun 2023 &mdash; Mar 2024</span>
+                        </div>
+                    </a>
+
+                    <a class="project-tile" href="projects/FTC-23.html" data-identifier="FTC-23" data-category="competition robotics">
+                        <div class="project-tile-image">
+                            <img src="assets/images/projects/FTC-23/FTC_23_Robot.JPG" alt="FTC competition robot on the field" loading="lazy">
+                            <span class="project-tile-badge tag tag-robotics">School Team</span>
+                        </div>
+                        <div class="project-tile-label">
+                            <span class="project-tile-title">FIRST Tech Challenge '22-'23 Robot</span>
+                            <span class="project-tile-meta">Sep 2022 &mdash; Apr 2023</span>
+                        </div>
+                    </a>
+
+                    <a class="project-tile" href="projects/ML-Algorithms.html" data-identifier="ML-Algorithms" data-category="research ml">
+                        <div class="project-tile-image">
+                            <img src="assets/images/profile/ML_Hero_Stock.webp" alt="Machine learning themed hero image" loading="lazy">
+                            <span class="project-tile-badge tag">Research</span>
+                        </div>
+                        <div class="project-tile-label">
+                            <span class="project-tile-title">Machine Learning Algorithms for Consumer Plastics Identification and Sorting</span>
+                            <span class="project-tile-meta">Jun &mdash; Oct 2022</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Alex Ko's Maker Portfolio</h3>
+                    <p>Showcasing my engineering and robotics projects in addition to other interesting things about me!</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/alexsyko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin">
+                            in
+                        </a>
+                        <a href="https://github.com/asyk454" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="social-github">
+                            <svg class="icon-github" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </a>
+                        <a href="mailto:alexko@college.harvard.edu" aria-label="Email" class="social-email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                                <path d="M3 7l9 6 9-6"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alex Ko. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
